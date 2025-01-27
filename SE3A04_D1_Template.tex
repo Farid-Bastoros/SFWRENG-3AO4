@@ -37,11 +37,14 @@
 
 \maketitle	
 \noindent{\bf Tutorial Number:} T0x\\
-{\bf Group Number:} Gx \\
+{\bf Group Number:} G07 \\
 {\bf Group Members:} 
 \begin{itemize}
-	\item Group Member Name (as listed in Avenue)
-	\item You do not need to use student \#s or macid (keep those private).
+	\item Farid Bastoros 
+	\item 
+	\item 
+	\item
+	\item  
 \end{itemize}
 
 \section*{IMPORTANT NOTES}
@@ -159,11 +162,21 @@
 \subsection{User Characteristics}
 \label{sub:user_characteristics}
 % Begin SubSection
-\begin{itemize}
-	\item Describe those general characteristics of the intended users of the product including educational level, experience, and technical expertise 
-	\item Since there will be many users, you may wish to divide into different user types or personas
-%	\item Do not state specific requirements, but rather provide the reasons why certain specific requirements are later specified
-\end{itemize}
+General characteristics of the intended users of the product:
+\begin{enumerate}
+	\item Education Level: Basic Literacy required
+	\begin{itemize}
+		\item Users with the ability to read, write, and comprehend simple instructions should face no problems using the app.
+	\end{itemize}
+	\item Experience: No prior experience required
+	\begin{itemize}
+		\item First-time users should be able to navigate without difficulty, as the app is assumed to be user-friendly.
+	\end{itemize}
+	\item Technical Expertise: Familiarity with touchscreen devices
+	\begin{itemize}
+		\item Users with basic knowledge of touchscreen interactions, such as swiping, tapping, and typing, should have no issues using the app.
+	\end{itemize}
+\end{enumerate}
 % End SubSection
 
 \subsection{Constraints}
@@ -177,15 +190,22 @@
 \subsection{Assumptions and Dependencies}
 \label{sub:assumptions_and_dependencies}
 % Begin SubSection
-\begin{itemize}
-	\item List any assumptions you made in interpreting what the software being developed is aiming to achieve
-	\item List any other assumptions you made that, if it fails to hold, could require you to change the requirements
-	%\item List each of the factors that affect the requirements stated in the SRS
-	%\item These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS
-	\begin{itemize}
-		\item \textbf{Example}: An assumption may be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly.
-	\end{itemize}
-\end{itemize}
+Assumptions made while interpreting what the software being developed aims to achieve.
+\begin{enumerate}
+	\item The function of identifying a mushroom is different from discovering the different types of mushrooms.
+	\item \textbf{\textcolor{red}{Innovative feature 1:}} The user can collect mushrooms. When they identify one, it's saved to their account as a collected mushroom.
+	\item \textbf{\textcolor{red}{Innovative feature 2:}} After the user has found an edible mushroom, they can find recipes for it.
+	\item Assume "Identify Mushroom using photo" implies displaying the camera app to take a picture.
+	\item The app will only be used in Canada.
+\end{enumerate}
+
+Other assumptions that, if it fails to hold, could require a change to the requirements:
+\begin{enumerate}
+	\item The product shall have uninterrupted access to an internet connection.
+    \item Assume that users have granted all necessary permissions for the app to function properly.
+    \item Assume that third-party libraries and dependencies remain compatible with future updates.
+    \item Assume that APIs remain compatible with future updates.
+\end{enumerate}
 % End SubSection
 
 \subsection{Apportioning of Requirements}
