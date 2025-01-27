@@ -111,11 +111,9 @@
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-\begin{itemize}
-	\item Describe what the remainder of the document/SRS contains.\\
-	(e.g. "Section 2 discusses...Section 3...")
-%	\item Explain how the SRS is organized
-\end{itemize}
+
+Section 2 will be discussing the overall product description and describe the general factors that affect the product. This will include product perspective and functions, user characteristics, assumptions and dependencies, and apportioning of requirements. Section 3 includes a Use Case Diagram for the scenario of identifying a mushroom in the wild. Section 4 highlights the function requirements and specifies all the uses cases by their Business Events. Section 5 will then move on to Non-Functional requirements, discussing look and feel, usability and humanity, performance, security, and cultural and political requirements. Finally, section A contains a division of labour.
+
 % End SubSection
 
 % End Section
@@ -134,12 +132,16 @@
 \subsection{Product Perspective}
 \label{sub:product_perspective}
 % Begin SubSection
-\begin{itemize}
-	\item Put the product into perspective with other related products, i.e., context
-	\item If the product is independent and totally self-contained, it should be stated here
-	\item If the SRS defines a product that is a component of a larger system, then this subsection should relate the requirements of that larger system to the functionality of the software being developed. Identify interfaces between that larger system and the software to be developed.
-	\item A block diagram showing the major components of the larger system, interconnections, and external interfaces can be helpful
-\end{itemize}
+[Name] is a mobile mushroom identification app that allows users to submit a text description, macro photo, or micro photo of a mushroom and get detailed information on it. It will function similarly to Google Lens which lets users identify objects with their camera, but it will be specifically tailored to fungi allowing for more accuracy. The product will use state of the art machine learning-based services to determine the species. Location data will be used to narrow down the results, allowing for more accuracy. Users will have a profile where they can save their mushrooms, similar to a Pokedex.\\
+
+The system will interact with Plant.id's identification api and [SYSTEM FOR ANALYZING TEXT DATA] in order to determine the specific fungi and if it is edible. It will be clarified to the user that they are only to consume the mushrooms at their own risk. If the mushroom is determined to be edible, the product will recommend recipes the user can cook using said mushroom. \\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{BlockDiagram.jpg}
+    \caption{System Diagram.}
+    \label{fig:example}
+\end{figure}
 % End SubSection
 
 \subsection{Product Functions}
