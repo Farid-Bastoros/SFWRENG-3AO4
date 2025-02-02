@@ -30,6 +30,7 @@
 \author{SE 3A04: Software Design II -- Large System Design}
 \date{}
                             
+
 %------------------------------------------------------------------------------
 
 % Document
@@ -311,20 +312,86 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 
 \noindent {\bf Main Business Events:} List out all the main business events you are presenting. If you sub-divided into smaller ones, you don't need to include the smaller ones in this list.\\
 
+\begin{itemize}
+	\item BE1: Identify a mushroom.
+\end{itemize}
+
 \noindent {\bf Viewpoints:} List out all the viewpoints you will be considering.\\
+
+\begin{itemize}
+	\item VP1: User
+	\item VP2: External Providers
+	\item VP3: Marketing
+	\item VP4: Mycologist (Fungi expert)
+	\item VP5: Culinary Expert
+\end{itemize}
 
 \noindent {\bf Interpretation:} Specify any liberties you took in interpreting business events, if necessary.\\
 
 \begin{enumerate}[{\bf BE1.}]
-	\item Business Event Name \#1
+	\item Identify a mushroom. \\
+	\\
+	\textbf{Pre-condition}: User has the app opened and has completed initial app setup. 
 		\begin{enumerate}[{\bf VP1.}]
-			\item Viewpoint Name \#1 \\
-				\textcolor{red}{Insert Scenario Here}
-			\item Viewpoint Name \#2 \\
-				\textcolor{red}{Insert Scenario Here}
+			\item User \#1 \\
+				\begin{enumerate}[1.]
+					\item User taps the button to open the mushroom identification page.
+					\item The user presses the button to upload images.
+					\item The system displays all images stored in the phone gallery.
+					\item The user selects and confirms the desired macro and micro image of the mushroom.
+					\item The system confirms if the pictures are valid and usable.
+					\item The system uploads the image to the macro and micro image identifier expert and displays a checkmark to the user.
+					\item The user selects the option to fill out the form for the textual identification expert. 
+					\item The system displays the form to the user.
+					\item The user fills out the form with a description of the mushroom and GPS location.
+					\item The system verifies the form and uploads it to the textual identification expert.
+					\item User requests the identification process to begin.
+					\item Once a decision has been reached, the system displays the resulting identification and confidence probability.
+				\end{enumerate}
+			\item External Provider\\
+				\begin{enumerate}[1.]
+					\item The external system receives an image upload request.
+					\item System begins transferring images for the image based experts.
+					\item System sends back upload complete and successful message to client.
+					\item System recieves a completed form to store.
+					\item System sends back success message to client.
+					\item System receives a request to start identification process.
+					\item System validates inputs provided and starts the identification process.
+					\item Once the decision forum reaches a final decision, the system sends the results to the client.
+				\end{enumerate}
+			\item Marketing\\
+				\textcolor{red}{N/A}
+			\item Mycologist\\
+				\begin{enumerate}[1.]
+					\item Mycologist wants to ensure an overall decision system accuracy rate.
+				\end{enumerate}
+			\item Culinary Expert\\
+				\textcolor{red}{N/A}
 		\end{enumerate}
 		{\bf Global Scenario:}\\
-		\textcolor{red}{Insert Scenario Here}
+		\begin{enumerate}[1.]
+			\item User taps the button to open the mushroom identification page.
+			\item The user presses the button to upload images.
+			\item The system displays all images stored in the phone gallery.
+			\item The user selects and confirms the desired macro and micro image of the mushroom.
+			\item The system confirms if the pictures are valid and usable.
+			\item The system uploads the image to the macro and micro image identifier expert.
+			\item External provider system receives an image upload request.
+			\item External provider system begins transferring images for the image based experts.
+			\item External provider system sends back upload complete and successful message to client.
+			\item The system displays a checkmark to the user confirming success.
+			\item The user selects the option to fill out the form for the textual identification expert. 
+			\item The system displays the form to the user.
+			\item The user fills out the form with a description of the mushroom and GPS location.
+			\item The system verifies the form and uploads it to the textual identification expert.
+			\item External provider system recieves a completed form to store.
+			\item External provider systems sends a success message to client.
+			\item User requests the identification process to begin.
+			\item External provider system receives a request to start identification process.
+			\item External provider system validates inputs provided and starts the identification process.
+			\item Identification results are further validated based on heuristics provided by Mycologist.
+			\item Once the decision forum reaches a final decision, the result is sent to the client.
+		\end{enumerate}
 	\item Business Event Name \#2
 	\begin{enumerate}[{\bf VP1.}]
 		\item Viewpoint Name \#1 \\
