@@ -338,6 +338,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\textbf{Pre-condition}: User has the app opened and has completed initial app setup. 
 		\begin{enumerate}[{\bf VP1.}]
 			\item User \#1 \\
+				\textbf{Main Scenario:}
 				\begin{enumerate}[1.]
 					\item User taps the button to open the mushroom identification page.
 					\item The user presses the button to upload images.
@@ -400,9 +401,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 			\item Identification results are further validated based on heuristics provided by Mycologist.
 			\item Once the decision forum reaches a final decision, the result is sent to the client.
 		\end{enumerate}
-	\item Business Event Name \#2
-	\begin{enumerate}[{\bf BE2.}]
-	    \item Save Mushroom to Profile \#2\\
+	\item Save Mushroom to Profile \#2\\
 	    \textbf{Pre-condition:} The user is logged in and viewing a mushroom identification result.\\[1mm]
 	    
 	    \textbf{VP1. User \#1}\\
@@ -633,23 +632,12 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\textbf{Post-Condition:}\\
 	The user receives a confirmation message indicating that the post was published.
 
-	\item Business Event Name \#5
-	\begin{enumerate}[{\bf VP1.}]
-		\item Viewpoint Name \#1 \\
-		\textcolor{red}{Insert Scenario Here}
-		\item Viewpoint Name \#2 \\
-		\textcolor{red}{Insert Scenario Here}
-	\end{enumerate}
-	{\bf Global Scenario:}\\
-	\textcolor{red}{Insert Scenario Here}
-\end{enumerate}
 
-\begin{enumerate}[{\bf BE3.}]
     \item Recipe Recommendation \\
     \\
     \textbf{Pre-condition}: User has identified a mushroom and it is classified as safe for consumption. The user has an active account.
     \begin{enumerate}[{\bf VP1.}]
-		\subsubsection*{VP1: User \#1}
+		\item VP1: User \#1
 		\textbf{Main Success Scenario}
 		\begin{enumerate}
 			\item User navigates to the Recipe Recommendation page.
@@ -678,26 +666,27 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 			\end{enumerate}
 		\end{enumerate}
 		
-		\subsubsection*{VP2: External Provider \#2}
+		\item VP2: External Provider \#2
 		\begin{enumerate}
 			\item External system provides API data for recipes.
 			\item System fetches and updates recipe recommendations.
 		\end{enumerate}
 		
-		\subsubsection*{VP3: Marketing \#3}
+		\item VP3: Marketing \#3
 		\begin{enumerate}
 			\item User has the option to share the recipe with others through social media.
 		\end{enumerate}
 		
-		\subsubsection*{VP4: Mycologist \#4}
+		\item VP4: Mycologist \#4
 		\begin{enumerate}
 			\item Mycologist ensures that the system only recommends safe mushrooms.
 		\end{enumerate}
 		
-		\subsubsection*{VP5: Culinary Expert \#5}
+		\item VP5: Culinary Expert \#5
 		\begin{enumerate}
 			\item Culinary expert curates and verifies the quality of recommended recipes.
 		\end{enumerate}
+	\end{enumerate}
 		
 		\textbf{Post-condition}:  
 		\begin{itemize}
@@ -713,8 +702,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 			\item System records user interactions for future recipe recommendation improvements.
 		\end{enumerate}
 
-	\begin{enumerate}[{\bf BE5.}]
-		\item Recipe Recommendation \\
+	\item Recipe Recommendation \\
 
 		\textbf{Pre-condition}:  
 	\begin{itemize}
@@ -799,6 +787,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 		\item User verifies the email and logs in.
 		\item System activates the account and grants access.
 	\end{enumerate}
+
+
 
 		
 
