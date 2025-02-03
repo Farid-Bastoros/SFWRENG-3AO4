@@ -410,6 +410,77 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\textcolor{red}{Insert Scenario Here}
 \end{enumerate}
 
+\begin{enumerate}[{\bf BE3.}]
+    \item Recipe Recommendation \\
+    \\
+    \textbf{Pre-condition}: User has identified a mushroom and it is classified as safe for consumption. The user has an active account.
+    \begin{enumerate}[{\bf VP1.}]
+		\subsubsection*{VP1: User \#1}
+		\textbf{Main Success Scenario}
+		\begin{enumerate}
+			\item User navigates to the Recipe Recommendation page.
+			\item System checks if the identified mushroom is edible.
+			\item System fetches curated recipes that involve the identified mushroom.
+			\item System displays a list of recipe options with preparation details and ingredient lists.
+			\item User selects a recipe to view cooking steps in detail.
+			\item System provides step-by-step cooking instructions along with safety tips.
+			\item User has the option to save the recipe for later or share it with others.
+		\end{enumerate}
+		
+		\textbf{Secondary Scenario}
+		\begin{enumerate}
+			\item[3i.] No recipes found for the mushroom.
+			\begin{enumerate}
+				\item[3i.1] System notifies the user that no recipes are available.
+				\item[3i.2] System suggests searching for other edible mushrooms.
+			\end{enumerate}
+			\item[4i.] User selects a recipe, but the link is broken.
+			\begin{enumerate}
+				\item[4i.1] System displays an error message and offers alternative recipes.
+			\end{enumerate}
+			\item[5i.] Mycologist reports an error in mushroom classification.
+			\begin{enumerate}
+				\item[5i.1] System removes the recipe and warns the user.
+			\end{enumerate}
+		\end{enumerate}
+		
+		\subsubsection*{VP2: External Provider \#2}
+		\begin{enumerate}
+			\item External system provides API data for recipes.
+			\item System fetches and updates recipe recommendations.
+		\end{enumerate}
+		
+		\subsubsection*{VP3: Marketing \#3}
+		\begin{enumerate}
+			\item User has the option to share the recipe with others through social media.
+		\end{enumerate}
+		
+		\subsubsection*{VP4: Mycologist \#4}
+		\begin{enumerate}
+			\item Mycologist ensures that the system only recommends safe mushrooms.
+		\end{enumerate}
+		
+		\subsubsection*{VP5: Culinary Expert \#5}
+		\begin{enumerate}
+			\item Culinary expert curates and verifies the quality of recommended recipes.
+		\end{enumerate}
+		
+		\textbf{Post-condition}:  
+		\begin{itemize}
+			\item User has successfully found a recipe and received cooking steps.
+		\end{itemize}
+		
+		\textbf{Global Scenario:}
+		\begin{enumerate}
+			\item User navigates to the Recipe Recommendation page.
+			\item System verifies if the mushroom is safe to eat.
+			\item System retrieves a list of appropriate recipes.
+			\item User selects a recipe and follows the cooking instructions.
+			\item System records user interactions for future recipe recommendation improvements.
+		\end{enumerate}
+		
+
+
 %	Below, we organize by Business Event.
 %	\begin{enumerate}[{BE}1.]
 %		\item Business Event name
