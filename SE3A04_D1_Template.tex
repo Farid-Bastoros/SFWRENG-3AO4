@@ -712,6 +712,96 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 			\item User selects a recipe and follows the cooking instructions.
 			\item System records user interactions for future recipe recommendation improvements.
 		\end{enumerate}
+
+		\begin{enumerate}[{\bf BE5.}]
+			\item Recipe Recommendation \\
+
+		\textbf{Pre-condition}:  
+	\begin{itemize}
+		\item User does not have an existing account and the app is installed on their device.  
+	\end{itemize}
+
+	\subsubsection*{VP1: User \#1}
+	\textbf{Main Success Scenario}
+	\begin{enumerate}
+		\item User navigates to the Sign-Up page.
+		\item System prompts the user to enter required details:
+		\begin{itemize}
+			\item Full Name
+			\item Email Address
+			\item Password
+			\item (Optional) Location for improved mushroom identification accuracy.
+		\end{itemize}
+		\item User enters details and presses “Create Account.”
+		\item System verifies the input:
+		\begin{itemize}
+			\item Checks if the email is valid.
+			\item Ensures the password meets security requirements.
+			\item Confirms the email is not already in use.
+		\end{itemize}
+		\item System creates the account and sends a verification email.
+		\item User verifies their email by clicking the confirmation link.
+		\item System activates the account and redirects the user to the home page.
+	\end{enumerate}
+
+	\textbf{Secondary Scenario}
+	\begin{enumerate}
+		\item[3i.] User enters an invalid email format.
+		\begin{enumerate}
+			\item[3i.1] System prompts the user to enter a valid email.
+		\end{enumerate}
+		\item[3ii.] Password does not meet security requirements.
+		\begin{enumerate}
+			\item[3ii.1] System displays password guidelines.
+		\end{enumerate}
+		\item[4i.] Email is already registered.
+		\begin{enumerate}
+			\item[4i.1] System suggests the user logs in instead.
+		\end{enumerate}
+		\item[5i.] User does not receive verification email.
+		\begin{enumerate}
+			\item[5i.1] System allows resending the verification email.
+		\end{enumerate}
+		\item[6i.] User does not verify the email.
+		\begin{enumerate}
+			\item[6i.1] System reminds the user after 24 hours.
+		\end{enumerate}
+	\end{enumerate}
+
+	\subsubsection*{VP2: External Provider \#2}
+	\begin{enumerate}
+		\item External provider handles authentication services (Google, Apple, etc.).
+	\end{enumerate}
+
+	\subsubsection*{VP3: Marketing \#3}
+	\begin{enumerate}
+		\item System collects user data for engagement tracking and app improvements.
+	\end{enumerate}
+
+	\subsubsection*{VP4: Customer Support \#4}
+	\textbf{NA}  
+
+	\subsubsection*{VP5: Customer Success \#5}
+	\begin{enumerate}
+		\item Displays customer satisfaction form.
+	\end{enumerate}
+
+	\textbf{Post-condition}:  
+	\begin{itemize}
+		\item User successfully registers and verifies their account.
+	\end{itemize}
+
+	\textbf{Global Scenario:}
+	\begin{enumerate}
+		\item User navigates to Sign-Up.
+		\item System prompts the user to enter details.
+		\item User submits their information.
+		\item System validates the input.
+		\item System creates the account and sends a verification email.
+		\item User verifies the email and logs in.
+		\item System activates the account and grants access.
+	\end{enumerate}
+
 		
 
 
