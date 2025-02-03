@@ -317,6 +317,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 
 \begin{itemize}
 	\item BE1: Identify a mushroom.
+ 	\item BE2. Save Mushroom to Profile.
 \end{itemize}
 
 \noindent {\bf Viewpoints:} List out all the viewpoints you will be considering.\\
@@ -400,14 +401,75 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 			\item Once the decision forum reaches a final decision, the result is sent to the client.
 		\end{enumerate}
 	\item Business Event Name \#2
-	\begin{enumerate}[{\bf VP1.}]
-		\item Viewpoint Name \#1 \\
-		\textcolor{red}{Insert Scenario Here}
-		\item Viewpoint Name \#2 \\
-		\textcolor{red}{Insert Scenario Here}
-	\end{enumerate}
-	{\bf Global Scenario:}\\
-	\textcolor{red}{Insert Scenario Here}
+	\begin{enumerate}[{\bf BE2.}]
+	    \item Save Mushroom to Profile \#2\\
+	    \textbf{Pre-condition:} The user is logged in and viewing a mushroom identification result.\\[1mm]
+	    
+	    \textbf{VP1. User \#1}\\
+	    \textbf{Main Success Scenario:}
+	    \begin{enumerate}
+	        \item[1.] System displays the mushroom identification result with a ``Save to Profile'' option.
+	        \item[2.] User selects the ``Save to Profile'' option.
+	        \item[3.] Mushroom data is sent to the Database for storage.
+	        \item[4.] System updates the user's profile with the mushroom information and displays a confirmation message.
+	    \end{enumerate}
+	    \textbf{Secondary Scenario:}
+	    {\color{red}
+	    \begin{enumerate}
+	        \item[2i.] The system fails to update the user profile with the mushroom information.
+	        \begin{enumerate}
+	            \item[2i.1] The system attempts to retry the update operation.
+	            \item[2i.2] If the retry fails, the system displays an error message indicating that the save operation was unsuccessful. 
+	        \end{enumerate}
+	        \item[3i.] Database fails to upload the Mushroom Information.
+	        \begin{enumerate}
+	            \item[3i.1] The system attempts to retry the database upload.
+	            \item[3i.2] If unsuccessful, the system displays an error message indicating that the database upload failed.
+	        \end{enumerate}
+	    \end{enumerate}
+	    }
+	    \textbf{VP2. External Services (Database/API) \#2}
+	    {\color{red}
+	        \begin{enumerate}
+	        \item[3i.] Database error message is received, logged, and troubleshooted.
+	    \end{enumerate}
+	    }
+	    \textbf{VP3. Customer Support \#3}
+	        {\color{red}
+	        \begin{enumerate}
+	        \item[2i.] System should prompt an error page with suggestions to retry the operation or provide a link to contact customer support.\\
+	    \end{enumerate}
+	    }
+	    \textbf{VP4. Marketing \#4}\\
+	    NA\\[1mm]
+	    
+	    \textbf{VP5. Mushroom Expert \#5}\\
+	    NA\\[1mm]
+	    
+	    \textbf{Global Scenario:}\\
+	    \textbf{Pre-condition:} The user is logged in and a mushroom identification result is available.\\[1mm]
+	    \textbf{Main Success Scenario:}
+	    \begin{enumerate}
+	        \item[1.] System displays the mushroom identification result with a ``Save to Profile'' option.
+	        \item[2.] User selects the ``Save to Profile'' option.
+	        \item[3.] Mushroom data is sent to the Database for storage.
+	        \item[4.] System updates the user's profile with the mushroom information and displays a confirmation message.
+	    \end{enumerate}
+	    \textbf{Secondary Scenario:}
+	    {\color{red}
+	    \begin{enumerate}
+	        \item[2i. ] The system fails to update the user profile with the mushroom information.
+	        \begin{enumerate}
+	            \item[2i.1] The system attempts to retry the update operation.
+	            \item[2i.2] If the retry fails, the system displays an error message indicating that the save operation was unsuccessful. 
+	        \end{enumerate}
+	        \item[3i.] Database fails to upload the Mushroom Information.
+	        \begin{enumerate}
+	            \item[3i.1] The system attempts to retry the database upload.
+	            \item[3i.2] If unsuccessful, the system displays an error message indicating that the database upload failed.
+	        \end{enumerate}
+	    \end{enumerate}
+	    }
 
 	\item Business Event Name \#3
 	\begin{enumerate}[{\bf VP1.}]
