@@ -408,6 +408,178 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\end{enumerate}
 	{\bf Global Scenario:}\\
 	\textcolor{red}{Insert Scenario Here}
+
+	\item Business Event Name \#3
+	\begin{enumerate}[{\bf VP1.}]
+		\item Viewpoint Name \#1 \\
+		\textcolor{red}{Insert Scenario Here}
+		\item Viewpoint Name \#2 \\
+		\textcolor{red}{Insert Scenario Here}
+	\end{enumerate}
+	{\bf Global Scenario:}\\
+	\textcolor{red}{Insert Scenario Here}
+
+	\item Sharing on Social Media \#4\\
+	
+	\textbf{Pre-Condition:}\\
+	The user has successfully identified a mushroom using the application. The user has an account and has access to at least one social media platform.\\
+	
+	\begin{enumerate}[{\bf VP1.}]
+		\item User \#1 \\
+		
+		\textbf{Main Success Scenario} \\
+		1. The user selects the "Share on Social Media" option after identifying an object. \\
+		2. The system displays a list of supported platforms (e.g., Facebook, Instagram). \\
+		3. The user selects a preferred platform for sharing. \\
+		4. The system requests authentication if the user is not already logged in. \\
+		5. Upon successful authentication, the system submits the post to the selected platform. \\
+		6. The system generates an auto-formatted post, including an image, object details, and a brief description. \\
+		7. The user customizes the post by adding a caption, hashtags, or tagging friends. \\
+		8. The user sumbit the post to be shared.\\
+		9. The user receives confirmation that the post was successfully shared. \\
+		
+		\textbf{Secondary Scenario} \\
+		4i. System fails to authenticate the user. \\ 
+		4i.1 The authentication process fails due to incorrect credentials.\\
+		4i.2 The system prompts the user to retry or reset their password. \\ 
+		4i.3 If multiple failed attempts occur, the system suggests contacting support. \\
+
+		5i. System fails to connect to the selected social media platform.\\
+		5i.1 The API request is rejected due to platform downtime or permission errors. \\
+		5i.2 The system informs the user and suggests alternative sharing options. \\
+		5i.3 The system saves the post in a queue to retry later. \\
+		
+		7i. User enters invalid post content. \\
+		7i.1 The system detects restricted words or prohibited content.\\
+		7i.2 The system notifies the user and requests modifications.\\
+		7i.3 The user edits the post and resubmits it.\\
+
+		\item External Providers (Social Media Platforms and APIs) \#2 \\
+		
+		\textbf{Main Success Scenario} \\
+		1. The system sends a post request to the selected social media platform’s API.\\
+		2. The external provider validates the request for format and compliance.\\
+		3. The platform processes and schedules the content for posting.\\
+		4. The provider returns a success response confirming the post is published.\\
+		5. The platform allows users to interact with the post through likes, comments, and shares.\\
+		6. The system logs the response for future tracking and analytics.\\
+		
+		\textbf{Secondary Scenario} \\
+		1i. System fails to connect to the selected social media platform.\\
+		1i.1 The API request is rejected due to platform downtime or permission errors. \\
+		1i.2 The system informs the user and suggests alternative sharing options. \\
+		1i.3 The system saves the post in a queue to retry later. \\
+		
+		\item Marketing \#3 \\
+		
+		\textbf{Main Success Scenario} \\
+		1. The marketing team tracks user engagement metrics on social media. \\
+		2. The system collects data on shared posts, including reach, impressions, and interactions.\\
+		3. The team analyzes the data to understand sharing trends and user demographics.\\
+		4. Insights are used to optimize promotional strategies and improve app visibility.\\
+		5. The marketing team develops targeted campaigns encouraging more social sharing.\\
+		6. Influencers or key users with high engagement are identified for potential collaborations.\\
+
+		\textbf{Secondary Scenario} \\
+		2i. The system fails to track user engagement data accurately.\\
+		2i.1 The system fails to collect data on shared posts, including reach, impressions, and interactions.\\
+		2i.2 The analysis process is impacted due to incomplete or inaccurate data.\\
+		2i.3 Insights derived from the engagement metrics are unreliable, leading to ineffective promotional strategies.\\
+		2i.4 The marketing team identifies the issue and implements corrective actions, such as refining data collection mechanisms or integrating third-party analytics tools.\\
+
+		\item Fungi Expert \#4 \\
+		
+		\textbf{Main Success Scenario} \\
+		1. A fungi expert discovers a shared post related to an identified mushroom.\\
+		2. They verify the accuracy of the identification using the provided details.\\
+		3. They engage by commenting with additional information.\\
+		4. The expert shares related educational content to increase public knowledge.\\
+		5. If necessary, they report misinformation to the app’s support team.\\
+		
+		\textbf{Secondary Scenario} \\
+		3i. Fungi expert fails to engage with the post.\\
+		3i.1 The expert’s comment fails to post due to restricted words or prohibited content.\\
+		3i.2 The system flags the comment as potentially violating community guidelines.\\
+		3i.3 The expert is prompted to edit and resubmit the comment.\\
+
+		4i. The expert encounters difficulties sharing educational content.\\
+		4i.1 The content-sharing feature malfunctions or experiences downtime.\\
+		4i.2 The system informs the expert and suggests retrying later.\\
+		4i.3 The expert is given the option to save the content as a draft.\\
+
+		5i. The misinformation report submission fails.\\
+		5i.1 The report submission does not go through due to a system error.\\
+		5i.2 The expert is notified and given the option to retry.\\
+		5i.3 The system saves the report and automatically resubmits it later.\\
+
+		\item Cooking Expert \#5 \\
+		
+		\textbf{Main Success Scenario} \\
+		1. A cooking expert finds a shared post about an edible mushroom. \\
+		2. They verify the information to ensure it is correctly identified as safe.\\
+		3. The expert engages by suggesting cooking methods or preservation techniques.\\
+		4. They share additional culinary content, such as recipes or food pairings.\\
+		5. If the mushroom has unique nutritional benefits, they highlight its value.\\
+		6. The expert may reshare the post to food communities to expand reach.\\
+		
+		\textbf{Secondary Scenario} \\
+		3i. Cooking expert fails to engage with the post.\\
+		3i.1 The expert’s comment fails to post due to restricted words or prohibited content.\\
+		3i.2 The system flags the comment as potentially violating community guidelines.\\
+		3i.3 The expert is prompted to edit and resubmit the comment.\\
+
+		4i. The expert encounters difficulties sharing educational content.\\
+		4i.1 The content-sharing feature malfunctions or experiences downtime.\\
+		4i.2 The system informs the expert and suggests retrying later.\\
+		4i.3 The expert is given the option to save the content as a draft.\\
+
+	\end{enumerate}
+	{\bf Global Scenario:}\\
+
+	\textbf{Pre-Condition:}\\
+	The user has successfully identified a mushroom within the application. The user has an account and has access to at least one social media platform.\\
+	
+	\textbf{Main Success Scenario} \\
+	1. The user selects the \textbf{Share on Social Media} option after identification.\\
+	2. The system prompts the user to log in (if not already authenticated).\\
+	3. The user enters their account credentials.\\
+	4. The system authenticates the user.\\
+	5. The system provides sharing options, including supported social media platforms.\\
+	6. The user selects a preferred platform for sharing.\\
+	7. The system generates an auto-formatted post containing an image, object details, and a description.\\
+	8. The user customizes the post with a caption, hashtags, or tagged friends.\\
+	9. The system sends the post request to the selected social media platform’s API.\\
+	10. The external platform processes the request and publishes the post.\\
+	11. The system confirms successful sharing and notifies the user.\\
+	
+	\textbf{Secondary Scenario}\\
+	4i. System fails to authenticate the user.\\
+	4i.1 The authentication process fails due to incorrect credentials.\\
+	4i.2 The system prompts the user to retry or reset their password.\\
+	4i.3 If multiple failed attempts occur, the system suggests contacting support.\\
+
+	8i. User enters invalid post content.\\
+	8i.1 The system detects restricted words or prohibited content.\\
+	8i.2 The system notifies the user and requests modifications.\\
+	8i.3 The user edits the post and resubmits it.\\
+
+	9i. System fails to connect to the selected social media platform.\\
+	9i.1 The API request is rejected due to platform downtime or permission errors.\\
+	9i.2 The system informs the user and suggests alternative sharing options.\\
+	9i.3 The system saves the post in a queue to retry later.\\
+	
+	\textbf{Post-Condition:}\\
+	The user receives a confirmation message indicating that the post was published.
+
+	\item Business Event Name \#5
+	\begin{enumerate}[{\bf VP1.}]
+		\item Viewpoint Name \#1 \\
+		\textcolor{red}{Insert Scenario Here}
+		\item Viewpoint Name \#2 \\
+		\textcolor{red}{Insert Scenario Here}
+	\end{enumerate}
+	{\bf Global Scenario:}\\
+	\textcolor{red}{Insert Scenario Here}
 \end{enumerate}
 
 %	Below, we organize by Business Event.
