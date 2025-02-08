@@ -927,7 +927,16 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:appearance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF-A}1. ]
-	\item 
+	\item The system shall maintain a consistent theme and branding across all interfaces.\\
+	\textbf{Rationale:} The system shall use a color scheme, fonts, and icons that align with the app’s theme to ensure visual consistency and reinforce brand identity.
+	\item The system shall provide a minimalist and uncluttered interface to enhance user experience.\\
+	\textbf{Rationale:} The design should avoid excessive elements, providing a clean layout that allows users to focus on identification and information retrieval without distractions.
+	\item The system shall ensure clear visual differentiation of elements for improved usability.\\
+	\textbf{Rationale:} Buttons, menus, and icons must have distinct shapes, sizes, or colors to improve accessibility and prevent user confusion.
+	\item The system shall support high-quality image display without distortion or loss of detail.\\
+	\textbf{Rationale:} Since users rely on macro and micro photos for identification, the app must support high-resolution image uploads and clear previews.
+	\item The system shall offer both dark and light mode options for user preference and accessibility.\\
+	\textbf{Rationale:} The system should offer both dark and light modes to accommodate different user preferences and enhance readability in various lighting conditions.
 \end{enumerate}
 % End SubSubSection
 
@@ -935,7 +944,16 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:style_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF-S}1. ]
-	\item 
+	\item The system shall implement a responsive design to ensure compatibility across various devices.\\
+	\textbf{Rationale:} The system must adjust seamlessly across mobile phones without loss of functionality or readability.
+	\item The system shall provide intuitive navigation and a consistent layout for a seamless user experience.\\
+	\textbf{Rationale:} Menus, buttons, and features should be positioned consistently to help users quickly understand the interface and navigate efficiently.
+	\item The system shall support accessibility features for users with visual impairments to enhance inclusivity.\\
+	\textbf{Rationale:} The system should follow accessibility standards, including scalable text, color contrast adjustments, and screen reader compatibility.
+	\item The system shall display loading indicators and feedback messages to inform users of system status.\\
+	\textbf{Rationale:} Users must receive immediate feedback when uploading images, processing identifications, or sharing posts to ensure smooth interaction.
+	\item The system shall incorporate smooth animations and transitions to improve visual appeal and usability.\\
+	\textbf{Rationale:} The app should use subtle animations for actions like screen transitions and button presses to enhance the user experience without causing delays.
 \end{enumerate}
 % End SubSubSection
 
@@ -1064,32 +1082,40 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \subsubsection{Expected Physical Environment}
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
-\begin{enumerate}[{OE-EPE}1. ]
-	\item 
-\end{enumerate}
+\hspace{1.5cm}     N/A 
+%\begin{enumerate}[{OE-EPE}1. ]
+%	\item N/A
+%\end{enumerate}
 % End SubSubSection
 
 \subsubsection{Requirements for Interfacing with Adjacent Systems}
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
 \begin{enumerate}[{OE-IA}1. ]
-	\item 
+	\item The system must be able to send and receive data from image recognition APIs and external databases.\\
+	\textbf{Rationale:} Since the app relies on machine learning-based image recognition and species databases for mushroom identification, it must maintain seamless communication with these services for accurate results.
+	\item The system must be able to integrate with social media platforms for sharing.\\
+	\textbf{Rationale:}  Users must be able to share their identified mushrooms and findings directly through the app without needing manual uploads.
 \end{enumerate}
 % End SubSubSection
 
 \subsubsection{Productization Requirements}
 \label{ssub:productization_requirements}
 % Begin SubSubSection
-\begin{enumerate}[{OE-P}1. ]
-	\item 
-\end{enumerate}
+\hspace{1.5cm}     N/A 
+% \begin{enumerate}[{OE-P}1. ]
+% 	\item 
+% \end{enumerate}
 % End SubSubSection
 
 \subsubsection{Release Requirements}
 \label{ssub:release_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE-R}1. ]
-	\item 
+	\item The app must be compatible with Android 8.0 or above.\\
+	\textbf{Rationale:} Ensuring compatibility with widely used operating system versions maximizes the number of potential users.
+	\item The app must function offline for basic identification features.\\
+	\textbf{Rationale:} Users may be in remote areas without internet access, so offline access to stored mushroom data and previous identifications is necessary.
 \end{enumerate}
 % End SubSubSection
 
