@@ -967,7 +967,10 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:ease_of_use_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-EOU}1. ]
-	\item 
+	\item The system shall adhere to usability standards, such as ISO 9241-11, to ensure that users can easily navigate and interact with the app.\\
+	\textbf{Rationale:} Adhering to established usability standards like ISO 9241-11 ensures that the app is user-friendly and accessible to a wide range of users, including those with varying levels of technical expertise.
+	\item The system shall provide aural and haptic feedback to the user when they interact with the user interface.\\
+	\textbf{Rationale:} Providing aural and haptic feedback enhances the interactivity of the user interface by giving users immediate confirmation of their actions. This reduces uncertainty and improves accessibility, especially for users with visual impairments.
 \end{enumerate}
 % End SubSubSection
 
@@ -975,7 +978,14 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:personalization_and_internationalization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-PI}1. ]
-	\item 
+	\item The client app shall utilize localization features of the chosen development framework to allow easy translation of UI strings.\\
+	\textbf{Rationale:} Effective localization enables the app to seamlessly adapt to various languages and regional formats, thereby enhancing usability and broadening its appeal to international markets.
+	\item The client app shall be designed in a way that easily allows transitioning between languages that read from left-to-right and right-to-left.\\
+	\textbf{Rationale:} If the app's user interface is designed with reversibility in mind, it will make localization and internationalization much easier. This is crucial
+	since languages read in different directions globally and the UI will have to be significantly overhauled for each language type if it is not considered in early development. 
+	\item The account manager shall allow users to create accounts with names in different languages. Passwords will be required to be alphanumeric in English.\\
+	\textbf{Rationale:} Users may not appreciate their account info being locked to a single language. It is preferable to allow them to create their account using their native language.
+	This requirement should also assist with international law requirements. Since passwords are crucial for security, they are required to be English alphanumeric.
 \end{enumerate}
 % End SubSubSection
 
@@ -983,7 +993,11 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:learning_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-L}1. ]
-	\item 
+	\item The application shall be designed in line with their respective platform(s) guidelines (e.g Android, iOS) to feel familiar to other apps on the same platform.\\
+	\textbf{Rationale:} Google and Apple provide design guidelines and UI toolkits to make apps on their platforms feel familiar. The development should utilize these toolkits
+	and technologies to create a familiar experience which should help reduce the learning time required for the application.
+	\item The application shall provide a tutorial to the user on the first time usage of the application. The user can start the tutorial at anytime after the first usage if required.\\
+	\textbf{Rationale:} Modern applications often provide tutorials on how to use the user interface to perform specific actions to familiarize the user with the functionality of the app.
 \end{enumerate}
 % End SubSubSection
 
@@ -991,7 +1005,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:understandability_and_politeness_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-UP}1. ]
-	\item 
+	\item The app shall offer polite, context-aware hints to guide users through the interface when assistance is needed.\\
+	\textbf{Rationale:} Framing hints in a clear and courteous manner improves understandability and ensures that users feel respected and supported. This approach not only reduces the learning curve for new users but also encourages a positive interaction with the application.
 \end{enumerate}
 % End SubSubSection
 
@@ -999,7 +1014,11 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:accessibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-A}1. ]
-	\item 
+	\item The app shall adhere to accessibility guidelines provided by frameworks such as WCAG (Web Content Accessibility Guidelines) and W3C Web Accessibility Interface (WAI).\\
+	\textbf{Rationale:} Frameworks for accessiblity offer a comprehensive checklist and guide for creating accessible apps. They also ensure a uniform accessiblity experience across multiple applications.
+	\item The user interface of the client app shall include a high-contrast mode and avoid colors to convey information.\\
+	\textbf{Rationale:} High contrast user interface options help users better distinguish text from the background. Avoiding colors as the primary means to communicate information is helpful for color blind individuals
+	who may not be able to perceive such information.
 \end{enumerate}
 % End SubSubSection
 
