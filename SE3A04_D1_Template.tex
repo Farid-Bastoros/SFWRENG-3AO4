@@ -1159,7 +1159,10 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AC}1. ]
-	\item 
+	\item The app must request user consent to access the device's camera, storage, and GPS (location) functionalities.\\
+	\textbf{Rationale:} To capture high-quality macro and micro images for mushroom identification, store user data (such as saved identifications), and utilize location data to improve identification accuracy, the app needs permission to access these device features.
+	\item The app must allow the user to access their account if and only if the login details provided are correct.\\
+	\textbf{Rationale:} This ensures that only registered users can view and manage their personal mushroom collections and identification history, protecting user accounts from unauthorized access.
 \end{enumerate}
 % End SubSubSection
 
@@ -1167,7 +1170,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:integrity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-INT}1. ]
-	\item 
+	\item All user data—including images, textual descriptions, and account information—must be encrypted during transmission.\\
+	\textbf{Rationale:} Encryption safeguards the sensitive information of users from interception and tampering, ensuring the integrity of data exchanged between the app and external identification services.
 \end{enumerate}
 % End SubSubSection
 
@@ -1175,7 +1179,10 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-P}1. ]
-	\item 
+	\item The app must clearly inform users about the collection and use of their personal data (including images, location, and text inputs) and obtain their explicit consent.\\
+	\textbf{Rationale:} This transparency is required by app store policies and data protection regulations, ensuring users are aware of and agree to how their data will be used.
+	\item The app must provide users with a comprehensive and legally adequate privacy notice.\\
+	\textbf{Rationale:} A clear privacy notice builds trust with users and ensures compliance with legal obligations, such as those outlined in the Google Play Developer Distribution Agreement.
 \end{enumerate}
 % End SubSubSection
 
@@ -1183,7 +1190,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:audit_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AU}1. ]
-	\item 
+	\item The app must log critical security events such as login attempts, image uploads, and mushroom identification requests.\\
+	\textbf{Rationale:} Maintaining logs of these events is essential for monitoring user activity, diagnosing issues, and investigating any potential security incidents.
 \end{enumerate}
 % End SubSubSection
 
@@ -1191,7 +1199,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-IM}1. ]
-	\item 
+	\item The system must validate and sanitize all user inputs, including image files and text data, to reject any unexpected or malicious content.\\
+	\textbf{Rationale:} Proper input validation helps to prevent attacks such as SQL injection or other forms of code injection, ensuring that only valid and safe data is processed by the app.
 \end{enumerate}
 % End SubSubSection
 
