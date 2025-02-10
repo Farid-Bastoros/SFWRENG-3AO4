@@ -1019,6 +1019,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\item The user interface of the client app shall include a high-contrast mode and avoid colors to convey information.\\
 	\textbf{Rationale:} High contrast user interface options help users better distinguish text from the background. Avoiding colors as the primary means to communicate information is helpful for color blind individuals
 	who may not be able to perceive such information.
+	\item The user interface of the application will be accessible using screen readers.\\
+	\textbf{Rationale:} Screen readers assist users with visual impairments use the application using voice prompts and reading.
 \end{enumerate}
 % End SubSubSection
 
@@ -1032,7 +1034,12 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:speed_and_latency_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-SL}1. ]
-	\item 
+	\item The system's decision forum shall provide an identification of the mushroom in less than 15 seconds of the initiation of the process.\\
+	\textbf{Rationale:} User's expect modern applications to be responsive and fast. For every extra second that the detection takes, the concern of the application 
+	not responding rises.
+	\item File uploads to the system's detector agents shall takes less than 45 seconds for a standard 720P PNG image on a 20 mb/s minimum connection speed.\\
+	\textbf{Rationale:} Ensuring a fast upload speed minimizes the delay before the image begins processing, thereby contributing to an overall responsive system. This requirement accounts for network variability while guaranteeing a smooth user experience by reducing user wait times.
+
 \end{enumerate}
 % End SubSubSection
 
@@ -1040,7 +1047,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:safety_critical_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-SC}1. ]
-	\item 
+	\item N/A.
 \end{enumerate}
 % End SubSubSection
 
@@ -1048,7 +1055,10 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:precision_or_accuracy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-PA}1. ]
-	\item 
+	\item The accuracy of the macro and micro image detectors used shall be measured to be greater than 85\% indepdently when using the RMSE loss function.\\
+	\textbf{Rationale:} Ensuring that the macro and micro image detectors each achieve an accuracy greater than 85\% is vital, as it minimizes the chance of misclassification at the individual module level. This level of performance helps prevent error propagation when their outputs are later integrated in the decision forum.
+	\item The final decision of the forum shall be accurate with a precision of greater than 90\% when using the RMSE loss function.\\
+	\textbf{Rationale:} Requiring the final decision of the forum to be accurate with a precision greater than 90\% is crucial for building user trust and ensuring reliable mushroom identifications. This higher threshold compensates for any minor discrepancies from the individual detectors, thereby delivering a more robust and dependable overall result.
 \end{enumerate}
 % End SubSubSection
 
@@ -1056,7 +1066,11 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-RA}1. ]
-	\item 
+	\item The system shall notify users 1 week in advance if there are any expected maintainence outages in the future.\\
+	\textbf{Rationale:} Users may plan foraging trips around being able to use the app and should therefore be informed in advance if any application maintainence outages are expected to allow them to make alternative plans. 
+	\item The system shall have a backup server available to switch over to when maintainence is being performed on the main server.\\
+	\textbf{Rationale:} Having a backup server that the system can switch to during maintainence on the main server will allow an increased uptime for the whole service. It will also help prevent catastrophic system failure 
+	in case a maintainence update causes system failure on the main server.
 \end{enumerate}
 % End SubSubSection
 
@@ -1064,7 +1078,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-RFT}1. ]
-	\item 
+	\item N/A
 \end{enumerate}
 % End SubSubSection
 
@@ -1072,7 +1086,9 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:capacity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-C}1. ]
-	\item 
+	\item The system and the corresponding detection agents should be able to serve 160 user requests per hour without system failure.\\
+	\textbf{Rationale:} The requirement of 160 user requests per hour stems from there being an assumption of 2 main servers with a distributed load balancing system in place. Each server should be able to respond
+	to a request within 45 seconds of recieving it which yields $\frac{3600}{45} = 80$ requests per hour per server and 160 requests per 2 hours for the whole service. This is expected to drop when the system is under maintainence.
 \end{enumerate}
 % End SubSubSection
 
@@ -1080,7 +1096,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:scalability_or_extensibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-SE}1. ]
-	\item 
+	\item The system shall be extensible with the capability to add more detection agents and experts to the decision forum without any major modifications required to the decision forum.\\
+	\textbf{Rationale:} Being open for extension and closed for modification is one of the fundamental software design principles that needs to be adhered to for modular and clean code. 
 \end{enumerate}
 % End SubSubSection
 
@@ -1088,7 +1105,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:longevity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-L}1. ]
-	\item 
+	\item N/A
 \end{enumerate}
 % End SubSubSection
 
