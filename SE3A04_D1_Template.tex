@@ -46,9 +46,8 @@
 \begin{itemize}
 	\item Farid Bastoros 
 	\item Neha Bhatla
-	\item 
+	\item Omar Alam
 	\item
-	\item  
 \end{itemize}
 
 \section*{IMPORTANT NOTES}
@@ -92,7 +91,7 @@
 \end{itemize}
 
 \noindent
-Mushroom.id, the mushroom identification application will allow users to identify mushrooms based on data collected in the field while foraging. The application is expected to use three
+Shroomify, the mushroom identification application will allow users to identify mushrooms based on data collected in the field while foraging. The application is expected to use three
 independent sources of identification called "experts". The experts are not intended to be real individuals, but rather software components that will provide identification based on user provided data. 
 
 \vspace{0.5cm}
@@ -105,7 +104,7 @@ The three experts are expected to be:
 	\item Text Description Expert: This expert will use textual descriptions of the mushroom, the location of the mushroom and other relevant information to identify the mushroom. The user will be required to input the textual information into the application. The expert based on a NLP (Natural Language Processing) model will identify the mushroom along with a probability.
 \end{itemize}
 
-Mushroom.id is not expected to provide any guarantees regarding the classification of the mushrooms, only a confidence percentage with a classification ranging from 0-100\%
+Shroomify is not expected to provide any guarantees regarding the classification of the mushrooms, only a confidence percentage with a classification ranging from 0-100\%
 Each expert module is expected to output a confidence probability ranging from 0.0 to 1.0 and a forum component will use each output and confidence probability to make the final decision.
 
 If the user chooses to accept the mushroom identification outputted by the application, the application will also provide the user with a list of similar mushrooms and recipes that can be prepared using the identified mushroom.
@@ -825,117 +824,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 
 \end{enumerate}
 
-
-%	Below, we organize by Business Event.
-%	\begin{enumerate}[{BE}1.]
-%		\item Business Event name
-%		\begin{enumerate}[{VP1}.1]
-%			\item Viewpoint name \newline
-%			\noindent\fbox{%
-%				\parbox{0.5\textwidth}{%
-%					\begin{itemize}
-%						\item {\bf $S_{1}$:} Initial response of the system to the Business Event
-%						\item {\bf $E_{1}$:}  Reaction of the environment to $S_{1}$
-%						\item {\bf $S_{2}$:}  Response of the system to $E_{1}$
-%						\item {\bf $E_{2}$:}  Reaction of the environment to $S_{2}$
-%						\item[] $\cdots$
-%						\item {\bf $S_{n}$:}  Response of the system to $E_{(n-1)}$
-%						\item {\bf $E_{n}$:}  Reaction of the environment to $E_{(n-1)}$
-%						\item {\bf $S_{(n+1)}$:} Final response of the system concluding its function regarding the Business Event
-%					\end{itemize}
-%				}%
-%			}
-%			\item Viewpoint name\newline
-%			\noindent\fbox{%
-%				\parbox{0.5\textwidth}{%
-%					\begin{itemize}
-%						\item {\bf $S_{1}$:} Initial response of the system to the Business Event
-%						\item {\bf $E_{1}$:}  Reaction of the environment to $S_{1}$
-%						\item {\bf $S_{2}$:}  Response of the system to $E_{1}$
-%						\item {\bf $E_{2}$:}  Reaction of the environment to $S_{2}$
-%						\item[] $\cdots$
-%						\item {\bf $S_{k}$:}  Response of the system to $E_{(k-1)}$
-%						\item {\bf $E_{k}$:}  Reaction of the environment to $E_{(k-1)}$
-%						\item {\bf $S_{(k+1)}$:} Final response of the system concluding its function regarding the Business Event
-%					\end{itemize}
-%				}%
-%			}
-%			\item \dots
-%			\item \dots
-%			\item \dots
-%			\item[\dots]
-%		\end{enumerate}	
-%		\item[] {\bf Global Scenario of {\it Business Event Name}:} It is the scenario corresponding to the integration of all the above scenarios from the different Viewpoints of the Business Event BE1.\newline
-%		\noindent\fbox{%
-%			\parbox{0.5\textwidth}{%
-%				\begin{itemize}
-%					\item {\bf $S_{1}$:} Initial response of the system to the Business Event
-%					\item {\bf $E_{1}$:}  Reaction of the environment to $S_{1}$
-%					\item {\bf $S_{2}$:}  Response of the system to $E_{1}$
-%					\item {\bf $E_{2}$:}  Reaction of the environment to $S_{2}$
-%					\item[] $\cdots$
-%					\item {\bf $S_{m}$:}  Response of the system to $E_{(m-1)}$
-%					\item {\bf $E_{m}$:}  Reaction of the environment to $E_{(m-1)}$
-%					\item {\bf $S_{(m+1)}$:} Final response of the system concluding its function regarding the Business Event
-%				\end{itemize}
-%			}%
-%		}	
-%		%\end{enumerate}
-%		\item Business Event name
-%		\begin{enumerate}[{VP1}.1]
-%			\item Viewpoint name \newline
-%			\noindent\fbox{%
-%				\parbox{0.5\textwidth}{%
-%					\begin{itemize}
-%						\item {\bf $S_{1}$:} Initial response of the system to the Business Event
-%						\item {\bf $E_{1}$:}  Reaction of the environment to $S_{1}$
-%						\item {\bf $S_{2}$:}  Response of the system to $E_{1}$
-%						\item {\bf $E_{2}$:}  Reaction of the environment to $S_{2}$
-%						\item[] $\cdots$
-%						\item {\bf $S_{n'}$:}  Response of the system to $E_{(n'-1)}$
-%						\item {\bf $E_{n'}$:}  Reaction of the environment to $E_{(n'-1)}$
-%						\item {\bf $S_{(n'+1)}$:} Final response of the system concluding its function regarding the Business Event
-%					\end{itemize}
-%				}%
-%			}
-%			\item Viewpoint name\newline
-%			\noindent\fbox{%
-%				\parbox{0.5\textwidth}{%
-%					\begin{itemize}
-%						\item {\bf $S_{1}$:} Initial response of the system to the Business Event
-%						\item {\bf $E_{1}$:}  Reaction of the environment to $S_{1}$
-%						\item {\bf $S_{2}$:}  Response of the system to $E_{1}$
-%						\item {\bf $E_{2}$:}  Reaction of the environment to $S_{2}$
-%						\item[] $\cdots$
-%						\item {\bf $S_{k'}$:}  Response of the system to $E_{(k'-1)}$
-%						\item {\bf $E_{k'}$:}  Reaction of the environment to $E_{(k'-1)}$
-%						\item {\bf $S_{(k'+1)}$:} Final response of the system concluding its function regarding the Business Event
-%					\end{itemize}
-%				}%
-%			}
-%			\item \dots
-%			\item \dots
-%			\item \dots
-%			\item[\dots]
-%		\end{enumerate}	
-%		\item[] {\bf Global Scenario of {\it Business Event Name}:} It is the scenario corresponding to the integration of all the above scenarios from the different Viewpoints of the Business Event BE2.\newline
-%		\noindent\fbox{%
-%			\parbox{0.5\textwidth}{%
-%				\begin{itemize}
-%					\item {\bf $S_{1}$:} Initial response of the system to the Business Event
-%					\item {\bf $E_{1}$:}  Reaction of the environment to $S_{1}$
-%					\item {\bf $S_{2}$:}  Response of the system to $E_{1}$
-%					\item {\bf $E_{2}$:}  Reaction of the environment to $S_{2}$
-%					\item[] $\cdots$
-%					\item {\bf $S_{m'}$:}  Response of the system to $E_{(m'-1)}$
-%					\item {\bf $E_{m'}$:}  Reaction of the environment to $E_{(m'-1)}$
-%					\item {\bf $S_{(m'+1)}$:} Final response of the system concluding its function regarding the Business Event
-%				\end{itemize}
-%			}%
-%		}		
-%	\end{enumerate}
-
-%End Section
+\end{enumerate}
 
 \section{Non-Functional Requirements}
 \label{sec:non-functional_requirements}
