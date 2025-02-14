@@ -45,7 +45,7 @@
 {\bf Group Members:} 
 \begin{itemize}
 	\item Farid Bastoros 
-	\item 
+	\item Neha Bhatla
 	\item 
 	\item
 	\item  
@@ -470,15 +470,110 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	    \end{enumerate}
 	    }
 
-	\item Business Event Name \#3
-	\begin{enumerate}[{\bf VP1.}]
-		\item Viewpoint Name \#1 \\
-		\textcolor{red}{Insert Scenario Here}
-		\item Viewpoint Name \#2 \\
-		\textcolor{red}{Insert Scenario Here}
-	\end{enumerate}
-	{\bf Global Scenario:}\\
-	\textcolor{red}{Insert Scenario Here}
+		\item Recipe Recommendation \\
+		\\
+		\textbf{Pre-condition}: User has identified a mushroom and it is classified as safe for consumption. The user has an active account.
+		\begin{enumerate}[{\bf VP1.}]
+			\item VP1: User \#1 \\
+		\textbf{Main Success Scenario} 
+			\begin{enumerate}
+				\item[1.] User navigates to the Recipe Recommendation page.
+				\item[2.] System checks if the identified mushroom is edible.
+				\item[3.] System fetches curated recipes that involve the identified mushroom.
+				\item[4.] System displays a list of recipe options with preparation details and ingredient lists.
+				\item[5.] User selects a recipe to view cooking steps in detail.
+				\item[6.] System provides step-by-step cooking instructions along with safety tips.
+				\item[7.] User has the option to save the recipe for later or share it with others.
+			\end{enumerate}
+			
+			\textbf{Secondary Scenario}
+			\begin{enumerate}
+				\item[3i.] No recipes found for the mushroom.
+				\begin{enumerate}
+					\item[3i.1] System notifies the user that no recipes are available.
+					\item[3i.2] System suggests searching for other edible mushrooms.
+				\end{enumerate}
+				\item[4i.] User selects a recipe, but the link is broken.
+				\begin{enumerate}
+					\item[4i.1] System displays an error message and offers alternative recipes.
+				\end{enumerate}
+				\item[5i.] Mycologist reports an error in mushroom classification.
+				\begin{enumerate}
+					\item[5i.1] System removes the recipe and warns the user.
+				\end{enumerate}
+			\end{enumerate}
+			
+			\item VP2: External Provider \#2 \\
+				\textbf{Main Success Scenario} 
+			\begin{enumerate}
+				\item[1.] External system provides API data for recipes.
+				\item[2.] System fetches and updates recipe recommendations.
+			\end{enumerate}
+			 \textbf{Secondary Success Scenario}
+			  \begin{enumerate}
+				\item[1i.] External system API is unavailable.
+					\begin{enumerate}
+						 \item[1i.1] System notifies the user that recipe recommendations cannot be updated.
+						 \item [1i.2] System suggests trying again later or browsing previously saved recipes.
+					\end{enumerate}
+					\item[2i.] External system returns incomplete or invalid data. previously saved recipes.
+					\begin{enumerate}
+						 \item[2i.1] System logs the error and excludes incomplete data from the recommendations.
+						 \item[2i.2] System notifies the user of potential missing recipes and offers existing curated options.
+					\end{enumerate}
+			\end{enumerate}
+			
+			\item VP3: Marketing \#3 \\ 
+				\textbf{Main Success Scenario} 
+			\begin{enumerate}
+				\item[1.] User has the option to share the recipe with others through social media.
+			\end{enumerate}
+				\textbf{Secondary Success Scenario}
+				\begin{enumerate}
+				\item[1i.] System fails to connect to the selected social media platform.
+					\begin{enumerate}
+						 \item[1i.1] System notifies the user of the issue and suggests trying again later.
+					\end{enumerate}
+				\end{enumerate}
+				
+			\item VP4: Mycologist \#4 \\
+				\textbf{Main Success Scenario} 
+			\begin{enumerate}
+				\item[1.] Mycologist ensures that the system only recommends safe mushrooms.
+					\item[2.] System updates recommendations based on the mycologist's approval.
+			\end{enumerate}
+				\textbf{Secondary Success Scenario}
+				\begin{enumerate}
+				\item[1i.1] Mycologist identifies a misclassified mushroom.
+					\item[1i.2] System removes the related recipes and notifies users who saved or interacted with them.
+				\end{enumerate}
+			
+			\item VP5: Culinary Expert \#5 \\
+				\textbf{Main Success Scenario} 
+			\begin{enumerate}
+				\item[1.] Culinary expert curates and verifies the quality of recommended recipes.
+			\end{enumerate}
+				\textbf{Secondary Success Scenario} 
+			\begin{enumerate}
+				\item[1i.1] Culinary expert curates and verifies the quality of recommended recipes.
+					\item[1i.2] System removes the flagged recipe and notifies the users who saved or interacted with it.
+			\end{enumerate}                    
+		\end{enumerate}
+			
+			\textbf{Post-condition}:  
+			\begin{itemize}
+				\item User has successfully found a recipe and received cooking steps.
+			\end{itemize}
+			
+			\textbf{Global Scenario:} \\
+				\textbf{Pre-condition}: User has identified a mushroom and it is classified as safe for consumption. The user has an active account.
+			\begin{enumerate}
+				\item[1.] User navigates to the Recipe Recommendation page.
+				\item[2.] System verifies if the mushroom is safe to eat.
+				\item[3.] System retrieves a list of appropriate recipes.
+				\item[4.] User selects a recipe and follows the cooking instructions.
+				\item[5.] System records user interactions for future recipe recommendation improvements.
+			\end{enumerate}
 
 	\item Sharing on Social Media \#4\\
 	
@@ -633,103 +728,32 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	The user receives a confirmation message indicating that the post was published.
 
 
-    \item Recipe Recommendation \\
-    \\
-    \textbf{Pre-condition}: User has identified a mushroom and it is classified as safe for consumption. The user has an active account.
-    \begin{enumerate}[{\bf VP1.}]
-		\item VP1: User \#1
-		\textbf{Main Success Scenario}
-		\begin{enumerate}
-			\item User navigates to the Recipe Recommendation page.
-			\item System checks if the identified mushroom is edible.
-			\item System fetches curated recipes that involve the identified mushroom.
-			\item System displays a list of recipe options with preparation details and ingredient lists.
-			\item User selects a recipe to view cooking steps in detail.
-			\item System provides step-by-step cooking instructions along with safety tips.
-			\item User has the option to save the recipe for later or share it with others.
-		\end{enumerate}
-		
-		\textbf{Secondary Scenario}
-		\begin{enumerate}
-			\item[3i.] No recipes found for the mushroom.
-			\begin{enumerate}
-				\item[3i.1] System notifies the user that no recipes are available.
-				\item[3i.2] System suggests searching for other edible mushrooms.
-			\end{enumerate}
-			\item[4i.] User selects a recipe, but the link is broken.
-			\begin{enumerate}
-				\item[4i.1] System displays an error message and offers alternative recipes.
-			\end{enumerate}
-			\item[5i.] Mycologist reports an error in mushroom classification.
-			\begin{enumerate}
-				\item[5i.1] System removes the recipe and warns the user.
-			\end{enumerate}
-		\end{enumerate}
-		
-		\item VP2: External Provider \#2
-		\begin{enumerate}
-			\item External system provides API data for recipes.
-			\item System fetches and updates recipe recommendations.
-		\end{enumerate}
-		
-		\item VP3: Marketing \#3
-		\begin{enumerate}
-			\item User has the option to share the recipe with others through social media.
-		\end{enumerate}
-		
-		\item VP4: Mycologist \#4
-		\begin{enumerate}
-			\item Mycologist ensures that the system only recommends safe mushrooms.
-		\end{enumerate}
-		
-		\item VP5: Culinary Expert \#5
-		\begin{enumerate}
-			\item Culinary expert curates and verifies the quality of recommended recipes.
-		\end{enumerate}
-	\end{enumerate}
-		
-		\textbf{Post-condition}:  
-		\begin{itemize}
-			\item User has successfully found a recipe and received cooking steps.
-		\end{itemize}
-		
-		\textbf{Global Scenario:}
-		\begin{enumerate}
-			\item User navigates to the Recipe Recommendation page.
-			\item System verifies if the mushroom is safe to eat.
-			\item System retrieves a list of appropriate recipes.
-			\item User selects a recipe and follows the cooking instructions.
-			\item System records user interactions for future recipe recommendation improvements.
-		\end{enumerate}
+    \item Account Registration \\
 
-	\item Recipe Recommendation \\
+\textbf{Pre-condition}: User does not have an existing account and the app is installed on their device.  
 
-		\textbf{Pre-condition}:  
-	\begin{itemize}
-		\item User does not have an existing account and the app is installed on their device.  
-	\end{itemize}
-
-	\subsubsection*{VP1: User \#1}
+\begin{enumerate}[{\bf VP1.}]
+    \item User \#1 \\
 	\textbf{Main Success Scenario}
 	\begin{enumerate}
-		\item User navigates to the Sign-Up page.
-		\item System prompts the user to enter required details:
+		\item[1.] User navigates to the Sign-Up page.
+		\item[2.] System prompts the user to enter required details:
 		\begin{itemize}
 			\item Full Name
 			\item Email Address
 			\item Password
 			\item (Optional) Location for improved mushroom identification accuracy.
 		\end{itemize}
-		\item User enters details and presses “Create Account.”
-		\item System verifies the input:
+		\item[3.] User enters details and presses “Create Account.”
+		\item[4.] System verifies the input:
 		\begin{itemize}
 			\item Checks if the email is valid.
 			\item Ensures the password meets security requirements.
 			\item Confirms the email is not already in use.
 		\end{itemize}
-		\item System creates the account and sends a verification email.
-		\item User verifies their email by clicking the confirmation link.
-		\item System activates the account and redirects the user to the home page.
+		\item[5.] System creates the account and sends a verification email.
+		\item[6.] User verifies their email by clicking the confirmation link.
+		\item[7.] System activates the account and redirects the user to the home page.
 	\end{enumerate}
 
 	\textbf{Secondary Scenario}
@@ -756,41 +780,50 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 		\end{enumerate}
 	\end{enumerate}
 
-	\subsubsection*{VP2: External Provider \#2}
+    \item External Provider \#2 \\
+        \textbf{Main Success Scenario}
 	\begin{enumerate}
-		\item External provider handles authentication services.
+		\item [1. ]External provider handles authentication services.
+            \item [2. ] System grants the user access to the application features.
 	\end{enumerate}
-
-	\subsubsection*{VP3: Marketing \#3}
+        \textbf{Secondary Scenario}
+	\begin{enumerate}
+		\item [1i. ]External provider fails to authenticate the user.
+            \item [1i.1 ] System notifies the user of the issue and suggests retrying or resetting their password.
+	\end{enumerate}      
+        
+ \item Marketing \#3 \\
 	\textbf{N/A}
 
-	\subsubsection*{VP4: Customer Support \#4}
+\item Customer Support \#4 \\
 	\textbf{N/A}  
 
-	\subsubsection*{VP5: Customer Success \#5}
-	\begin{enumerate}
+\item Customer Success \#5 \\
+    \textbf{Main Success Scenario}
+    \begin{enumerate}
 		\item Displays customer satisfaction form.
-	\end{enumerate}
+    \end{enumerate}
+    \textbf{Secondary Scenario}
+   \begin{enumerate}
+		\item[1i.] System fails to load the customer satisfaction form.
+            \item[1i.1] System notifies the user of the issue and suggests retrying later.
+            \item[1i.2] System logs the error for troubleshooting and provides an alternative feedback option (e.g., email support).
+    \end{enumerate} 
+	\textbf{Global Scenario:} \\
+	\textbf{Post-condition}:  User successfully registers and verifies their account.
 
-	\textbf{Post-condition}:  
-	\begin{itemize}
-		\item User successfully registers and verifies their account.
-	\end{itemize}
-
-	\textbf{Global Scenario:}
 	\begin{enumerate}
-		\item User navigates to Sign-Up.
-		\item System prompts the user to enter details.
-		\item User submits their information.
-		\item System validates the input.
-		\item System creates the account and sends a verification email.
-		\item User verifies the email and logs in.
-		\item System activates the account and grants access.
+		\item[1.] User navigates to Sign-Up.
+		\item[2.] System prompts the user to enter details.
+		\item[3.] User submits their information.
+		\item[4.] System validates the input.
+		\item[5.] System creates the account and sends a verification email.
+		\item[6.] User verifies the email and logs in.
+		\item[7.] System activates the account and grants access.
 	\end{enumerate}
 
 
 \end{enumerate}
-		
 
 
 %	Below, we organize by Business Event.
