@@ -241,8 +241,12 @@ General characteristics of the intended users of the product:
 \label{sub:constraints}
 % Begin SubSection
 \begin{itemize}
-	\item Provide a general description of any constraints that will limit the developer's options
+    \item \textbf{Time Constraints}: The timeline constraints placed by developers and stakeholders will affect the outcome of the product as it limits resources and development time.
+    \item \textbf{Budget Constraints}: The project budget of \$0 limits the technologies the developers can use since certain APIs or resources cost money to use.
+    \item \textbf{Device Constraints}: The device of a typical user must be considered as the computing power and RAM usage will be limited for our app.
+    \item \textbf{Storage Constraints}: Depending on how much data is stored, there may be limitations on the amount of data that can be stored on a user’s device or online.
 \end{itemize}
+
 % End SubSection
 
 \subsection{Assumptions and Dependencies}
@@ -281,12 +285,12 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \section{Use Case Diagram}
 \label{sec:use_case_diagram}
 % Begin Section
-\begin{itemize}
-	\item Provide the use case diagram for the system being developed.
-	\item You do not need to provide the textual description of any of the use cases here (these will be specified under "Highlights of Functional Requirements").
-%	\item Provide \emph{one} use case diagram for the most important Business Event.
-%	\item The text of all use cases will be specified under "Highlights of Functional Requirements"
-\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{BlockDiagram.jpg}
+    \caption{System Diagram.}
+    \label{fig:example}
+\end{figure}
 %In this section, select the most important Business Event that your system responds to and give its use case diagram.  Only one use case diagram is needed.  Give a brief textual description of the use case without repeating what is in the scenarios of the corresponding Business Event.
 
 %
@@ -1170,47 +1174,37 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 % End SubSubSection
 
 % End SubSection
-
 \subsection{Cultural and Political Requirements}
-\label{sub:cultural_and_political_requirements}
-% Begin SubSection
-
 \subsubsection{Cultural Requirements}
-\label{ssub:cultural_requirements}
-% Begin SubSubSection
-\begin{enumerate}[{CP-C}1. ]
-	\item 
-\end{enumerate}
-% End SubSubSection
+\begin{itemize}
+    \item The app should support multiple languages to accommodate diverse users worldwide.
+    \item Provide culturally sensitive descriptions, avoiding offensive terminology when discussing mushroom edibility or toxicity.
+    \item Consider regional mushroom naming conventions to ensure inclusivity and avoid misidentification.
+    \item Allow users to customize their experience based on local mushroom species relevant to their region.
+\end{itemize}
 
 \subsubsection{Political Requirements}
-\label{ssub:political_requirements}
-% Begin SubSubSection
-\begin{enumerate}[{CP-P}1. ]
-	\item 
-\end{enumerate}
-% End SubSubSection
-
-% End SubSection
+\begin{itemize}
+    \item Ensure the app does not promote illegal foraging or harvesting in protected areas, aligning with national park and conservation laws.
+    \item Consider country-specific restrictions on sharing foraging locations to prevent environmental degradation.
+    \item Ensure compliance with international wildlife protection agreements to prevent unethical foraging practices.
+\end{itemize}
 
 \subsection{Legal Requirements}
-\label{sub:legal_requirements}
-% Begin SubSection
-
 \subsubsection{Compliance Requirements}
-\label{ssub:compliance_requirements}
-% Begin SubSubSection
-\begin{enumerate}[{LR-COMP}1. ]
-	\item 
-\end{enumerate}
-% End SubSubSection
+\begin{itemize}
+    \item The app must comply with data privacy laws (e.g., GDPR, CCPA) regarding user images and location tracking.
+    \item Obtain explicit consent for location tracking when users save or share their findings.
+    \item Include disclaimers to inform users that the app’s identification is not a substitute for expert advice, reducing liability risks.
+    \item Ensure compliance with accessibility standards (e.g., WCAG 2.1) to support users with disabilities.
+\end{itemize}
 
 \subsubsection{Standards Requirements}
-\label{ssub:standards_requirements}
-% Begin SubSubSection
-\begin{enumerate}[{LR-STD}1. ]
-	\item 
-\end{enumerate}
+\begin{itemize}
+    \item Follow ISO 13485 (if any aspects of the app involve health or medical guidance related to poisonous mushrooms).
+    \item Use industry-standard machine learning practices (if AI is used for identification).
+    \item Ensure app security standards (e.g., OWASP Mobile Security for secure data storage and sharing).
+\end{itemize}
 % End SubSubSection
 
 % End SubSection
