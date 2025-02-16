@@ -16,6 +16,11 @@
 %\usepackage{setspace}
 %\usepackage{xcolor}
 \usepackage{color}
+\usepackage[numbers]{natbib} % Enables numbered citations
+\usepackage{url}     
+
+\bibliographystyle{ieeetr}  % Use IEEE-style numbering
+
 %------------------------------------------------------------------------------
 
 % Header and Footer
@@ -37,8 +42,7 @@
 % Document
 %------------------------------------------------------------------------------
 \begin{document}
-\setlength\parindent{0pt} 
-\setlength{\parskip}{\baselineskip}
+\setlength{\parskip}{3pt}
 
 \maketitle	
 \noindent{\bf Tutorial Number:} T0x\\
@@ -68,21 +72,16 @@
 \label{sec:introduction}
 % Begin Section
 
-\begin{itemize}
-	\item Provide an overview of the document/SRS.
-\end{itemize}
-
-
 \subsection{Purpose}
 \label{sub:purpose}
-The purpose of this document is to identify software requirements, background info regarding the product and its users, and use cases. \\
-The intended audience for this document is internal stakeholders on the project, such as developers, managers, executives, investors, domain experts, and anybody involved in the development of MushFind. Note that there is no prior knowledge required.  
+The purpose of this document is to identify software requirements, background info regarding the Shroomify product and its users, and use cases. \\
+
+The intended audience for this document are the internal stakeholders on the project, such as developers, managers, executives, investors, domain experts, and anybody involved in the development of Shroomify. Note that there is no prior knowledge required.  
 
 
 \subsection{Scope}
 
 
-\noindent
 Shroomify, the mushroom identification application will allow users to identify mushrooms based on data collected in the field while foraging. The application is expected to use three
 independent sources of identification called "experts". The experts are not intended to be real individuals, but rather software components that will provide identification based on user provided data. 
 
@@ -92,8 +91,8 @@ The three experts are expected to be:
 
 \begin{itemize}
 	\item Macro Photo Expert: This expert will use a photo of the mushroom taken using a camera to identify the mushroom. The user will be required to take a photo of the mushroom and upload it to the application. The expert based on a CNN (Convolutional Neural Network) will identify the mushroom along with a confidence score.
-	\item Micro Photo Expert: This expert will use a photo of the mushroom taken using a microscope to identify the mushroom. The user will be required to take a photo of the mushroom under a microscope and upload it to the application. The expert based on a CNN (Convolutional Neural Network) will identify the mushroom along with a probability.
-	\item Text Description Expert: This expert will use textual descriptions of the mushroom, the location of the mushroom and other relevant information to identify the mushroom using a natural language processing model (NLP). The user will be required to input the textual information into the application. 
+	\item Micro Photo Expert: This expert will use a photo of the mushroom taken using a microscope to identify the mushroom. The user will be required to take a photo of the mushroom under a microscope and upload it to the application. The expert based on a CNN (Convolutional Neural Network) will identify the mushroom along with a confidence score.
+	\item Text Description Expert: This expert will use textual descriptions of the mushroom, the location of the mushroom and other relevant information to identify the mushroom using a natural language processing model (NLP). The user will be required to input the textual information into the application and the NLP model will provide an identification and confidence score. 
 \end{itemize}
 
 Shroomify is not expected to provide any guarantees regarding the classification of the mushrooms, only a confidence percentage with a classification ranging from 0-100\%
@@ -101,23 +100,31 @@ Each expert module is expected to output a confidence probability ranging from 0
 
 If the user chooses to accept the mushroom identification outputted by the application, the application will also provide the user with a list of similar mushrooms and recipes that can be prepared using the identified mushroom.
 
-To use the application the user is required to create an account so that the application can create a profile for the user to store their previous identifications and preferences. The user will also be able to access the application without creating an account, but the application will not store any of the user's data.
+To use the application the user is required to create an account so that the application can create a profile for the user to store their previous identifications and preferences. The user will also be able to access the application without creating an account, but the application will not store any of the user's data between app uses.
 % End SubSection
 
 \subsection{Definitions, Acronyms, and Abbreviations}
 \label{sub:definitions_acronyms_and_abbreviations}
 % Begin SubSection
 \begin{itemize}
-	\item Provide the definitions of all terms, acronyms, and abbreviations required to properly interpret the SRS.
-	\item This should be in alphabetical order.
+	\item CNN - Convolutional Neural Network
+	\item NLP - Natural Language Processing
+	\item API - Application Programming Interface
+	\item GUI - Graphical User Interface
+	\item VR - Virtual Reality
+	\item AR - Augmented Reality
+	\item GPS - Global Positioning System
+	\item BE - Business Event
+	\item VP - Viewpoint
+	\item UI - User Interface
+	\item UX - User Experience
 \end{itemize}
 % End SubSection
 
 \subsection{References}
 \label{sub:references}
-% Begin SubSection
-N/A
-% End SubSection
+\bibliography{references} 
+
 
 \subsection{Overview}
 \label{sub:overview}
@@ -136,9 +143,9 @@ Section 2 will be discussing the overall product description and describe the ge
 \subsection{Product Perspective}
 \label{sub:product_perspective}
 % Begin SubSection
-Shroomify is a mobile mushroom identification app that allows users to submit a text description, macro photo, or micro photo of a mushroom and get detailed information on it. It will function similarly to Google Lens which lets users identify objects with their camera, but it will be specifically tailored to fungi allowing for more accuracy. The product will use state of the art machine learning-based services to determine the species. Location data will be used to narrow down the results, allowing for more accuracy. Users will have a profile where they can save their mushrooms, similar to a Pokedex.\\
+Shroomify is a mobile mushroom identification app that allows users to submit a text description, macro photo, or micro photo of a mushroom and get detailed information on it. It will function similarly to Google Lens which lets users identify objects with their camera, but it will be specifically tailored to fungi allowing for more accuracy. The product will use state of the art machine learning-based services to determine the species. Location data will be used to narrow down the results, allowing for more accuracy. Users will have a profile where they can save their mushrooms.\\
 
-The system will interact with Plant.id's identification api and [SYSTEM FOR ANALYZING TEXT DATA] in order to determine the specific fungi and if it is edible. It will be clarified to the user that they are only to consume the mushrooms at their own risk. If the mushroom is determined to be edible, the product will recommend recipes the user can cook using said mushroom. \\
+The system will interact with Plant.id's identification api and an NLP in order to determine the specific fungi and if it is edible. It will be clarified to the user that they are only to consume the mushrooms at their own risk. If the mushroom is determined to be edible, the product will recommend recipes the user can cook using said mushroom. \\
 
 \begin{figure}[h!]
     \centering
@@ -258,10 +265,10 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \section{Use Case Diagram}
 \label{sec:use_case_diagram}
 % Begin Section
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{BlockDiagram.jpg}
-    \caption{System Diagram.}
+    \includegraphics[width=0.9\textwidth]{3A04UseCaseDiagram.jpg}
+    \caption{Use Case Diagram for Shroomify.}
     \label{fig:example}
 \end{figure}
 %In this section, select the most important Business Event that your system responds to and give its use case diagram.  Only one use case diagram is needed.  Give a brief textual description of the use case without repeating what is in the scenarios of the corresponding Business Event.
@@ -279,7 +286,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{sec:functional_requirements}
 % Begin Section
 
-\noindent {\bf Main Business Events:} List out all the main business events you are presenting. If you sub-divided into smaller ones, you don't need to include the smaller ones in this list.\\
+\noindent {\bf Main Business Events:} 
 
 \begin{itemize}
 	\item BE1: Identify a mushroom.
@@ -289,7 +296,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
  	\item BE5. Account Registration.
 \end{itemize}
 
-\noindent {\bf Viewpoints:} List out all the viewpoints you will be considering.\\
+\newpage
+\noindent {\bf Viewpoints:} 
 
 \begin{itemize}
 	\item VP1: User
@@ -776,8 +784,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
             \item[1i.1] System notifies the user of the issue and suggests retrying later.
             \item[1i.2] System logs the error for troubleshooting and provides an alternative feedback option (e.g., email support).
     \end{enumerate} 
-	\textbf{Global Scenario:} \\
-	\textbf{Post-condition}:  User successfully registers and verifies their account.
+	\textbf{Global Scenario:}
 
 	\begin{enumerate}
 		\item[1.] User navigates to Sign-Up.
@@ -788,6 +795,9 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 		\item[6.] User verifies the email and logs in.
 		\item[7.] System activates the account and grants access.
 	\end{enumerate}
+
+	\textbf{Post-condition}:  User successfully registers and verifies their account.
+
 
 
 \end{enumerate}
@@ -846,7 +856,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:ease_of_use_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-EOU}1. ]
-	\item The system shall adhere to usability standards, such as ISO 9241-11, to ensure that users can easily navigate and interact with the app.\\
+	\item The system shall adhere to usability standards, such as ISO 9241-11, to ensure that users can easily navigate and interact with the app. \cite{ISO_9241-11}\\
 	\textbf{Rationale:} Adhering to established usability standards like ISO 9241-11 ensures that the app is user-friendly and accessible to a wide range of users, including those with varying levels of technical expertise.
 	\item The system shall provide aural and haptic feedback to the user when they interact with the user interface.\\
 	\textbf{Rationale:} Providing aural and haptic feedback enhances the interactivity of the user interface by giving users immediate confirmation of their actions. This reduces uncertainty and improves accessibility, especially for users with visual impairments.
@@ -893,7 +903,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:accessibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-A}1. ]
-	\item The app shall adhere to accessibility guidelines provided by frameworks such as WCAG (Web Content Accessibility Guidelines) and W3C Web Accessibility Interface (WAI).\\
+	\item The app shall adhere to accessibility guidelines provided by frameworks such as WCAG (Web Content Accessibility Guidelines) and W3C Web Accessibility Interface (WAI). \cite{(WAI)}\\
 	\textbf{Rationale:} Frameworks for accessiblity offer a comprehensive checklist and guide for creating accessible apps. They also ensure a uniform accessiblity experience across multiple applications.
 	\item The user interface of the client app shall include a high-contrast mode and avoid colors to convey information.\\
 	\textbf{Rationale:} High contrast user interface options help users better distinguish text from the background. Avoiding colors as the primary means to communicate information is helpful for color blind individuals
@@ -1197,6 +1207,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\item Section 5.6 - Security Requirements - Luka Mahrt-Smith
 	\item Section 5.7 - Cultural and Political Requirements - Aidan Lao
 	\item Section 5.8 - Legal Requirements - Aidan Lao
+	\item Final Editing - Omar Alam
 \end{itemize}
 
 \subsection{Signatures}
@@ -1204,17 +1215,17 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\renewcommand{\arraystretch}{1.5} % Adjust row height for better alignment
 	\begin{tabular}{|m{4cm}|m{4cm}|m{6cm}|} % 'm{}' centers vertically
 		\hline
-		\textbf{Name} & \textbf{Student Number} & \textbf{Signature} \\
+		\textbf{Name} & \textbf{Mac ID} & \textbf{Signature} \\
 		\hline
-		Aiden Lao & StudentNo & \\ 
+		Aiden Lao & laoa6 & \\ 
 		\hline
-		Omar Alam & 400238260 & \includegraphics[scale=0.4]{omar-signature.png} \\ 
+		Omar Alam & alamo2 & \includegraphics[scale=0.3]{omar-signature.png} \\ 
 		\hline
-		Luka Mahrt-Smith & StudentNo & \\ 
+		Luka Mahrt-Smith & mahrtsml & \\ 
 		\hline
-		Farid Bastoros & StudentNo & \\ 
+		Farid Bastoros & bastorof & \\ 
 		\hline
-		Neha Bhatia & StudentNo & \\ 
+		Neha Bhatia & bhatlan & \\ 
 		\hline
 	\end{tabular}
 \end{center}
