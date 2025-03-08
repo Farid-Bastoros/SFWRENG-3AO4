@@ -17,7 +17,10 @@
 %\usepackage{xcolor}
 \usepackage{color}
 \usepackage[numbers]{natbib} % Enables numbered citations
-\usepackage{url}     
+\usepackage{url}    
+% \documentclass{article}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}  % Load ulem package for \sout{} 
 
 \bibliographystyle{ieeetr}  % Use IEEE-style numbering
 
@@ -107,18 +110,19 @@ To use the application the user is required to create an account so that the app
 \label{sub:definitions_acronyms_and_abbreviations}
 % Begin SubSection
 \begin{itemize}
-	\item CNN - Convolutional Neural Network
-	\item NLP - Natural Language Processing
-	\item API - Application Programming Interface
-	\item GUI - Graphical User Interface
-	\item VR - Virtual Reality
-	\item AR - Augmented Reality
-	\item GPS - Global Positioning System
-	\item BE - Business Event
-	\item VP - Viewpoint
-	\item UI - User Interface
-	\item UX - User Experience
+    \item CNN - \textbf{Convolutional Neural Network}: \textcolor{red}{A type of deep learning model used in image processing and computer vision tasks. It is essential for our app{}’s image-based mushroom identification.}
+    \item NLP - \textbf{Natural Language Processing}: \textcolor{red}{A field of AI that helps computers understand and process human language. It is useful in our app for analyzing text-based mushroom descriptions.}
+    \item API - \textbf{Application Programming Interface}: \textcolor{red}{A set of protocols and tools that allow different software applications to communicate. Our app uses APIs to interact with external databases and services, such as image recognition models and recipe sources.}
+    \item GUI - \textbf{Graphical User Interface}: \textcolor{red}{The visual interface through which users interact with the app. Our app provides an intuitive GUI to ensure smooth user experience.}
+    \item VR - \textbf{Virtual Reality}: \textcolor{red}{A technology that creates an immersive digital environment. While not a core feature of our app, VR could be used for educational or training purposes related to mushroom identification.}
+    \item AR - \textbf{Augmented Reality}: \textcolor{red}{A technology that overlays digital information onto the real world. Future enhancements of our app could incorporate AR to provide real-time mushroom identification in the field.}
+    \item GPS - \textbf{Global Positioning System}: \textcolor{red}{A navigation system that provides location data. Our app can use GPS to tag the locations where users find mushrooms, helping track collection spots.}
+    \item BE - \textbf{Business Event}: \textcolor{red}{A significant occurrence that affects business processes. In our app, a business event could be a user identifying a mushroom, saving it, or sharing it with the community.}
+    \item VP - \textbf{Viewpoint}: \textcolor{red}{A perspective from which system requirements and design are considered. Different viewpoints in our project include those of regular users, researchers, and foragers.}
+    \item UI - \textbf{User Interface}: \textcolor{red}{The design and layout of the app that enables user interaction. Our app ensures a clean UI to enhance usability.}
+    \item UX - \textbf{User Experience}: \textcolor{red}{The overall experience users have while interacting with the app, including ease of use and satisfaction. Our app focuses on optimizing UX by providing seamless navigation, accessibility, and engaging features.}
 \end{itemize}
+
 % End SubSection
 
 \subsection{References}
@@ -235,8 +239,9 @@ General characteristics of the intended users of the product:
 Assumptions made while interpreting what the software being developed aims to achieve.
 \begin{enumerate}
 	\item The function of identifying a mushroom is different from discovering the different types of mushrooms.
-	\item \textbf{\textcolor{red}{Innovative feature 1:}} The user can collect mushrooms. When they identify one, it's saved to their account as a collected mushroom.
-	\item \textbf{\textcolor{red}{Innovative feature 2:}} After the user has found an edible mushroom, they can find recipes for it.
+	% \item \sout{{\textcolor{red}{Innovative feature 1:}} The user can collect mushrooms. When they identify one, it's saved to their account as a collected mushroom.}
+	\item \sout{\textcolor{red}{Innovative feature 1: The user can collect mushrooms. When they identify one, it's saved to their account as a collected mushroom.}}
+	\item \sout{\textcolor{red}{Innovative feature 2: After the user has found an edible mushroom, they can find recipes for it.}}
 	\item Assume "Identify Mushroom using photo" implies displaying the camera app to take a picture.
 	\item The app will only be used in Canada.
 \end{enumerate}
@@ -1172,9 +1177,52 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 
 % End SubSection
 
-% End Section
+% End Sectio\begingroup
+\begingroup
+\color{red}
 
+\section{Innovative Feature}
+
+The chosen innovative feature to implement is the ability for users to collect and track identified mushrooms in their personal account. When a user successfully identifies a mushroom, it is saved to their collection, creating a log of their discoveries. This feature enhances user engagement and provides a rewarding experience for mushroom enthusiasts. Additionally, if a user identifies an edible mushroom, they can explore recipes tailored to that specific type, making the app both educational and practical.\\
+We have also come up with additional creative features, as listed below:
+
+\begin{itemize}
+    \item \textbf{Mushroom Collection System}  
+    \begin{itemize}
+        \item Users can build a personal database of identified mushrooms.
+        \item Each identified mushroom is automatically saved in their account.
+        \item Provides details such as location, date, and identification method (macro photo, micro photo, or text description).
+    \end{itemize}
+
+    \item \textbf{Recipe Recommendations}  
+    \begin{itemize}
+        \item When a user identifies an edible mushroom, they receive recipe suggestions.
+        \item Recipes are categorized based on the type of mushroom and its culinary uses.
+    \end{itemize}
+
+    \item \textbf{Progress and Achievements}  
+    \begin{itemize}
+        \item Users can unlock badges or achievements based on the number and rarity of mushrooms collected.
+        \item Encourages exploration and learning about different mushroom species.
+    \end{itemize}
+
+    \item \textbf{Social Media Sharing}  
+    \begin{itemize}
+        \item Users can share their mushroom discoveries on social media platforms such as Instagram, Twitter, and Facebook.
+        \item Allows for easy sharing of identification results, achievements, and recipes with friends and followers.
+        \item Includes options to add captions, hashtags, and location tags to posts.
+    \end{itemize}
+
+    \item \textbf{Offline Identification Mode}  
+    \begin{itemize}
+        \item Users can save photos and descriptions offline for later identification when they regain internet access.
+    \end{itemize}
+\end{itemize}
+
+This combination of features aims to create a fun, educational, and interactive experience for mushroom foragers and nature lovers while also allowing them to share their journey with a wider audience.
+\endgroup 
 \appendix
+\newpage
 \section{Division of Labour}
 \label{sec:division_of_labour}
 
@@ -1217,7 +1265,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 		\hline
 		\textbf{Name} & \textbf{Mac ID} & \textbf{Signature} \\
 		\hline
-		Aiden Lao & laoa6 & \includegraphics[scale=0.3]{aidan-signature.png} \\ 
+		Aiden Lao & laoa6 & \includegraphics[scale=0.08]{aidan-signature.png} \\ 
 		\hline
 		Omar Alam & alamo2 & \includegraphics[scale=0.3]{omar-signature.png} \\ 
 		\hline
