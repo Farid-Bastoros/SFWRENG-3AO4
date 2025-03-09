@@ -409,6 +409,290 @@ This section should contain all of your CRC cards.
 		\hline
 		\end{tabular}
 	\end{table}
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Account Manager (Controller)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Account DB & Account DB\\
+		Knows User Info & User Info\\
+		Knows Create Account & Create Account\\
+            Knows Edit Account & Edit Account\\
+		Knows View Account & View Account\\
+		Knows Login & Login\\
+            Knows Account Success & Account Success\\
+            Knows Account Error & Account Error\\
+
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Account DB  (Entity)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Manager & Account Manager\\
+		Knows User Info & User Info\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: User Info (Entity)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Manager & Account Manager\\
+            Knows Account DB & Account DB\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+    \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Create Account (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Manager & Account Manager\\
+            Handle user interactions for creating an account &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Edit Account (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Manager & Account Manager\\
+            Handles click-event of "Edit Account" button &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: View Account (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Manager & Account Manager\\
+            Handles click-event of "View Account" button &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Login (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Manager & Account Manager\\
+            Handles click-event of "Login" button &\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Account Success (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Manager & Account Manager\\
+            Handles successful events for account creation/editing & \\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Account Error (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Account Manager & Account Manager\\
+            Handles Login error events 
+            Handles Edit Account error events
+            Handles View Account error events
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+     \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Mushroom Manager (Controller)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Mushroom DB & Mushroom DB\\
+		Knows Mushroom Info & Mushroom Info\\
+		Knows View Mushrooms & View Mushrooms\\
+            Knows Save Mushroom & Save Mushroom\\
+		Knows Delete Mushroom & Delete Mushroom\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+    \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Mushroom DB  (Entity)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Mushroom Manager & Mushroom Manager\\
+		Knows Mushroom Info & Mushroom Info\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Mushroom Info (Entity)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Mushroom Manager & Mushroom Manager\\
+		Knows Social Media Manager & Social Media Manager\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+          \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: View Mushrooms (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Mushroom Manager & Mushroom Manager\\
+		Handles click-event of "View Mushrooms" button&\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Save Mushroom (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Mushroom Manager & Mushroom Manager\\
+		Handles click-event of "Save Mushroom" button&\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Delete Mushroom (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Mushroom Manager & Mushroom Manager\\
+		Handles click-event of "Delete Mushroom" button&\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}    
+
+   \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Social Media Manager (Controller)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+            Knows Mushroom Info & Mushroom Info\\
+		Knows Recipe Info & Recipe Info\\
+		Knows Share Recipe & Share Recipe\\
+            Knows Share Mushroom & Share Mushroom\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Share Recipe (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Social Media Manager & Social Media Manager\\
+		Handles click-event of "Share Recipe" button&\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table} 
+
+        \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{6cm}|p{6cm}|}
+		\hline 
+		\multicolumn{2}{|l|}{\textbf{Class Name: Share Mushroom (Boundary)}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Social Media Manager & Social Media Manager\\
+		Handles click-event of "Share Mushroom" button&\\
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}
+	\end{table} 
 	
 \end{itemize}
 
