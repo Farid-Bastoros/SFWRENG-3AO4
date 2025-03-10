@@ -79,7 +79,9 @@ This document provides a high-level overview of the Shroomify system architectur
 \subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
-Give a brief description of the system. This could be a paragraph or two to give some context to this document.
+The Shroomify system follows a Model-View-Controller (MVC) architecture, separating data management, business logic, and user interactions. This type of architecture has Model components, View components and Controller components which increase its scalability and  maintainability, allowing each component to be tested and updated independently.\\
+
+\noindent Additionally, Shroomify integrates Blackboard architecture and Repository architecture for  different subsystems based on their functionality. The repository architecture was used for subsystems that require efficient data storage and retrieval, allowing for concurrent access to shared data repositories. The Blackboard architecture was used for subsystems that need to combine different pieces of information to reach a final result, making it useful for tasks like decision-making and identification.
 
 % End SubSection
 
