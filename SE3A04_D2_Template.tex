@@ -68,12 +68,13 @@
 \label{sec:introduction}
 % Begin Section
 
-This section should provide an brief overview of the entire document.
+% This section should provide an brief overview of the entire document.
 
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
-This document provides a high-level overview of the Shroomify system architecture, outlining the core design principles, subsystems, and the rationale behind architectural choices. It is intended for internal stakeholders involved in the development of Shroomify, including software engineers, project managers, investors, domain experts, and system architects. Prior technical knowledge is beneficial but not required for understanding this document. 
+This document provides a high-level overview of the Shroomify system architecture, outlining the core design principles, subsystems, and the rationale behind architectural choices. It is intended for internal stakeholders involved in the development of Shroomify, including software engineers, project managers, investors, domain experts, and system architects. Prior technical knowledge is beneficial but not required for understanding this document. \\
+Please ensure that Shroomify Deliverable 1 is reviewed before Deliverable 2, as it provides essential context. Additionally, having technical knowledge may help in better understanding the contents of this document.
 % End SubSection
 
 \subsection{System Description}
@@ -88,8 +89,8 @@ The Shroomify system follows a Model-View-Controller (MVC) architecture, separat
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-This is Deliverable 2 of the Shroomify project and provides a general description of the system architecture. It considers the requirements, use cases, and design decisions outlined in Deliverable 1. Section 2 has an Analysis Class Diagram that represents the major classes and how they relate to each other from our requirements analysis. This diagram establishes the foundation for the organization of the system internally and ensures that design is high in cohesion and low in coupling among its components. Section 3 presents a description of the Architectural Design of Shroomify. In this section, we define the chosen architectural pattern and discuss specific design decisions. Section 4 focused on Class Responsibility Collaboration (CRC) Cards. These cards capture the responsibilities and communications of each class within the system, detailing exactly how the individual components interact to satisfy the demands of the system.
-
+This is Deliverable 2 of the Shroomify project and provides a general description of the system architecture. It considers the requirements, use cases, and design decisions outlined in Deliverable 1. Section 2 has an Analysis Class Diagram that represents the major classes and how they relate to each other from our requirements analysis. This diagram establishes the foundation for the organization of the system internally and ensures that design is high in cohesion and low in coupling among its components. Section 3 presents a description of the Architectural Design of Shroomify. In this section, we define the chosen architectural pattern and discuss specific design decisions. Section 4 focused on Class Responsibility Collaboration (CRC) Cards. These cards capture the responsibilities and communications of each class within the system, detailing exactly how the individual components interact to satisfy the demands of the system.\\
+Collectively, these sections provide a solid foundation for understanding the structure and functionality of the Shroomify app.
 % End SubSection
 
 % End Section
@@ -97,7 +98,7 @@ This is Deliverable 2 of the Shroomify project and provides a general descriptio
 \section{Analysis Class Diagram}
 \label{sec:analysis_class_diagram}
 % Begin Section
-This section should provide an analysis class diagram for your application.
+% This section should provide an analysis class diagram for your application.
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{AnalysisClassDiagram.png}
@@ -563,9 +564,9 @@ This section should contain all of your CRC cards.
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
 		Knows Account Manager & Account Manager\\
-            Handles Login error events \\
-            Handles Edit Account error events \\
-            Handles View Account error events \\
+            Handles Login error events &  \\
+            Handles Edit Account error events & \\
+            Handles View Account error events &  \\
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
@@ -721,19 +722,56 @@ This section should contain all of your CRC cards.
 % Begin Section
 \begin{itemize}
 	\item Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
-	\begin{table}[ht]
-		\centering
-		\begin{tabular}{| l | l | l | l | l | l |}
-		\hline
-		\textbf{Team Member} &\textbf{Farid Bastoros} & \textbf{Neha Bhatla} & \textbf{Omar Alam} & \textbf{Luka Mahrt-Smith} & \textbf{Aidan Lao} \\
-		\hline
-		Task & Task & Task & Task & Task & Task \\
-		\hline
-		Signature & Signature & Signature & Signature & Signature & Signature\\
-		\hline
-		\end{tabular}
-		\caption{Division of Labour}
-	\end{table}
+	\item Farid Bastoros:
+	\begin{itemize} 
+		\item Section 1 - Reviewed and updated 1.1
+		\item Section 1 - Reviewed and updated 1.3
+		\item Section 4 - Did Half of the CRC Cards
+		\item Modified Deliverable 1 with Fixes including: 
+		\begin{itemize} 
+			\item Section 1.3 - Definitions, Acronyms, and Abbreviations
+			\item Section 1.4 - References
+			\item Section 4 - Highlight of Functional Requirements BE1
+			\item Section 5.1 - Look and Feel Requirements
+			\item Section 5.2 - Usability and Humanity Requirements
+			\item Section 5.3 - Performance Requirements
+			\item Section 5.4 - Operational and Environmental Requirements
+			\item Section 5.5 - Maintainability and Support Requirements
+			\item Section 5.6 - Security Requirements
+			\item Section 5.7 - Cultural and Political Requirements
+			\item Section 5.8 - Legal Requirements
+			\item Section 6 - Innovative Feature
+		\end{itemize}
+	\end{itemize}
+	\includegraphics[scale=0.09]{Farid Bastoros - Signature.jpeg}\\ 
+	\item Neha Bhatla:
+	\item \begin{itemize} \end{itemize}
+	\item Omar Alam:
+	\item \begin{itemize} \end{itemize}
+	\item Luka Mahrt-Smith:
+	\item \begin{itemize} \end{itemize}
+	\item Aidan Lao:
+	\item \begin{itemize} \end{itemize}
+	
+	
+	% \begin{table}[ht]
+	% 	\centering
+	% 	\begin{tabular}{| l | l | l | l | l | l |}
+	% 	\hline
+	% 	\textbf{Team Member} &\textbf{Farid Bastoros} & \textbf{Neha Bhatla} & \textbf{Omar Alam} & \textbf{Luka Mahrt-Smith} & \textbf{Aidan Lao} \\
+	% 	\hline
+	% 	Task & Section 4 - Did Half of the CRC Cards & Task & Task & Task & Task \\
+	% 	\hline
+	% 	Task & Section 1 - Reviewed and updated 1.1 and 1.3 & Task & Task & Task & Task \\
+	% 	\hline
+	% 	Task & Section 2 - Added Half of the classes to the Analyis Class Diagram  & Task & Task & Task & Task \\
+	% 	\hline
+	% 	Signature & Signature & Signature & Signature & Signature & Signature\\
+	% 	\hline
+	% 	\end{tabular}
+	% 	\caption{Division of Labour}
+	% \end{table}
+	
 \end{itemize}
 % End Section
 
