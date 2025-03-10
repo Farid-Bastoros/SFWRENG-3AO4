@@ -1,4 +1,4 @@
-\documentclass[]{article}
+\documentclass{article}
 
 % Imported Packages
 %------------------------------------------------------------------------------
@@ -21,9 +21,9 @@
 % \documentclass{article}
 \usepackage{xcolor}
 \usepackage[normalem]{ulem}  % Load ulem package for \sout{} 
-
-\bibliographystyle{ieeetr}  % Use IEEE-style numbering
-
+\usepackage{natbib}
+% \bibliographystyle{ieeetr}  % Use IEEE-style numbering
+\bibliographystyle{plain}
 %------------------------------------------------------------------------------
 
 % Header and Footer
@@ -105,29 +105,71 @@ If the user chooses to accept the mushroom identification outputted by the appli
 
 To use the application the user is required to create an account so that the application can create a profile for the user to store their previous identifications and preferences. The user will also be able to access the application without creating an account, but the application will not store any of the user's data between app uses.
 % End SubSection
-
+\clearpage
 \subsection{Definitions, Acronyms, and Abbreviations}
 \label{sub:definitions_acronyms_and_abbreviations}
 % Begin SubSection
 \begin{itemize}
     \item CNN - \textbf{Convolutional Neural Network}: \textcolor{red}{A type of deep learning model used in image processing and computer vision tasks. It is essential for our app{}’s image-based mushroom identification.}
-    \item NLP - \textbf{Natural Language Processing}: \textcolor{red}{A field of AI that helps computers understand and process human language. It is useful in our app for analyzing text-based mushroom descriptions.}
+    \item NLP - \textbf{Natural Language Processing}: \textcolor{red}{A field of \textbf{AI} that helps computers understand and process human language. It is useful in our app for analyzing text-based mushroom descriptions.}
     \item API - \textbf{Application Programming Interface}: \textcolor{red}{A set of protocols and tools that allow different software applications to communicate. Our app uses APIs to interact with external databases and services, such as image recognition models and recipe sources.}
     \item GUI - \textbf{Graphical User Interface}: \textcolor{red}{The visual interface through which users interact with the app. Our app provides an intuitive GUI to ensure smooth user experience.}
     \item VR - \textbf{Virtual Reality}: \textcolor{red}{A technology that creates an immersive digital environment. While not a core feature of our app, VR could be used for educational or training purposes related to mushroom identification.}
     \item AR - \textbf{Augmented Reality}: \textcolor{red}{A technology that overlays digital information onto the real world. Future enhancements of our app could incorporate AR to provide real-time mushroom identification in the field.}
-    \item GPS - \textbf{Global Positioning System}: \textcolor{red}{A navigation system that provides location data. Our app can use GPS to tag the locations where users find mushrooms, helping track collection spots.}
+    \item GPS - \textbf{Global Positioning System}: \textcolor{red}{A navigation system that provides location data. Our app can use \textbf{GPS} to tag the locations where users find mushrooms, helping track collection spots.}
     \item BE - \textbf{Business Event}: \textcolor{red}{A significant occurrence that affects business processes. In our app, a business event could be a user identifying a mushroom, saving it, or sharing it with the community.}
     \item VP - \textbf{Viewpoint}: \textcolor{red}{A perspective from which system requirements and design are considered. Different viewpoints in our project include those of regular users, researchers, and foragers.}
     \item UI - \textbf{User Interface}: \textcolor{red}{The design and layout of the app that enables user interaction. Our app ensures a clean UI to enhance usability.}
     \item UX - \textbf{User Experience}: \textcolor{red}{The overall experience users have while interacting with the app, including ease of use and satisfaction. Our app focuses on optimizing UX by providing seamless navigation, accessibility, and engaging features.}
+	\item \textcolor{red}{RMSE - \textbf{Root Mean Square Error}: A statistical measure used to evaluate the accuracy of predictive models by calculating the square root of the average squared differences between predicted and actual values. In our app, RMSE can be used to assess the accuracy of the mushroom recognition model.}
+	\item \textcolor{red}{AI - \textbf{Artificial Intelligence}: The field of computer science focused on creating systems that can perform tasks requiring human intelligence, such as learning, reasoning, and problem-solving. Our app uses AI for mushroom identification and classification.}
+
 \end{itemize}
 
 % End SubSection
 
 \subsection{References}
 \label{sub:references}
-\bibliography{references} 
+\begingroup
+\color{red}
+\begin{enumerate}
+    \item J. Wong, “The Importance Of Consistency In Branding,” \textit{Forbes}, Dec. 30, 2024. Available: \url{https://www.forbes.com/councils/forbescommunicationscouncil/2024/12/30/the-importance-of-consistency-in-branding/}
+    \item imsincorporation, “The Power of Minimalist Design: Why Less Is More - imsincorporation,” \textit{imsincorporation}, Dec. 08, 2024. \url{https://imsincorporation.com/the-power-of-minimalist-design-why-less-is-more/}
+    \item “Which Mode is Right for Your App? Light, Dark, or Both?,” \textit{Thecalda.com}, 2024. \url{https://www.thecalda.com/media/which-mode-is-right-for-your-app-light-dark-or-both} (accessed Mar. 09, 2025).
+    \item Battle for Blindness, “Fitness Fun: Safe and Effective Exercises for Visually Impaired Girls,” \textit{Battle for Blindness}, Jan. 08, 2025. \url{https://battleforblindness.org/empowering-vision-a-guide-to-digital-accessibility-for-the-visually-challenged/} (accessed Mar. 09, 2025).
+    \item ISO - International Organization for Standardization, “ISO 9241-11:2018,” \textit{ISO}, 2018. \url{https://www.iso.org/standard/63500.html}
+    \item “Haptic Feedback in User Interfaces,” \textit{Encyclopedia of Multimedia}, pp. 278–279, Jan. 2008, doi: \url{https://doi.org/10.1007/978-0-387-78414-4_332}.
+    \item “Design Best Practices for Left (and Right) Handed Users,” \textit{Excelliscorp.com}, 2023. \url{https://www.excelliscorp.com/blog/left-handed-usability-design-best-practices} (accessed Mar. 09, 2025).
+    \item A. Crangasu, “UI Localization Best Practices: Improve User Experience,” \textit{Localization Services by BLEND}, Jul. 18, 2023. \url{https://www.getblend.com/blog/ui-localization-best-practices/}
+    \item World Wide Web Consortium, “Web Content Accessibility Guidelines (WCAG) Overview,” \textit{Web Accessibility Initiative (WAI)}, Dec. 12, 2024. \url{https://www.w3.org/WAI/standards-guidelines/wcag/}
+    \item w3c\_wai, “Home,” \textit{Web Accessibility Initiative (WAI)}, 2019. \url{https://www.w3.org/WAI/}
+    \item Colour Blind Awareness, “About Colour Blindness,” \textit{Colour Blind Awareness}, 2022. \url{https://www.colourblindawareness.org/colour-blindness/}
+    \item Sato Kenta, “The Impact of API Response Time on Performance: What You Need to Know,” \textit{DEV Community}, May 16, 2024. \url{https://dev.to/satokenta/the-impact-of-api-response-time-on-performance-what-you-need-to-know-24bd} (accessed Mar. 09, 2025).
+    \item SitePoint Sponsors, “File Uploading Necessities: Speed, Reliability, and Security — SitePoint,” \textit{Sitepoint.com}, Oct. 03, 2022. \url{https://www.sitepoint.com/file-uploading-necessities-speed-reliability-security/} (accessed Mar. 09, 2025).
+    \item “Define reliability based on user-experience goals,” \textit{Google Cloud}, 2024. \url{https://cloud.google.com/architecture/framework/reliability/define-reliability-based-on-user-experience-goals} (accessed Mar. 09, 2025).
+    \item “Performance and capacity management - AWS Cloud Adoption Framework: Operations Perspective,” \textit{docs.aws.amazon.com}. \url{https://docs.aws.amazon.com/whitepapers/latest/aws-caf-operations-perspective/performance-and-capacity-management.html}
+    \item “Document Version Control: Examples and Best Practices,” \textit{PM Study Circle}, Aug. 27, 2023. \url{https://pmstudycircle.com/document-version-control/}
+    \item R. Chandra, “Top 10 Image Recognition APIs in 2025,” \textit{Daffodilsw.com}, Jan. 13, 2025. \url{https://insights.daffodilsw.com/blog/top-10-image-recognization-apis-for-app-development} (accessed Mar. 09, 2025).
+    \item “Android 9 Compatibility Definition,” \textit{Android Open Source Project}, 2020. \url{https://source.android.com/docs/compatibility/9/android-9-cdd} (accessed Mar. 09, 2025).
+    \item “Provide information for Google Play’s Data safety section - Play Console Help,” \textit{support.google.com}. \url{https://support.google.com/googleplay/android-developer/answer/10787469?hl=en}
+    \item C. S. Writer, “The Importance of Software Updates,” \textit{Catalyit.com}, 2024, doi: \url{https://doi.org/106499424/1738195693377}.
+    \item “Privacy Policies for Mobile Apps,” \textit{Privacy Policies}. \url{https://www.privacypolicies.com/blog/mobile-apps-privacy-policy/}
+    \item “Building inclusive apps for diverse user populations,” \textit{moldstud.com}. \url{https://moldstud.com/articles/p-building-inclusive-apps-for-diverse-user-populations}
+    \item “International Wildlife Law: Understanding and Enhancing Its Role in Conservation,” \textit{Nereus Program - The Nippon Foundation}. \url{https://nereusprogram.org/works/international-wildlife-law-understanding-and-enhancing-its-role-in-conservation/}
+    \item GDPR, “General Data Protection Regulation (GDPR),” \textit{General Data Protection Regulation (GDPR)}, 2018. \url{https://gdpr-info.eu}
+    \item Office of the Privacy Commissioner of Canada, “The Personal Information Protection and Electronic Documents Act (PIPEDA) - Office of the Privacy Commissioner of Canada,” \textit{Office of the Privacy Commissioner of Canada}, Dec. 08, 2021. \url{https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/}
+    \item “ISO 13485 Compliance | Ethiobiomedical,” \textit{Ethiobiomedical | Ethiobiomedical is a platform created to provide detail regulatory requirements of medical products in different parts of the world}, Jan. 05, 2025. \url{https://www.ethiobiomedical.com/medical-device-regulatory-consultancy-services/global/iso-13485-compliance/} (accessed Mar. 10, 2025).
+    \item “OWASP Mobile Application Security,” \textit{Owasp.org}, 2025. \url{https://mas.owasp.org} (accessed Mar. 10, 2025).
+\end{enumerate}
+\endgroup
+% \begin{enumerate}
+% 	\item 
+% \end{enumerate}
+% \bibliography{references}
+% \bibliographystyle{ieeetr}
+% \bibliography{references}
+% \bibliography{references}
+% https://research-api.cbs.dk/ws/portalfiles/portal/66651668/chee_wee_tan_et_al_unravelling_the_relationship_between_response_time_and_user_experience_in_mobile_applications_acceptedversion.pdf
 
 
 \subsection{Overview}
@@ -316,22 +358,39 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\item Identify a mushroom. \\
 	\\
 	\textbf{Pre-condition}: User has the app opened and has completed initial app setup. 
+	% \textbf{VP1. User \#1}\\
 		\begin{enumerate}[{\bf VP1.}]
 			\item User \#1 \\
 				\textbf{Main Scenario:}
 				\begin{enumerate}[1.]
-					\item User taps the button to open the mushroom identification page.
-					\item The user presses the button to upload images.
-					\item The system displays all images stored in the phone gallery.
-					\item The user selects and confirms the desired macro and micro image of the mushroom.
-					\item The system confirms if the pictures are valid and usable.
-					\item The system uploads the image to the macro and micro image identifier expert and displays a checkmark to the user.
-					\item The user selects the option to fill out the form for the textual identification expert. 
-					\item The system displays the form to the user.
-					\item The user fills out the form with a description of the mushroom and GPS location.
-					\item The system verifies the form and uploads it to the textual identification expert.
-					\item User requests the identification process to begin.
-					\item Once a decision has been reached, the system displays the resulting identification and confidence probability.
+					% \item User taps the button to open the mushroom identification page.
+					% \item The user presses the button to upload images.
+					% \item The system displays all images stored in the phone gallery.
+					% \item The user selects and confirms the desired macro and micro image of the mushroom.
+					% \item The system confirms if the pictures are valid and usable.
+					% \item The system uploads the image to the macro and micro image identifier expert and displays a checkmark to the user.
+					% \item The user selects the option to fill out the form for the textual identification expert. 
+					% \item The system displays the form to the user.
+					% \item The user fills out the form with a description of the mushroom and GPS location.
+					% \item The system verifies the form and uploads it to the textual identification expert.
+					% \item User requests the identification process to begin.
+					% \item Once a decision has been reached, the system displays the resulting identification and confidence probability.
+					
+					\begingroup
+					\color{red}
+					\item The user accesses the \textbf{Mushroom Identification} page.  
+					\item The user selects the option to \textbf{upload images} for identification.  
+					\item The system displays all available images from the device’s gallery.  
+					\item The user selects and confirms the \textbf{macro} (overall appearance) and \textbf{micro} (detailed features) images of the mushroom.  
+					\item The system verifies whether the selected images are valid and usable.  
+					\item If valid, the system uploads the images to the \textbf{Macro \& Micro Image Identification Expert} and displays a confirmation checkmark.  
+					\item The user selects the option to provide additional \textbf{textual information} for identification.  
+					\item The system presents a structured \textbf{identification form}.  
+					\item The user inputs a \textbf{description} of the mushroom along with its \textbf{GPS location}.  
+					\item The system verifies the submitted information and uploads it to the \textbf{Textual Identification Expert}.  
+					\item The user initiates the \textbf{mushroom identification process}.  
+    				\item final decision is reached, the system displays the \textbf{identification result} along with the \textbf{confidence probability}.  
+					\endgroup
 				\end{enumerate}
 			\item External Provider\\
 				\begin{enumerate}[1.]
@@ -345,13 +404,15 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 					\item Once the decision forum reaches a final decision, the system sends the results to the client.
 				\end{enumerate}
 			\item Marketing\\
-				\textcolor{red}{N/A}
+				% \textcolor{red}{N/A}
+				N/A
 			\item Mycologist\\
 				\begin{enumerate}[1.]
 					\item Mycologist wants to ensure an overall decision system accuracy rate.
 				\end{enumerate}
 			\item Culinary Expert\\
-				\textcolor{red}{N/A}
+				% \textcolor{red}{N/A}
+				N/A
 		\end{enumerate}
 		
 		\vspace{0.2cm}
@@ -359,27 +420,51 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 		\vspace{0.1cm}\\
 		{\bf Global Scenario:}\\
 		\begin{enumerate}[1.]
-			\item User taps the button to open the mushroom identification page.
-			\item The user presses the button to upload images.
-			\item The system displays all images stored in the phone gallery.
-			\item The user selects and confirms the desired macro and micro image of the mushroom.
-			\item The system confirms if the pictures are valid and usable.
-			\item The system uploads the image to the macro and micro image identifier expert.
-			\item External provider system receives an image upload request.
-			\item External provider system begins transferring images for the image based experts.
-			\item External provider system sends back upload complete and successful message to client.
-			\item The system displays a checkmark to the user confirming success.
-			\item The user selects the option to fill out the form for the textual identification expert. 
-			\item The system displays the form to the user.
-			\item The user fills out the form with a description of the mushroom and GPS location.
-			\item The system verifies the form and uploads it to the textual identification expert.
-			\item External provider system recieves a completed form to store.
-			\item External provider systems sends a success message to client.
-			\item User requests the identification process to begin.
-			\item External provider system receives a request to start identification process.
-			\item External provider system validates inputs provided and starts the identification process.
-			\item Identification results are further validated based on heuristics provided by Mycologist.
-			\item Once the decision forum reaches a final decision, the result is sent to the client.
+			% \item User taps the button to open the mushroom identification page.
+			% \item The user presses the button to upload images.
+			% \item The system displays all images stored in the phone gallery.
+			% \item The user selects and confirms the desired macro and micro image of the mushroom.
+			% \item The system confirms if the pictures are valid and usable.
+			% \item The system uploads the image to the macro and micro image identifier expert.
+			% \item External provider system receives an image upload request.
+			% \item External provider system begins transferring images for the image based experts.
+			% \item External provider system sends back upload complete and successful message to client.
+			% \item The system displays a checkmark to the user confirming success.
+			% \item The user selects the option to fill out the form for the textual identification expert. 
+			% \item The system displays the form to the user.
+			% \item The user fills out the form with a description of the mushroom and GPS location.
+			% \item The system verifies the form and uploads it to the textual identification expert.
+			% \item External provider system recieves a completed form to store.
+			% \item External provider systems sends a success message to client.
+			% \item User requests the identification process to begin.
+			% \item External provider system receives a request to start identification process.
+			% \item External provider system validates inputs provided and starts the identification process.
+			% \item Identification results are further validated based on heuristics provided by Mycologist.
+			% \item Once the decision forum reaches a final decision, the result is sent to the client.
+			\begingroup
+			\color{red}
+			\item The user accesses the \textbf{Mushroom Identification} page.  
+			\item The user selects the option to \textbf{upload images} for identification.  
+			\item The system displays all available images from the device’s gallery.  
+			\item The user selects and confirms the \textbf{macro} (overall appearance) and \textbf{micro} (detailed features) images of the mushroom.  
+			\item The system verifies the selected images for validity and usability.  
+			\item If valid, the system uploads the images to the \textbf{Macro \& Micro Image Identification Expert}.  
+			\item The \textbf{External Provider System} receives the image upload request.  
+			\item The external system processes and transfers the images for expert analysis.  
+			\item Upon successful upload, the external system sends a confirmation message to the client.  
+			\item The system displays a confirmation indicator to the user.
+			\item The user selects the option to provide additional \textbf{textual information} for identification.  
+			\item The system presents a structured \textbf{identification form}.  
+			\item The user inputs a \textbf{description} of the mushroom along with its \textbf{GPS location}.  
+			\item The system verifies the submitted information and uploads it to the \textbf{Textual Identification Expert}.  
+			\item The \textbf{External Provider System} receives and stores the submitted form.  
+			\item A confirmation message is sent to the user upon successful submission.
+			\item The user initiates the \textbf{mushroom identification process}.  
+			\item The \textbf{External Provider System} receives the request and begins processing.  
+			\item The system validates the provided images and textual inputs before proceeding.  
+			\item Identification results undergo additional validation based on heuristics provided by a \textbf{Mycologist}.  
+			\item Once a final decision is reached, the system sends the \textbf{identification results} to the user along side with the confidence probability.  
+			\endgroup
 		\end{enumerate}
 	\item Save Mushroom to Profile \#2\\
 	    \textbf{Pre-condition:} The user is logged in and viewing a mushroom identification result.\\[1mm]
@@ -393,7 +478,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	        \item[4.] System updates the user's profile with the mushroom information and displays a confirmation message.
 	    \end{enumerate}
 	    \textbf{Secondary Scenario:}
-	    {\color{red}
+	    {
+			% \color{red}
 	    \begin{enumerate}
 	        \item[2i.] The system fails to update the user profile with the mushroom information.
 	        \begin{enumerate}
@@ -408,22 +494,25 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	    \end{enumerate}
 	    }
 	    \textbf{VP2. External Services (Database/API) \#2}
-	    {\color{red}
+	    {
+			% \color{red}
 	        \begin{enumerate}
 	        \item[3i.] Database error message is received, logged, and troubleshooted.
 	    \end{enumerate}
 	    }
 	    \textbf{VP3. Customer Support \#3}
-	        {\color{red}
+	        {
+				% \color{red}
 	        \begin{enumerate}
 	        \item[2i.] System should prompt an error page with suggestions to retry the operation or provide a link to contact customer support.\\
 	    \end{enumerate}
 	    }
 	    \textbf{VP4. Marketing \#4}\\
-	    NA\\[1mm]
+	    \hspace{1in}{N/A}\\[1mm]
 	    
 	    \textbf{VP5. Mushroom Expert \#5}\\
-	    NA\\[1mm]
+	    % N/A\\[1mm]
+		\hspace{1.5cm}     N/A \\
 	    
 	    \textbf{Global Scenario:}\\
 	    \textbf{Pre-condition:} The user is logged in and a mushroom identification result is available.\\[1mm]
@@ -435,7 +524,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	        \item[4.] System updates the user's profile with the mushroom information and displays a confirmation message.
 	    \end{enumerate}
 	    \textbf{Secondary Scenario:}
-	    {\color{red}
+	    {
+			% \color{red}
 	    \begin{enumerate}
 	        \item[2i. ] The system fails to update the user profile with the mushroom information.
 	        \begin{enumerate}
@@ -822,15 +912,15 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 % Begin SubSubSection
 \begin{enumerate}[{LF-A}1. ]
 	\item The system shall maintain a consistent theme and branding across all interfaces.\\
-	\textbf{Rationale:} The system shall use a color scheme, fonts, and icons that align with the app’s theme to ensure visual consistency and reinforce brand identity.
+	\textbf{Rationale:} The system shall use a color scheme, fonts, and icons that align with the app’s theme to ensure visual consistency and reinforce brand identity. \textcolor{red}{[1]}
 	\item The system shall provide a minimalist and uncluttered interface to enhance user experience.\\
-	\textbf{Rationale:} The design should avoid excessive elements, providing a clean layout that allows users to focus on identification and information retrieval without distractions.
+	\textbf{Rationale:} The design should avoid excessive elements, providing a clean layout that allows users to focus on identification and information retrieval without distractions.\textcolor{red}{[2]}
 	\item The system shall ensure clear visual differentiation of elements for improved usability.\\
 	\textbf{Rationale:} Buttons, menus, and icons must have distinct shapes, sizes, or colors to improve accessibility and prevent user confusion.
 	\item The system shall support high-quality image display without distortion or loss of detail.\\
 	\textbf{Rationale:} Since users rely on macro and micro photos for identification, the app must support high-resolution image uploads and clear previews.
 	\item The system shall offer both dark and light mode options for user preference and accessibility.\\
-	\textbf{Rationale:} The system should offer both dark and light modes to accommodate different user preferences and enhance readability in various lighting conditions.
+	\textbf{Rationale:} The system should offer both dark and light modes to accommodate different user preferences and enhance readability in various lighting conditions.\textcolor{red}{[3]}
 \end{enumerate}
 % End SubSubSection
 
@@ -839,11 +929,11 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 % Begin SubSubSection
 \begin{enumerate}[{LF-S}1. ]
 	\item The system shall implement a responsive design to ensure compatibility across various devices.\\
-	\textbf{Rationale:} The system must adjust seamlessly across mobile phones without loss of functionality or readability.
+	\textbf{Rationale:} \textcolor{red}{Device screens vary in shape and size, so the application should be designed to adapt to all screen dimensions.}
 	\item The system shall provide intuitive navigation and a consistent layout for a seamless user experience.\\
 	\textbf{Rationale:} Menus, buttons, and features should be positioned consistently to help users quickly understand the interface and navigate efficiently.
 	\item The system shall support accessibility features for users with visual impairments to enhance inclusivity.\\
-	\textbf{Rationale:} The system should follow accessibility standards, including scalable text, color contrast adjustments, and screen reader compatibility.
+	\textbf{Rationale:} The system should follow accessibility standards, including scalable text, color contrast adjustments, and screen reader compatibility.\textcolor{red}{[4]}
 	\item The system shall display loading indicators and feedback messages to inform users of system status.\\
 	\textbf{Rationale:} Users must receive immediate feedback when uploading images, processing identifications, or sharing posts to ensure smooth interaction.
 	\item The system shall incorporate smooth animations and transitions to improve visual appeal and usability.\\
@@ -861,10 +951,13 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:ease_of_use_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-EOU}1. ]
-	\item The system shall adhere to usability standards, such as ISO 9241-11, to ensure that users can easily navigate and interact with the app. \cite{ISO_9241-11}\\
+	\item \textcolor{red}{The system should be operable with just one hand.}\\
+	\textbf{Rationale:} \textcolor{red}{Users often find themselves in situations where only one hand is free. Ensuring one-handed usability allows them to interact with the app even in those moments.}
+	\item The system shall adhere to usability standards, such as ISO 9241-11, to ensure that users can easily navigate and interact with the app. \textcolor{red}{[5]}\\
 	\textbf{Rationale:} Adhering to established usability standards like ISO 9241-11 ensures that the app is user-friendly and accessible to a wide range of users, including those with varying levels of technical expertise.
 	\item The system shall provide aural and haptic feedback to the user when they interact with the user interface.\\
-	\textbf{Rationale:} Providing aural and haptic feedback enhances the interactivity of the user interface by giving users immediate confirmation of their actions. This reduces uncertainty and improves accessibility, especially for users with visual impairments.
+	\textbf{Rationale:} \textcolor{red}{Aural and haptic feedback enhance user interaction by providing immediate confirmation of actions. This helps reduce uncertainty, making the interface more intuitive and responsive. Additionally, it improves accessibility for users with visual impairments by offering alternative sensory cues for navigation and interaction.[6]}\\
+	% \textbf{Rationale:} Providing aural and haptic feedback enhances the interactivity of the user interface by giving users immediate confirmation of their actions. This reduces uncertainty and improves accessibility, especially for users with visual impairments.
 \end{enumerate}
 % End SubSubSection
 
@@ -872,14 +965,20 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:personalization_and_internationalization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-PI}1. ]
-	\item The client app shall utilize localization features of the chosen development framework to allow easy translation of UI strings.\\
-	\textbf{Rationale:} Effective localization enables the app to seamlessly adapt to various languages and regional formats, thereby enhancing usability and broadening its appeal to international markets.
-	\item The client app shall be designed in a way that easily allows transitioning between languages that read from left-to-right and right-to-left.\\
-	\textbf{Rationale:} If the app's user interface is designed with reversibility in mind, it will make localization and internationalization much easier. This is crucial
-	since languages read in different directions globally and the UI will have to be significantly overhauled for each language type if it is not considered in early development. 
-	\item The account manager shall allow users to create accounts with names in different languages. Passwords will be required to be alphanumeric in English.\\
-	\textbf{Rationale:} Users may not appreciate their account info being locked to a single language. It is preferable to allow them to create their account using their native language.
-	This requirement should also assist with international law requirements. Since passwords are crucial for security, they are required to be English alphanumeric.
+	\item \textcolor{red} {The system should be designed for easy use by both right-handed and left-handed users.}\\
+	\textbf{Rationale:} \textcolor{red}{Users have personal preferences for using their phone with either hand, so the system should be comfortable regardless of hand choice. Additionally, there are situations where users may be unable to use a specific hand. If the application is optimized for only one hand, it may feel awkward and difficult to use in such cases.[7]}\\
+	\item \textcolor{red} {The system should remain functional at lower device brightness levels.}\\
+	\textbf{Rationale:} \textcolor{red} {Users do not always keep their device at full brightness. If the system becomes difficult to use in low-brightness settings, it may lead to a frustrating user experience.}\\
+	\item The \textcolor{red} {system} shall utilize localization features of the chosen development framework to allow easy translation of UI strings.\\
+	\textbf{Rationale:} \textcolor{red} {Proper localization allows the application to adapt seamlessly to different languages and regional formats. This enhances usability for a diverse user base and increases its appeal in international markets.[8]}\\
+	% \item The client app shall be designed in a way that easily allows transitioning between languages that read from left-to-right and right-to-left.\\
+	% \textbf{Rationale:} If the app's user interface is designed with reversibility in mind, it will make localization and internationalization much easier. This is crucial
+	% since languages read in different directions globally and the UI will have to be significantly overhauled for each language type if it is not considered in early development. 
+	% \item The system shall allow users to create accounts with names in different languages. Passwords will be required to be alphanumeric in English.\\
+	\item \textcolor{red} {The account manager shall allow users to create accounts with names in different languages. Passwords, however, must be alphanumeric and in English.}\\
+	\textbf{Rationale:} \textcolor{red} {Users may prefer to create their accounts using their native language rather than being restricted to a single language. This approach also supports compliance with international laws. However, since passwords are critical for security, they must be in English and alphanumeric to ensure consistency and safety.}\\
+	% Users may not appreciate their account info being locked to a single language. It is preferable to allow them to create their account using their native language.
+	% This requirement should also assist with international law requirements. Since passwords are crucial for security, they are required to be English alphanumeric.
 \end{enumerate}
 % End SubSubSection
 
@@ -890,7 +989,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\item The application shall be designed in line with their respective platform(s) guidelines (e.g Android, iOS) to feel familiar to other apps on the same platform.\\
 	\textbf{Rationale:} Google and Apple provide design guidelines and UI toolkits to make apps on their platforms feel familiar. The development should utilize these toolkits
 	and technologies to create a familiar experience which should help reduce the learning time required for the application.
-	\item The application shall provide a tutorial to the user on the first time usage of the application. The user can start the tutorial at anytime after the first usage if required.\\
+	\item The \textcolor{red}{system} shall provide a tutorial to the user on the first time usage of the application. The user can start the tutorial at anytime after the first usage if required.\\
 	\textbf{Rationale:} Modern applications often provide tutorials on how to use the user interface to perform specific actions to familiarize the user with the functionality of the app.
 \end{enumerate}
 % End SubSubSection
@@ -901,6 +1000,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \begin{enumerate}[{UH-UP}1. ]
 	\item The app shall offer polite, context-aware hints to guide users through the interface when assistance is needed.\\
 	\textbf{Rationale:} Framing hints in a clear and courteous manner improves understandability and ensures that users feel respected and supported. This approach not only reduces the learning curve for new users but also encourages a positive interaction with the application.
+	\item \textcolor {red}{Any icons used in the system should be easily recognizable by users or simple to learn.}\\
+	\textbf{Rationale:} \textcolor {red}{Icons that are universally understood or quick to grasp will help users more easily comprehend the functionality of the system.}
 \end{enumerate}
 % End SubSubSection
 
@@ -908,13 +1009,17 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:accessibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-A}1. ]
-	\item The app shall adhere to accessibility guidelines provided by frameworks such as WCAG (Web Content Accessibility Guidelines) and W3C Web Accessibility Interface (WAI). \cite{(WAI)}\\
+	\item The app shall adhere to accessibility guidelines provided by frameworks such as WCAG (Web Content Accessibility Guidelines) and W3C Web Accessibility Interface (WAI). \textcolor{red}{[9][10]}\\
 	\textbf{Rationale:} Frameworks for accessiblity offer a comprehensive checklist and guide for creating accessible apps. They also ensure a uniform accessiblity experience across multiple applications.
-	\item The user interface of the client app shall include a high-contrast mode and avoid colors to convey information.\\
-	\textbf{Rationale:} High contrast user interface options help users better distinguish text from the background. Avoiding colors as the primary means to communicate information is helpful for color blind individuals
-	who may not be able to perceive such information.
-	\item The user interface of the application will be accessible using screen readers.\\
-	\textbf{Rationale:} Screen readers assist users with visual impairments use the application using voice prompts and reading.
+	% \item The user interface of the client app shall include a high-contrast mode and avoid colors to convey information.\\
+	% \textbf{Rationale:} High contrast user interface options help users better distinguish text from the background. Avoiding colors as the primary means to communicate information is helpful for color blind individuals
+	% who may not be able to perceive such information.
+	% \item The user interface of the application will be accessible using screen readers.\\
+	% \textbf{Rationale:} Screen readers assist users with visual impairments use the application using voice prompts and reading.
+	\item \textcolor{red}{The system should be compatible with accessibility screen readers.}\\
+	\textbf{Rationale:} \textcolor{red}{Users with vision or comprehension disabilities often rely on screen readers to navigate devices and applications. To ensure the system is accessible to these users, it must be designed to work well with common screen readers.}\\
+	\item \textcolor{red}{The system should be accessible to users with color blindness.}\\
+	\textbf{Rationale:} \textcolor{red}{With approximately 300 million people affected by color blindness, it's important to design the interface in a way that ensures these users are not excluded from the experience.[11]}\\
 \end{enumerate}
 % End SubSubSection
 
@@ -929,10 +1034,9 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 % Begin SubSubSection
 \begin{enumerate}[{PR-SL}1. ]
 	\item The system's decision forum shall provide an identification of the mushroom in less than 15 seconds of the initiation of the process.\\
-	\textbf{Rationale:} User's expect modern applications to be responsive and fast. For every extra second that the detection takes, the concern of the application 
-	not responding rises.
+	\textbf{Rationale:} \textcolor{red}{User's expect modern applications to be responsive and fast. For every extra second that the detection takes, the concern of the application not responding rises and users are likely to abandon the interaction or log off the app as shown by research.[12]}
 	\item File uploads to the system's detector agents shall takes less than 45 seconds for a standard 720P PNG image on a 20 mb/s minimum connection speed.\\
-	\textbf{Rationale:} Ensuring a fast upload speed minimizes the delay before the image begins processing, thereby contributing to an overall responsive system. This requirement accounts for network variability while guaranteeing a smooth user experience by reducing user wait times.
+	\textbf{Rationale:} Ensuring a fast upload speed minimizes the delay before the image begins processing, thereby contributing to an overall responsive system. This requirement accounts for network variability while guaranteeing a smooth user experience by reducing user wait times.\textcolor{red}{[13]}
 
 \end{enumerate}
 % End SubSubSection
@@ -949,10 +1053,13 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:precision_or_accuracy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-PA}1. ]
-	\item The accuracy of the macro and micro image detectors used shall be measured to be greater than 85\% indepdently when using the RMSE loss function.\\
+	\item The accuracy of the macro and micro image detectors used shall be measured to be greater than 85\% indepdently when using the \textcolor{red}{\textbf{RMSE}} loss function.\\
 	\textbf{Rationale:} Ensuring that the macro and micro image detectors each achieve an accuracy greater than 85\% is vital, as it minimizes the chance of misclassification at the individual module level. This level of performance helps prevent error propagation when their outputs are later integrated in the decision forum.
-	\item The final decision of the forum shall be accurate with a precision of greater than 90\% when using the RMSE loss function.\\
-	\textbf{Rationale:} Requiring the final decision of the forum to be accurate with a precision greater than 90\% is crucial for building user trust and ensuring reliable mushroom identifications. This higher threshold compensates for any minor discrepancies from the individual detectors, thereby delivering a more robust and dependable overall result.
+	\item The final decision of the forum shall be accurate with a precision of greater than 90\% when using the \textcolor{red}{\textbf{RMSE}} loss function.\\
+	% \textbf{Rationale:} Requiring the final decision of the forum to be accurate with a precision greater than 90\% is crucial for building user trust and ensuring reliable mushroom identifications. This higher threshold compensates for any minor discrepancies from the individual detectors, thereby delivering a more robust and dependable overall result.
+	\textbf{Rationale:} \textcolor{red}{High identification accuracy is crucial for building user trust and ensuring reliable mushroom identifications. This higher threshold compensates for any minor discrepancies from the individual detectors, thereby delivering a more robust and dependable overall result.}
+	\item \textcolor{red}{The confidence score of each expert's prediction must be displayed alongside the result.}\\
+	\textbf{Rationale:} \textcolor{red}{As multiple experts contribute their input, some may have higher confidence in their predictions than others. Displaying these confidence scores enables users to make more informed decisions rather than blindly relying on the system.}\\
 \end{enumerate}
 % End SubSubSection
 
@@ -960,6 +1067,10 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-RA}1. ]
+	\item \textcolor{red}{The system must automatically detect external API failures to prioritize internal processing and inform users of any limited functionality.}\\
+	\textbf{Rationale:} \textcolor{red}{Relying on third-party APIs can create potential failure points. A fallback mechanism ensures that essential features, like image recognition and classification, continue to function while users receive clear notifications instead of vague error messages. This improves system resilience and prevents a total failure if an API becomes slow or unresponsive. [14]}\\
+	\item \textcolor{red}{The system and its detection agents should be capable of processing 160 user requests per hour without failure.}\\
+	\textbf{Rationale:} \textcolor{red}{The goal of handling 160 requests per hour is based on the assumption of two primary servers with a distributed load balancing system. Each server should respond to requests within 45 seconds, which allows for 80 requests per hour per server, totaling 160 requests per hour for the entire system. AWS services can support this capacity, ensuring consistent performance, with the system load expected to decrease during maintenance periods. [15]}
 	\item The system shall notify users 1 week in advance if there are any expected maintainence outages in the future.\\
 	\textbf{Rationale:} Users may plan foraging trips around being able to use the app and should therefore be informed in advance if any application maintainence outages are expected to allow them to make alternative plans. 
 	\item The system shall have a backup server available to switch over to when maintainence is being performed on the main server.\\
@@ -972,7 +1083,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-RFT}1. ]
-	\item N/A
+	\item \textcolor{red}{The system must recognize invalid, corrupted, or unsupported image uploads and provide users with helpful instructions.}\\
+	\textbf{Rationale:} \textcolor{red}{Users might upload incorrect file types, large images, or corrupted files, which can cause identification failures.}\\
 \end{enumerate}
 % End SubSubSection
 
@@ -980,9 +1092,11 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:capacity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-C}1. ]
-	\item The system and the corresponding detection agents should be able to serve 160 user requests per hour without system failure.\\
-	\textbf{Rationale:} The requirement of 160 user requests per hour stems from there being an assumption of 2 main servers with a distributed load balancing system in place. Each server should be able to respond
-	to a request within 45 seconds of recieving it which yields $\frac{3600}{45} = 80$ requests per hour per server and 160 requests per 2 hours for the whole service. This is expected to drop when the system is under maintainence.
+	\item \textcolor{red}{The system must be capable of storing at least 0.5 million images, each averaging 10MB in size.}\\
+	\textbf{Rationale:} \textcolor{red}{As user activity increases, a scalable storage solution is crucial to ensure that historical searches remain accessible. Cloud storage options like AWS S3 or Google Cloud Storage should be considered for their cost-effective scalability, which can support growth without sacrificing performance.}\\
+	% \item The system and the corresponding detection agents should be able to serve 160 user requests per hour without system failure.\\
+	% \textbf{Rationale:} The requirement of 160 user requests per hour stems from there being an assumption of 2 main servers with a distributed load balancing system in place. Each server should be able to respond
+	% to a request within 45 seconds of recieving it which yields $\frac{3600}{45} = 80$ requests per hour per server and 160 requests per 2 hours for the whole service. This is expected to drop when the system is under maintainence.
 \end{enumerate}
 % End SubSubSection
 
@@ -992,6 +1106,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \begin{enumerate}[{PR-SE}1. ]
 	\item The system shall be extensible with the capability to add more detection agents and experts to the decision forum without any major modifications required to the decision forum.\\
 	\textbf{Rationale:} Being open for extension and closed for modification is one of the fundamental software design principles that needs to be adhered to for modular and clean code. 
+	\item \textcolor{red}{The system should be designed for multi-platform accessibility, enabling future deployment on both web and iOS platforms.}\\
+	\textbf{Rationale:} \textcolor{red}{While initially developed for Android, expanding to web and iOS platforms will enhance accessibility and reach a broader user base.}\\
 \end{enumerate}
 % End SubSubSection
 
@@ -999,7 +1115,10 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:longevity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-L}1. ]
-	\item N/A
+	\item \textcolor{red}{The system should be built to accommodate future improvements in \textbf{AI} models.}\\
+	\textbf{Rationale:} \textcolor{red}{As \textbf{AI} research progresses, more efficient architectures may emerge as industry standards. The system must be flexible enough to incorporate these advancements without needing significant changes to its architecture.}
+	\item \textcolor{red}{The source code and documentation should be organized with effective version control and clear guidelines for developers throughout the development phase.}\\
+	\textbf{Rationale:} \textcolor{red}{Well-maintained documentation and version control allow future developers to work with the system smoothly, reducing the risk of code issues and minimizing technical debt. [16]}\\
 \end{enumerate}
 % End SubSubSection
 
@@ -1012,10 +1131,11 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \subsubsection{Expected Physical Environment}
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
-\hspace{1.5cm}     N/A 
-%\begin{enumerate}[{OE-EPE}1. ]
-%	\item N/A
-%\end{enumerate}
+% \hspace{1.5cm}     N/A 
+\begin{enumerate}[{OE-EPE}1. ]
+	\item \textcolor{red}{The system should be optimized to perform well on mobile devices with limited hardware capabilities.}\\
+	\textbf{Rationale:} \textcolor{red}{Since many users may not have high-end smartphones, the application needs to be designed for devices with lower processing power, less RAM, and slower internet speeds. Implementing techniques such as model quantization can help ensure a seamless experience on these devices.}\\
+\end{enumerate}
 % End SubSubSection
 
 \subsubsection{Requirements for Interfacing with Adjacent Systems}
@@ -1023,9 +1143,11 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 % Begin SubSubSection
 \begin{enumerate}[{OE-IA}1. ]
 	\item The system must be able to send and receive data from image recognition APIs and external databases.\\
-	\textbf{Rationale:} Since the app relies on machine learning-based image recognition and species databases for mushroom identification, it must maintain seamless communication with these services for accurate results.
-	\item The system must be able to integrate with social media platforms for sharing.\\
-	\textbf{Rationale:}  Users must be able to share their identified mushrooms and findings directly through the app without needing manual uploads.
+	\textbf{Rationale:} Since the app relies on machine learning-based image recognition and species databases for mushroom identification, it must maintain seamless communication with these services for accurate results.\textcolor{red}{[17]}
+	% \item The system must be able to integrate with social media platforms for sharing.\\
+	% \textbf{Rationale:}  Users must be able to share their identified mushrooms and findings directly through the app without needing manual uploads.
+	\item \textcolor{red}{The system must be capable of integrating with popular social media platforms to enable seamless sharing of content.}\\
+	\textbf{Rationale:} \textcolor{red}{Users should have the ability to easily share their mushroom identifications and findings directly from the app to social media platforms such as Facebook, Twitter, or Instagram. This integration will allow users to effortlessly post their results without the need to manually upload images or data, enhancing user experience and promoting engagement with the app.}\\
 \end{enumerate}
 % End SubSubSection
 
@@ -1042,10 +1164,13 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:release_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE-R}1. ]
-	\item The app must be compatible with Android 8.0 or above.\\
-	\textbf{Rationale:} Ensuring compatibility with widely used operating system versions maximizes the number of potential users.
-	\item The app must function offline for basic identification features.\\
-	\textbf{Rationale:} Users may be in remote areas without internet access, so offline access to stored mushroom data and previous identifications is necessary.
+	\item The app must be compatible with Android 9.0 or above. \textcolor{red}{[18]}\\
+	% \textbf{Rationale:} Ensuring compatibility with widely used operating system versions maximizes the number of potential users.
+	\textbf{Rationale:} \textcolor{red}{Making the system compatible with older, but still commonly used, Android versions ensures greater accessibility. Android 9.0 supports modern \textbf{AI} and image processing features without compromising performance.}\\
+	% \item The app must function offline for basic identification features.\\
+	% \textbf{Rationale:} Users may be in remote areas without internet access, so offline access to stored mushroom data and previous identifications is necessary.
+	\item \textcolor{red}{The application must adhere to Google Play Store policies, including those related to data privacy and API usage.}\\
+	\textbf{Rationale:} \textcolor{red}{To ensure the app is accepted and stays available on the Play Store, it must follow Google’s developer guidelines for privacy, data handling, and API usage limits. Failure to comply with these guidelines may result in the app being removed from the store. [19]}\\
 \end{enumerate}
 % End SubSubSection
 
@@ -1060,7 +1185,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 % Begin SubSubSection
 \begin{enumerate}[{MS-M}1. ]
 	\item The system must provide quarterly software updates to patch bugs and improve the application.\\
-	\textbf{Rationale:} Quarterly updates will allow continuous improvement while simultaneously fixing any minor bugs or potential risk factors. Quarterly periods will ensure that the application is maintained while avoiding excessive notifications or interruptions that may frustrate users.
+	\textbf{Rationale:} Quarterly updates will allow continuous improvement while simultaneously fixing any minor bugs or potential risk factors. Quarterly periods will ensure that the application is maintained while avoiding excessive notifications or interruptions that may frustrate users. \textcolor{red}{[20]}
 \end{enumerate}
 % End SubSubSection
 
@@ -1072,6 +1197,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
     \textbf{Rationale: }Users must have immediate access to support resources for common issues such as unsuccessful image upload,   reducing dependency on external customer support and creating a more positive user experience.
 	\item The system must provide a dedicated feedback form for users to report issues or suggest improvements directly through the app. \\
     \textbf{Rationale:} A built-in feedback system allows users to share their experiences and helps developers prioritize updates and fixes.
+	\item \textcolor{red}{The system must include a support ticketing feature for users to report unresolved issues.}\\
+	\textbf{Rationale:} \textcolor{red}{Certain issues may need direct attention from our team. A support ticketing system enables users to report problems, ensuring that user-reported issues are prioritized for resolution.}\\
 \end{enumerate}
 % End SubSubSection
 
@@ -1079,8 +1206,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:adaptability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS-A}1. ]
-	\item The system must be compatible with the latest two major versions of Android and iOS operating systems. \\
-	\textbf{Rationale:} Ensuring compatibility with current operating systems maximizes accessibility and usability of the application for a wide range of users with varying devices.
+	\item The system must be compatible with the latest two major versions of Android operating system. \\
+	\textbf{Rationale:} Ensuring compatibility with current operating system maximizes accessibility and usability of the application for a wide range of users with varying devices.
 	\item The system must allow application updates to individual components without requiring a full app reinstall. \\
 	\textbf{Rationale:} Modular updates will simplify the process of adding new features or fixing bugs while reducing potential disruptions to the user experience.
 \end{enumerate}
@@ -1096,10 +1223,12 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AC}1. ]
-	\item The app must request user consent to access the device's camera, storage, and GPS (location) functionalities.\\
-	\textbf{Rationale:} To capture high-quality macro and micro images for mushroom identification, store user data (such as saved identifications), and utilize location data to improve identification accuracy, the app needs permission to access these device features.
-	\item The app must allow the user to access their account if and only if the login details provided are correct.\\
-	\textbf{Rationale:} This ensures that only registered users can view and manage their personal mushroom collections and identification history, protecting user accounts from unauthorized access.
+	\item \textcolor{red}{Users should be granted access to an account only if they enter the correct login credentials.}\\
+	\textbf{Rationale:} \textcolor{red}{This ensures that only authorized users can access their accounts and manage their personal mushroom collections and identification history. It also prevents the creation of "master accounts" or backdoors that could be used to gain unauthorized access, safeguarding user data from unauthorized viewers.}\\
+	\item The app must request user consent to access the device's camera, storage, and \textbf{GPS} (location) functionalities.\\
+	\textbf{Rationale:} \textcolor{red}{To capture high-quality macro and micro images for mushroom identification, store user data (such as saved identifications), and utilize location data to improve identification accuracy, the app needs permission to access these device features. It's important to obtain the user's consent before accessing the camera, so they are aware of which phone features the system is using.}
+	% \item The app must allow the user to access their account if and only if the login details provided are correct.\\
+	% \textbf{Rationale:} This ensures that only registered users can view and manage their personal mushroom collections and identification history, protecting user accounts from unauthorized access.
 \end{enumerate}
 % End SubSubSection
 
@@ -1109,6 +1238,8 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \begin{enumerate}[{SR-INT}1. ]
 	\item All user data—including images, textual descriptions, and account information—must be encrypted during transmission.\\
 	\textbf{Rationale:} Encryption safeguards the sensitive information of users from interception and tampering, ensuring the integrity of data exchanged between the app and external identification services.
+	\item \textcolor{red}{An account’s history or mushroom collection can only be modified if the user is logged into the account.}\\
+	\textbf{Rationale:} \textcolor{red}{Individuals who are not logged into a user’s account should not have the ability to alter any data related to that account.}\\
 \end{enumerate}
 % End SubSubSection
 
@@ -1119,7 +1250,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	\item The app must clearly inform users about the collection and use of their personal data (including images, location, and text inputs) and obtain their explicit consent.\\
 	\textbf{Rationale:} This transparency is required by app store policies and data protection regulations, ensuring users are aware of and agree to how their data will be used.
 	\item The app must provide users with a comprehensive and legally adequate privacy notice.\\
-	\textbf{Rationale:} A clear privacy notice builds trust with users and ensures compliance with legal obligations, such as those outlined in the Google Play Developer Distribution Agreement.
+	\textbf{Rationale:} A clear privacy notice builds trust with users and ensures compliance with legal obligations, such as those outlined in the Google Play Developer Distribution Agreement. \textcolor{red}{[21]}
 \end{enumerate}
 % End SubSubSection
 
@@ -1136,7 +1267,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-IM}1. ]
-	\item The system must validate and sanitize all user inputs, including image files and text data, to reject any unexpected or malicious content.\\
+	\item \textcolor{red}{The application should be protected against harmful or malicious input from users.}\\
 	\textbf{Rationale:} Proper input validation helps to prevent attacks such as SQL injection or other forms of code injection, ensuring that only valid and safe data is processed by the app.
 \end{enumerate}
 % End SubSubSection
@@ -1144,35 +1275,115 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 % End SubSection
 \subsection{Cultural and Political Requirements}
 \subsubsection{Cultural Requirements}
-\begin{itemize}
-    \item The app should support multiple languages to accommodate diverse users worldwide.
-    \item Provide culturally sensitive descriptions, avoiding offensive terminology when discussing mushroom edibility or toxicity.
-    \item Consider regional mushroom naming conventions to ensure inclusivity and avoid misidentification.
-    \item Allow users to customize their experience based on local mushroom species relevant to their region.
-\end{itemize}
+\begin{enumerate}[{CP-C}1. ]
+	% \item \textcolor{red}{The application should be protected against harmful or malicious input from users.}\\
+	% \textbf{Rationale:} Proper input validation helps to prevent attacks such as SQL injection or other forms of code injection, ensuring that only valid and safe data is processed by the app.
+	% \item The app should support multiple languages to accommodate diverse users worldwide.
+    % \item Provide culturally sensitive descriptions, avoiding offensive terminology when discussing mushroom edibility or toxicity.
+    % \item Consider regional mushroom naming conventions to ensure inclusivity and avoid misidentification.
+    % \item Allow users to customize their experience based on local mushroom species relevant to their region.
+
+	\item \textcolor{red}{The system shall provide culturally sensitive descriptions, avoiding offensive terminology when discussing mushroom edibility or toxicity.}\\
+	\textbf{Rationale:} \textcolor{red}{It is important to respect diverse cultures and beliefs, especially when dealing with topics like food safety. Using neutral, accurate language helps ensure that descriptions are inclusive and prevent offending users from different cultural backgrounds. [22]}\\
+
+	\item \textcolor{red}{The system shall consider regional mushroom naming conventions to ensure inclusivity and avoid misidentification.}\\
+	\textbf{Rationale:} \textcolor{red}{Mushroom names can vary by region, and using local naming conventions will make the app more accessible and accurate for users worldwide. This reduces the risk of confusion or misidentification, helping users feel more confident in the information provided.}\\
+
+	\item \textcolor{red}{The system should allow users to customize their experience based on local mushroom species relevant to their region.}\\
+	\textbf{Rationale:} \textcolor{red}{Different regions have distinct mushroom species, so enabling users to tailor the app to their local environment ensures that the content is more relevant and useful. This personalizes the experience, making it easier for users to identify mushrooms in their area.}\\
+
+\end{enumerate}
+
 
 \subsubsection{Political Requirements}
-\begin{itemize}
-    \item Ensure the app does not promote illegal foraging or harvesting in protected areas, aligning with national park and conservation laws.
-    \item Consider country-specific restrictions on sharing foraging locations to prevent environmental degradation.
-    \item Ensure compliance with international wildlife protection agreements to prevent unethical foraging practices.
-\end{itemize}
+\begin{enumerate}[{CP-P}1. ]
+	% \item \textcolor{red}{The application should be protected against harmful or malicious input from users.}\\
+	% \textbf{Rationale:} Proper input validation helps to prevent attacks such as SQL injection or other forms of code injection, ensuring that only valid and safe data is processed by the app.
+	% \item The app should support multiple languages to accommodate diverse users worldwide.
+    % \item Provide culturally sensitive descriptions, avoiding offensive terminology when discussing mushroom edibility or toxicity.
+    % \item Consider regional mushroom naming conventions to ensure inclusivity and avoid misidentification.
+    % \item Allow users to customize their experience based on local mushroom species relevant to their region.
+
+	\item \textcolor{red}{The system shall ensure the app does not promote illegal foraging or harvesting in protected areas, aligning with national park and conservation laws.}\\
+	\textbf{Rationale:} \textcolor{red}{The app must adhere to legal and ethical guidelines to protect biodiversity and ecosystems. Promoting illegal foraging in protected areas could harm the environment and violate national park and conservation laws. By following these regulations, the app helps prevent the degradation of natural habitats.}\\
+
+	\item \textcolor{red}{The system shall ensure compliance with international wildlife protection agreements to prevent unethical foraging practices.}\\
+	\textbf{Rationale:} \textcolor{red}{International wildlife protection agreements set global standards for ethical foraging and conservation. Ensuring compliance with these agreements prevents harmful foraging practices, supports sustainable ecosystems, and promotes responsible behavior among users. [23]}\\
+
+	% \item \textcolor{red}{The system should allow users to customize their experience based on local mushroom species relevant to their region.}\\
+	% \textbf{Rationale:} \textcolor{red}{Different regions have distinct mushroom species, so enabling users to tailor the app to their local environment ensures that the content is more relevant and useful. This personalizes the experience, making it easier for users to identify mushrooms in their area.}\\
+
+\end{enumerate}
+
+% \begin{itemize}
+%     \item Ensure the app does not promote illegal foraging or harvesting in protected areas, aligning with national park and conservation laws.
+%     \item Consider country-specific restrictions on sharing foraging locations to prevent environmental degradation.
+%     \item Ensure compliance with international wildlife protection agreements to prevent unethical foraging practices.
+% \end{itemize}
 
 \subsection{Legal Requirements}
 \subsubsection{Compliance Requirements}
-\begin{itemize}
-    \item The app must comply with data privacy laws (e.g., GDPR, CCPA) regarding user images and location tracking.
-    \item Obtain explicit consent for location tracking when users save or share their findings.
-    \item Include disclaimers to inform users that the app’s identification is not a substitute for expert advice, reducing liability risks.
-    \item Ensure compliance with accessibility standards (e.g., WCAG 2.1) to support users with disabilities.
-\end{itemize}
+\begin{enumerate}[{LR-COMP}1. ]
+	% \item \textcolor{red}{The application should be protected against harmful or malicious input from users.}\\
+	% \textbf{Rationale:} Proper input validation helps to prevent attacks such as SQL injection or other forms of code injection, ensuring that only valid and safe data is processed by the app.
+	% \item The app should support multiple languages to accommodate diverse users worldwide.
+    % \item Provide culturally sensitive descriptions, avoiding offensive terminology when discussing mushroom edibility or toxicity.
+    % \item Consider regional mushroom naming conventions to ensure inclusivity and avoid misidentification.
+    % \item Allow users to customize their experience based on local mushroom species relevant to their region.
+
+	\item \textcolor{red}{The system must comply with data privacy laws (e.g., GDPR, CCPA) regarding user images and location tracking.}\\
+	\textbf{Rationale:} \textcolor{red}{The system must adhere to data privacy regulations to protect user data, ensuring that images and location information are handled responsibly and transparently. This compliance builds user trust and avoids legal repercussions for mishandling personal data. [24]}\\
+
+	\item \textcolor{red}{The system must ensure compliance with accessibility standards (e.g., WCAG 2.1) to support users with disabilities.}\\
+	\textbf{Rationale:} \textcolor{red}{To be inclusive, the system must follow accessibility standards to provide a positive user experience for people with disabilities. This ensures that the app is usable by a broader audience and meets legal accessibility requirements.}\\
+
+	\item \textcolor{red}{The system must comply with PIPEDA (Personal Information Protection and Electronic Documents Act) regarding the collection, use, and storage of personal data.}\\
+	\textbf{Rationale:} \textcolor{red}{The system must align with PIPEDA to ensure that it handles personal data in a manner that respects Canadian privacy rights. This compliance is essential for protecting user information and preventing legal issues related to the unauthorized collection or misuse of personal data. [25]}\\
+
+	% \item \textcolor{red}{The system shall ensure compliance with international wildlife protection agreements to prevent unethical foraging practices.}\\
+	% \textbf{Rationale:} \textcolor{red}{International wildlife protection agreements set global standards for ethical foraging and conservation. Ensuring compliance with these agreements prevents harmful foraging practices, supports sustainable ecosystems, and promotes responsible behavior among users.}\\
+
+	% \item \textcolor{red}{The system should allow users to customize their experience based on local mushroom species relevant to their region.}\\
+	% \textbf{Rationale:} \textcolor{red}{Different regions have distinct mushroom species, so enabling users to tailor the app to their local environment ensures that the content is more relevant and useful. This personalizes the experience, making it easier for users to identify mushrooms in their area.}\\
+
+\end{enumerate}
+% \begin{itemize}
+%     \item The app must comply with data privacy laws (e.g., GDPR, CCPA) regarding user images and location tracking.
+%     \item Obtain explicit consent for location tracking when users save or share their findings.
+%     \item Include disclaimers to inform users that the app’s identification is not a substitute for expert advice, reducing liability risks.
+%     \item Ensure compliance with accessibility standards (e.g., WCAG 2.1) to support users with disabilities.
+% \end{itemize}
 
 \subsubsection{Standards Requirements}
-\begin{itemize}
-    \item Follow ISO 13485 (if any aspects of the app involve health or medical guidance related to poisonous mushrooms).
-    \item Use industry-standard machine learning practices (if AI is used for identification).
-    \item Ensure app security standards (e.g., OWASP Mobile Security for secure data storage and sharing).
-\end{itemize}
+\begin{enumerate}[{LR-STD}1. ]
+	% \item \textcolor{red}{The application should be protected against harmful or malicious input from users.}\\
+	% \textbf{Rationale:} Proper input validation helps to prevent attacks such as SQL injection or other forms of code injection, ensuring that only valid and safe data is processed by the app.
+	% \item The app should support multiple languages to accommodate diverse users worldwide.
+    % \item Provide culturally sensitive descriptions, avoiding offensive terminology when discussing mushroom edibility or toxicity.
+    % \item Consider regional mushroom naming conventions to ensure inclusivity and avoid misidentification.
+    % \item Allow users to customize their experience based on local mushroom species relevant to their region.
+
+	\item \textcolor{red}{The system must follow ISO 13485 (if any aspects of the app involve health or medical guidance related to poisonous mushrooms).}\\
+	\textbf{Rationale:} \textcolor{red}{If the app provides health or medical-related guidance regarding poisonous mushrooms, it must comply with ISO 13485, which sets requirements for quality management systems in the medical device industry. This ensures the app meets high standards for safety, accuracy, and reliability when handling health-related information. [26]}\\
+
+	\item \textcolor{red}{The system must ensure app security standards (e.g., OWASP Mobile Security for secure data storage and sharing).}\\
+	\textbf{Rationale:} \textcolor{red}{To protect user data and prevent security breaches, the system must adhere to recognized app security standards like OWASP Mobile Security. This ensures secure data storage and sharing, safeguarding against threats such as data leaks, hacking, or unauthorized access, and maintaining user trust in the app. [27]}\\
+
+	% \item \textcolor{red}{The system must comply with PIPEDA (Personal Information Protection and Electronic Documents Act) regarding the collection, use, and storage of personal data.}\\
+	% \textbf{Rationale:} \textcolor{red}{The system must align with PIPEDA to ensure that it handles personal data in a manner that respects Canadian privacy rights. This compliance is essential for protecting user information and preventing legal issues related to the unauthorized collection or misuse of personal data.}\\
+
+	% \item \textcolor{red}{The system shall ensure compliance with international wildlife protection agreements to prevent unethical foraging practices.}\\
+	% \textbf{Rationale:} \textcolor{red}{International wildlife protection agreements set global standards for ethical foraging and conservation. Ensuring compliance with these agreements prevents harmful foraging practices, supports sustainable ecosystems, and promotes responsible behavior among users.}\\
+
+	% \item \textcolor{red}{The system should allow users to customize their experience based on local mushroom species relevant to their region.}\\
+	% \textbf{Rationale:} \textcolor{red}{Different regions have distinct mushroom species, so enabling users to tailor the app to their local environment ensures that the content is more relevant and useful. This personalizes the experience, making it easier for users to identify mushrooms in their area.}\\
+
+\end{enumerate}
+% \begin{itemize}
+%     \item Follow ISO 13485 (if any aspects of the app involve health or medical guidance related to poisonous mushrooms).
+%     \item Use industry-standard machine learning practices (if AI is used for identification).
+%     \item Ensure app security standards (e.g., OWASP Mobile Security for secure data storage and sharing).
+% \end{itemize}
 % End SubSubSection
 
 % End SubSection
@@ -1258,6 +1469,25 @@ This combination of features aims to create a fun, educational, and interactive 
 	\item Final Editing - Omar Alam
 \end{itemize}
 
+\subsection{Edits Based on Feedback}
+
+All items highlighted in red have been completed solely by \textbf{Farid Bastoros}, including:
+
+\begin{itemize}
+	% \item All things Highlted written in red are done by Farid Bastoros including: 
+	\item \textcolor{red}{Section 1.3 - Definitions, Acronyms, and Abbreviations - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 1.4 - References - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 4 - Highlight of Functional Requirements BE1 - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 5.1 - Look and Feel Requirements - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 5.2 - Usability and Humanity Requirements - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 5.3 - Performance Requirements - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 5.4 - Operational and Environmental Requirements - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 5.5 - Maintainability and Support Requirements - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 5.6 - Security Requirements - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 5.7 - Cultural and Political Requirements - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 5.8 - Legal Requirements - \textbf{Farid Bastoros}}
+	\item \textcolor{red}{Section 6 - Innovative Feature - \textbf{Farid Bastoros}}
+\end{itemize}
 \subsection{Signatures}
 \begin{center}
 	\renewcommand{\arraystretch}{1.5} % Adjust row height for better alignment
