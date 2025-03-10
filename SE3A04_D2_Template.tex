@@ -164,7 +164,10 @@ different areas of expertise, and provides a flexible and extensible framework f
 their solutions. It also allows for us to easily modify each agent independently without affecting
 the overall system and also add more agents if needed in the future without any modification of pre-existing
 code. This architecture lets us apply the open-closed principle well which will help us with maintainability
-in the future.
+in the future. Another architecture that was considered for this subsystem was the Model-View-Controller
+architecture, but it was not chosen because the Decision Forum subsystem is not primarily focused on user
+interaction and does not require a user interface. MVC also does not provide a clear way to combine
+the partial solutions from different expert agents.
 
 \subsubsection{Mushroom Management Architecture}
 
@@ -184,15 +187,21 @@ system.
 The Model-View-Controller architecture was chosen for the Social Media Management subsystem since 
 a user interaction will be required to share information with external social media platforms. This entails
 having a user interface to interact with the system (View), an agent to handle user input (Controller), and 
-a data store to manage the retrieve and store the information being shared (Model).
+a data store to manage the retrieve and store the information being shared (Model). The pipe and filter
+architecture was considered because of the nature of the subsystem sending streams of information to 
+external platforms, and it may be contained within the controller of the architecture but is not well-suited
+to be the main architecture for the subsystem.
 
 \subsubsection{Recipe Recommendation Architecture}
 
 The repository architecture was chosen for the Recipe Recommendation subsystem since the Recommendation
 system is intended to be a simple search and compare algorithm from a database. The architecture provides
 a data store (database) which can be efficiently searched for recipes based on the identified mushrooms.
+The blackboard architecture was considered for this subsystem because it could potentially combine multiple 
+recommendation algorithms to produce a final recommendation. However, the complexity of the recommendation
+system is not high enough to warrant the use of the blackboard architecture.
 
-\vspace{4pt}
+\newpage
 The following diagrams show the structural architecture of the system, illustrating the 
 relationships between different controllers, databases and views.
 
