@@ -73,12 +73,13 @@
 \label{sec:introduction}
 % Begin Section
 
-This section should provide an brief overview of the entire document.
+% This section should provide an brief overview of the entire document.
 
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
-This document provides a high-level overview of the Shroomify system architecture, outlining the core design principles, subsystems, and the rationale behind architectural choices. It is intended for internal stakeholders involved in the development of Shroomify, including software engineers, project managers, investors, domain experts, and system architects. Prior technical knowledge is beneficial but not required for understanding this document. 
+This document provides a high-level overview of the Shroomify system architecture, outlining the core design principles, subsystems, and the rationale behind architectural choices. It is intended for internal stakeholders involved in the development of Shroomify, including software engineers, project managers, investors, domain experts, and system architects. Prior technical knowledge is beneficial but not required for understanding this document. \\
+Please ensure that Shroomify Deliverable 1 is reviewed before Deliverable 2, as it provides essential context. Additionally, having technical knowledge may help in better understanding the contents of this document.
 % End SubSection
 
 \subsection{System Description}
@@ -93,8 +94,8 @@ The Shroomify system follows a Model-View-Controller (MVC) architecture, separat
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-This is Deliverable 2 of the Shroomify project and provides a general description of the system architecture. It considers the requirements, use cases, and design decisions outlined in Deliverable 1. Section 2 has an Analysis Class Diagram that represents the major classes and how they relate to each other from our requirements analysis. This diagram establishes the foundation for the organization of the system internally and ensures that design is high in cohesion and low in coupling among its components. Section 3 presents a description of the Architectural Design of Shroomify. In this section, we define the chosen architectural pattern and discuss specific design decisions. Section 4 focused on Class Responsibility Collaboration (CRC) Cards. These cards capture the responsibilities and communications of each class within the system, detailing exactly how the individual components interact to satisfy the demands of the system.
-
+This is Deliverable 2 of the Shroomify project and provides a general description of the system architecture. It considers the requirements, use cases, and design decisions outlined in Deliverable 1. Section 2 has an Analysis Class Diagram that represents the major classes and how they relate to each other from our requirements analysis. This diagram establishes the foundation for the organization of the system internally and ensures that design is high in cohesion and low in coupling among its components. Section 3 presents a description of the Architectural Design of Shroomify. In this section, we define the chosen architectural pattern and discuss specific design decisions. Section 4 focused on Class Responsibility Collaboration (CRC) Cards. These cards capture the responsibilities and communications of each class within the system, detailing exactly how the individual components interact to satisfy the demands of the system.\\
+Collectively, these sections provide a solid foundation for understanding the structure and functionality of the Shroomify app.
 % End SubSection
 
 % End Section
@@ -102,7 +103,7 @@ This is Deliverable 2 of the Shroomify project and provides a general descriptio
 \section{Analysis Class Diagram}
 \label{sec:analysis_class_diagram}
 % Begin Section
-This section should provide an analysis class diagram for your application.
+% This section should provide an analysis class diagram for your application.
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{AnalysisClassDiagram.png}
@@ -210,43 +211,141 @@ relationships between different controllers, databases and views.
 \end{figure}
 
 
+% \subsection{Subsystems}
+% \label{sub:subsystems}
+% % Begin SubSection
+%  Provide a list of your subsystems, with a brief description of each. Be sure to document its purpose and relationship to other subsystems.
+%  \subsubsection{Subsystem Overview}
+% Our system is divided into five main subsystems: \textbf{Decision Forum, Mushroom Management, Account Management, Social Media Management, and Recipe Recommendation}. These subsystems interact to provide users with a seamless experience in identifying mushrooms, managing their findings, and sharing information.
+
+% \subsubsection{Decision Forum}
+% The \textbf{Decision Forum} subsystem is responsible for identifying mushrooms. It contains the \textbf{machine learning algorithm} that classifies mushrooms based on user-provided descriptions and \textbf{computer vision technology} that analyzes images to determine species. If the identification confidence is low, users can also post images and descriptions to receive verification from the community.
+
+% \paragraph{Purpose}
+% Automates mushroom identification using AI and provides a space for community-based verification.
+
+% \paragraph{Relationship to Other Subsystems}
+% \begin{itemize}
+%     \item Works with \textbf{Mushroom Management} to store confirmed identifications.
+%     \item Interfaces with \textbf{Account Management} to associate identifications with users.
+%     \item Can interact with \textbf{Social Media Management} for users to share identification discussions.
+% \end{itemize}
+
+% \subsubsection{Mushroom Management}
+% The \textbf{Mushroom Management} subsystem serves as a \textbf{personal dictionary} of previously identified mushrooms. It allows users to view mushrooms they’ve found in the past, track their quantity, and access relevant information, including images and descriptions.
+
+% \paragraph{Purpose}
+% Stores and displays user-identified mushrooms but does \textbf{not} perform identification itself.
+
+% \paragraph{Relationship to Other Subsystems}
+% \begin{itemize}
+%     \item Retrieves identification results from \textbf{Decision Forum} and saves them.
+%     \item Integrates with \textbf{Account Management} to store mushroom data within user profiles.
+%     \item Interfaces with \textbf{Recipe Recommendation} to provide relevant recipes for identified mushrooms.
+% \end{itemize}
+
+% \subsubsection{Account Management}
+% The \textbf{Account Management} subsystem handles user authentication, profile settings, and data storage. It maintains a personalized record of identified mushrooms and user activity.
+
+% \paragraph{Purpose}
 \subsection{Subsystems}
-\label{sub:subsystems}
-% Begin SubSection
- Provide a list of your subsystems, with a brief description of each. Be sure to document its purpose and relationship to other subsystems.
- \subsubsection{Subsystem Overview}
+Our system is divided into five main subsystems: \textbf{Decision Forum, Mushroom Management, Account Management, Social Media Management, and Recipe Recommendation}. These subsystems interact to provide users with a seamless experience in identifying mushrooms, managing their findings, and sharing information.
+% \subsubsection{Decision Forum}
+% The \textbf{Decision Forum} subsystem is responsible for identifying mushrooms. It contains the \textbf{machine learning algorithm} that classifies mushrooms based on user-provided descriptions and \textbf{computer vision technology} that analyzes images to determine species. If the identification confidence is low, users can also post images and descriptions to receive verification from the community.
+
+% \paragraph{Purpose}
+% Automates mushroom identification using AI and provides a space for community-based verification.
+
+% \paragraph{Relationship to Other Subsystems}
+% \begin{itemize}
+%     \item Works with \textbf{Mushroom Management} to store confirmed identifications.
+%     \item Interfaces with \textbf{Account Management} to associate identifications with users.
+%     \item Can interact with \textbf{Social Media Management} for users to share identification discussions.
+% \end{itemize}
+
+% \subsubsection{Mushroom Management}
+% The \textbf{Mushroom Management} subsystem serves as a \textbf{personal dictionary} of previously identified mushrooms. It allows users to view mushrooms they’ve found in the past, track their quantity, and access relevant information, including images and descriptions.
+
+% \paragraph{Purpose}
+% Stores and displays user-identified mushrooms but does \textbf{not} perform identification itself.
+
+% \paragraph{Relationship to Other Subsystems}
+% \begin{itemize}
+%     \item Retrieves identification results from \textbf{Decision Forum} and saves them.
+%     \item Integrates with \textbf{Account Management} to store mushroom data within user profiles.
+%     \item Interfaces with \textbf{Recipe Recommendation} to provide relevant recipes for identified mushrooms.
+% \end{itemize}
+
+% \subsubsection{Account Management}
+% The \textbf{Account Management} subsystem handles user authentication, profile settings, and data storage. It maintains a personalized record of identified mushrooms and user activity.
+
+% \paragraph{Purpose}
+\subsection{Subsystems}
 Our system is divided into five main subsystems: \textbf{Decision Forum, Mushroom Management, Account Management, Social Media Management, and Recipe Recommendation}. These subsystems interact to provide users with a seamless experience in identifying mushrooms, managing their findings, and sharing information.
 
 \subsubsection{Decision Forum}
 The \textbf{Decision Forum} subsystem is responsible for identifying mushrooms. It contains the \textbf{machine learning algorithm} that classifies mushrooms based on user-provided descriptions and \textbf{computer vision technology} that analyzes images to determine species. If the identification confidence is low, users can also post images and descriptions to receive verification from the community.
-
+ 
 \paragraph{Purpose}
 Automates mushroom identification using AI and provides a space for community-based verification.
-
+ 
 \paragraph{Relationship to Other Subsystems}
 \begin{itemize}
     \item Works with \textbf{Mushroom Management} to store confirmed identifications.
     \item Interfaces with \textbf{Account Management} to associate identifications with users.
     \item Can interact with \textbf{Social Media Management} for users to share identification discussions.
 \end{itemize}
-
+ 
 \subsubsection{Mushroom Management}
 The \textbf{Mushroom Management} subsystem serves as a \textbf{personal dictionary} of previously identified mushrooms. It allows users to view mushrooms they’ve found in the past, track their quantity, and access relevant information, including images and descriptions.
-
+ 
 \paragraph{Purpose}
 Stores and displays user-identified mushrooms but does \textbf{not} perform identification itself.
-
+ 
 \paragraph{Relationship to Other Subsystems}
 \begin{itemize}
     \item Retrieves identification results from \textbf{Decision Forum} and saves them.
     \item Integrates with \textbf{Account Management} to store mushroom data within user profiles.
     \item Interfaces with \textbf{Recipe Recommendation} to provide relevant recipes for identified mushrooms.
 \end{itemize}
-
+ 
 \subsubsection{Account Management}
 The \textbf{Account Management} subsystem handles user authentication, profile settings, and data storage. It maintains a personalized record of identified mushrooms and user activity.
-
+ 
 \paragraph{Purpose}
+Manages user profiles and ensures that each user’s mushroom data is securely stored.
+ 
+\paragraph{Relationship to Other Subsystems}
+\begin{itemize}
+    \item Stores user-identified mushrooms from \textbf{Mushroom Management}.
+    \item Maintains user participation history in \textbf{Decision Forum}.
+    \item Interfaces with \textbf{Social Media Management} to track and share posts.
+\end{itemize}
+ 
+\subsubsection{Social Media Management}
+The \textbf{Social Media Management} subsystem allows users to share their mushroom identifications, forum discussions, and recipes on external platforms such as Facebook, Instagram, and Twitter.
+ 
+\paragraph{Purpose}
+Enhances community engagement by enabling content sharing.
+ 
+\paragraph{Relationship to Other Subsystems}
+\begin{itemize}
+    \item Works with \textbf{Account Management} to post from user profiles.
+    \item Allows users to share discoveries from \textbf{Mushroom Management} and \textbf{Decision Forum}.
+    \item Enables recipe-sharing from \textbf{Recipe Recommendation}.
+\end{itemize}
+ 
+\subsubsection{Recipe Recommendation}
+The \textbf{Recipe Recommendation} subsystem suggests safe and relevant recipes based on identified mushrooms. It retrieves information from a database and presents culinary suggestions to users.
+ 
+\paragraph{Purpose}
+Provides users with potential culinary uses for their identified mushrooms.
+ 
+\paragraph{Relationship to Other Subsystems}
+\begin{itemize}
+    \item Works with \textbf{Mushroom Management} to access user-identified mushrooms.
+    \item Allows users to share recipes through \textbf{Social Media Management}.
+\end{itemize}
  % End SubSection
 
 % End Section
@@ -649,9 +748,9 @@ This section should contain all of your CRC cards.
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
 		Knows Account Manager & Account Manager\\
-            Handles Login error events \\
-            Handles Edit Account error events \\
-            Handles View Account error events \\
+            Handles Login error events &  \\
+            Handles Edit Account error events & \\
+            Handles View Account error events &  \\
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
@@ -807,19 +906,58 @@ This section should contain all of your CRC cards.
 % Begin Section
 \begin{itemize}
 	\item Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
-	\begin{table}[ht]
-		\centering
-		\begin{tabular}{| l | l | l | l | l | l |}
-		\hline
-		\textbf{Team Member} &\textbf{Farid Bastoros} & \textbf{Neha Bhatla} & \textbf{Omar Alam} & \textbf{Luka Mahrt-Smith} & \textbf{Aidan Lao} \\
-		\hline
-		Task & Task & Task & Task & Task & Task \\
-		\hline
-		Signature & Signature & Signature & Signature & Signature & Signature\\
-		\hline
-		\end{tabular}
-		\caption{Division of Labour}
-	\end{table}
+	\item Farid Bastoros:
+	\begin{itemize} 
+		\item Section 1 - Reviewed and updated 1.1
+		\item Section 1 - Reviewed and updated 1.3
+		\item Section 2 - Added half of the classes
+		\item Section 2 - Formatted analysis class diagram in LaTeX
+		\item Section 4 - Did Half of the CRC Cards
+		\item Modified Deliverable 1 with Fixes including: 
+		\begin{itemize} 
+			\item Section 1.3 - Definitions, Acronyms, and Abbreviations
+			\item Section 1.4 - References
+			\item Section 4 - Highlight of Functional Requirements BE1
+			\item Section 5.1 - Look and Feel Requirements
+			\item Section 5.2 - Usability and Humanity Requirements
+			\item Section 5.3 - Performance Requirements
+			\item Section 5.4 - Operational and Environmental Requirements
+			\item Section 5.5 - Maintainability and Support Requirements
+			\item Section 5.6 - Security Requirements
+			\item Section 5.7 - Cultural and Political Requirements
+			\item Section 5.8 - Legal Requirements
+			\item Section 6 - Innovative Feature
+		\end{itemize}
+	\end{itemize}
+	\includegraphics[scale=0.09]{Farid Bastoros - Signature.jpeg}\\ 
+	\item Neha Bhatla:
+	\item \begin{itemize} \end{itemize}
+	\item Omar Alam:
+	\item \begin{itemize} \end{itemize}
+	\item Luka Mahrt-Smith:
+	\item \begin{itemize} \end{itemize}
+	\item Aidan Lao:
+	\item \begin{itemize} \end{itemize}
+	
+	
+	% \begin{table}[ht]
+	% 	\centering
+	% 	\begin{tabular}{| l | l | l | l | l | l |}
+	% 	\hline
+	% 	\textbf{Team Member} &\textbf{Farid Bastoros} & \textbf{Neha Bhatla} & \textbf{Omar Alam} & \textbf{Luka Mahrt-Smith} & \textbf{Aidan Lao} \\
+	% 	\hline
+	% 	Task & Section 4 - Did Half of the CRC Cards & Task & Task & Task & Task \\
+	% 	\hline
+	% 	Task & Section 1 - Reviewed and updated 1.1 and 1.3 & Task & Task & Task & Task \\
+	% 	\hline
+	% 	Task & Section 2 - Added Half of the classes to the Analyis Class Diagram  & Task & Task & Task & Task \\
+	% 	\hline
+	% 	Signature & Signature & Signature & Signature & Signature & Signature\\
+	% 	\hline
+	% 	\end{tabular}
+	% 	\caption{Division of Labour}
+	% \end{table}
+	
 \end{itemize}
 % End Section
 
