@@ -14,7 +14,7 @@
 \usepackage{array}
 %\usepackage{extarrows}
 %\usepackage{setspace}
-%\usepackage{xcolor}
+\usepackage{xcolor}
 \usepackage{color}
 \usepackage[numbers]{natbib} % Enables numbered citations
 \usepackage{url}    
@@ -341,6 +341,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
  	\item BE3. Recipe Recommendation.
  	\item BE4. Sharing on Social Media.
  	\item BE5. Account Registration.
+ 	\item BE6. User Login.
 \end{itemize}
 
 \newpage
@@ -798,7 +799,7 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 	The user receives a confirmation message indicating that the post was published.
 
 
-    \item Account Registration \\
+\item Account Registration \\
 
 \textbf{Pre-condition}: User does not have an existing account and the app is installed on their device.  
 
@@ -893,10 +894,80 @@ Other assumptions that, if it fails to hold, could require a change to the requi
 
 	\textbf{Post-condition}:  User successfully registers and verifies their account.
 
+	
+
+\end{enumerate}
+{\color{red}
+\item User Login \\
+\textbf{Pre-condition}: User has an existing account and the app is installed on their device.  
+
+\begin{enumerate}[{\bf VP1.}]
+    \item User \#1 \\
+	\textbf{Main Success Scenario}
+	\begin{enumerate}
+		\item[1.] User opens the app.
+		\item[2.] System prompts the user to enter required details:
+		\begin{itemize}
+			\item Email Address
+			\item Password
+		\end{itemize}
+		\item[3.] User enters details and presses “Login”
+		\item[4.] System verifies the input:
+		\begin{itemize}
+			\item Checks if the email is valid.
+			\item Finds account with matching email.
+			\item Verifies the password for the account.
+		\end{itemize}
+		\item[5.] System approves user login.
+		\end{enumerate}
+
+	\textbf{Secondary Scenario}
+	\begin{enumerate}
+		\item[3i.] User enters an invalid email format.
+		\begin{enumerate}
+			\item[3i.1] System prompts the user to enter a valid email.
+		\end{enumerate}
+		\item[4i.] Email is not found in account database.
+		\begin{enumerate}
+			\item[4i.1] System alerts the user that their account was not found.
+		\end{enumerate}
+		\item[4ii.] Password does not match the account.
+		\begin{enumerate}
+			\item [4ii.1] System prompts the user to re-enter their password.
+		\end{enumerate}
+		\item [5i.] System fails to approve user login.
+		\begin{enumerate}
+			\item [5i.1] System notifies the user that their login was unsuccessful.
+			\item [5i.2] System suggests retrying or resetting their password.
+			\item [5i.3] System suggests contacting customer support.
+		\end{enumerate}
+	\end{enumerate}
+
+    \item External Provider \#2 \\
+     \textbf{N/A}
+        
+ \item Marketing \#3 \\
+	\textbf{N/A}
+
+\item Customer Support \#4 \\
+
+	\textbf{Main Success Scenario}
+   
+	\begin{enumerate}
+		\item[1.] User contacts customer support.
+		\item[2.] System connects user with customer support agent.
+		\item[3.] System facilitates communication between user and agent.
+		\item[4.] User receives assistance from customer support.
+		\item[5.] User logs in after issue resolution. 
+	\end{enumerate}
+\item Customer Success \#5 \\
+    \textbf{N/A}
 
 
 \end{enumerate}
 
+\textbf{Post-condition}: User successfully logs in and gains access to their account.
+}
 \end{enumerate}
 
 \section{Non-Functional Requirements}
