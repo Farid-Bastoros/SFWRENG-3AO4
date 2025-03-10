@@ -125,43 +125,109 @@ This section should provide an overview of the overall architectural design of y
 \end{itemize}
 % End SubSection
 
-\subsection{Subsystems}
-\label{sub:subsystems}
-% Begin SubSection
- Provide a list of your subsystems, with a brief description of each. Be sure to document its purpose and relationship to other subsystems.
- \subsubsection{Subsystem Overview}
-Our system is divided into five main subsystems: \textbf{Decision Forum, Mushroom Management, Account Management, Social Media Management, and Recipe Recommendation}. These subsystems interact to provide users with a seamless experience in identifying mushrooms, managing their findings, and sharing information.
+% \subsection{Subsystems}
+% \label{sub:subsystems}
+% % Begin SubSection
+%  Provide a list of your subsystems, with a brief description of each. Be sure to document its purpose and relationship to other subsystems.
+%  \subsubsection{Subsystem Overview}
+% Our system is divided into five main subsystems: \textbf{Decision Forum, Mushroom Management, Account Management, Social Media Management, and Recipe Recommendation}. These subsystems interact to provide users with a seamless experience in identifying mushrooms, managing their findings, and sharing information.
 
+% \subsubsection{Decision Forum}
+% The \textbf{Decision Forum} subsystem is responsible for identifying mushrooms. It contains the \textbf{machine learning algorithm} that classifies mushrooms based on user-provided descriptions and \textbf{computer vision technology} that analyzes images to determine species. If the identification confidence is low, users can also post images and descriptions to receive verification from the community.
+
+% \paragraph{Purpose}
+% Automates mushroom identification using AI and provides a space for community-based verification.
+
+% \paragraph{Relationship to Other Subsystems}
+% \begin{itemize}
+%     \item Works with \textbf{Mushroom Management} to store confirmed identifications.
+%     \item Interfaces with \textbf{Account Management} to associate identifications with users.
+%     \item Can interact with \textbf{Social Media Management} for users to share identification discussions.
+% \end{itemize}
+
+% \subsubsection{Mushroom Management}
+% The \textbf{Mushroom Management} subsystem serves as a \textbf{personal dictionary} of previously identified mushrooms. It allows users to view mushrooms they’ve found in the past, track their quantity, and access relevant information, including images and descriptions.
+
+% \paragraph{Purpose}
+% Stores and displays user-identified mushrooms but does \textbf{not} perform identification itself.
+
+% \paragraph{Relationship to Other Subsystems}
+% \begin{itemize}
+%     \item Retrieves identification results from \textbf{Decision Forum} and saves them.
+%     \item Integrates with \textbf{Account Management} to store mushroom data within user profiles.
+%     \item Interfaces with \textbf{Recipe Recommendation} to provide relevant recipes for identified mushrooms.
+% \end{itemize}
+
+% \subsubsection{Account Management}
+% The \textbf{Account Management} subsystem handles user authentication, profile settings, and data storage. It maintains a personalized record of identified mushrooms and user activity.
+
+% \paragraph{Purpose}
+\subsection{Subsystems}
+Our system is divided into five main subsystems: \textbf{Decision Forum, Mushroom Management, Account Management, Social Media Management, and Recipe Recommendation}. These subsystems interact to provide users with a seamless experience in identifying mushrooms, managing their findings, and sharing information.
+ 
 \subsubsection{Decision Forum}
 The \textbf{Decision Forum} subsystem is responsible for identifying mushrooms. It contains the \textbf{machine learning algorithm} that classifies mushrooms based on user-provided descriptions and \textbf{computer vision technology} that analyzes images to determine species. If the identification confidence is low, users can also post images and descriptions to receive verification from the community.
-
+ 
 \paragraph{Purpose}
 Automates mushroom identification using AI and provides a space for community-based verification.
-
+ 
 \paragraph{Relationship to Other Subsystems}
 \begin{itemize}
     \item Works with \textbf{Mushroom Management} to store confirmed identifications.
     \item Interfaces with \textbf{Account Management} to associate identifications with users.
     \item Can interact with \textbf{Social Media Management} for users to share identification discussions.
 \end{itemize}
-
+ 
 \subsubsection{Mushroom Management}
 The \textbf{Mushroom Management} subsystem serves as a \textbf{personal dictionary} of previously identified mushrooms. It allows users to view mushrooms they’ve found in the past, track their quantity, and access relevant information, including images and descriptions.
-
+ 
 \paragraph{Purpose}
 Stores and displays user-identified mushrooms but does \textbf{not} perform identification itself.
-
+ 
 \paragraph{Relationship to Other Subsystems}
 \begin{itemize}
     \item Retrieves identification results from \textbf{Decision Forum} and saves them.
     \item Integrates with \textbf{Account Management} to store mushroom data within user profiles.
     \item Interfaces with \textbf{Recipe Recommendation} to provide relevant recipes for identified mushrooms.
 \end{itemize}
-
+ 
 \subsubsection{Account Management}
 The \textbf{Account Management} subsystem handles user authentication, profile settings, and data storage. It maintains a personalized record of identified mushrooms and user activity.
-
+ 
 \paragraph{Purpose}
+Manages user profiles and ensures that each user’s mushroom data is securely stored.
+ 
+\paragraph{Relationship to Other Subsystems}
+\begin{itemize}
+    \item Stores user-identified mushrooms from \textbf{Mushroom Management}.
+    \item Maintains user participation history in \textbf{Decision Forum}.
+    \item Interfaces with \textbf{Social Media Management} to track and share posts.
+\end{itemize}
+ 
+\subsubsection{Social Media Management}
+The \textbf{Social Media Management} subsystem allows users to share their mushroom identifications, forum discussions, and recipes on external platforms such as Facebook, Instagram, and Twitter.
+ 
+\paragraph{Purpose}
+Enhances community engagement by enabling content sharing.
+ 
+\paragraph{Relationship to Other Subsystems}
+\begin{itemize}
+    \item Works with \textbf{Account Management} to post from user profiles.
+    \item Allows users to share discoveries from \textbf{Mushroom Management} and \textbf{Decision Forum}.
+    \item Enables recipe-sharing from \textbf{Recipe Recommendation}.
+\end{itemize}
+ 
+\subsubsection{Recipe Recommendation}
+The \textbf{Recipe Recommendation} subsystem suggests safe and relevant recipes based on identified mushrooms. It retrieves information from a database and presents culinary suggestions to users.
+ 
+\paragraph{Purpose}
+Provides users with potential culinary uses for their identified mushrooms.
+ 
+\paragraph{Relationship to Other Subsystems}
+\begin{itemize}
+    \item Works with \textbf{Mushroom Management} to access user-identified mushrooms.
+    \item Allows users to share recipes through \textbf{Social Media Management}.
+\end{itemize}
  % End SubSection
 
 % End Section
@@ -726,6 +792,8 @@ This section should contain all of your CRC cards.
 	\begin{itemize} 
 		\item Section 1 - Reviewed and updated 1.1
 		\item Section 1 - Reviewed and updated 1.3
+		\item Section 2 - Added half of the classes
+		\item Section 2 - Formatted analysis class diagram in LaTeX
 		\item Section 4 - Did Half of the CRC Cards
 		\item Modified Deliverable 1 with Fixes including: 
 		\begin{itemize} 
