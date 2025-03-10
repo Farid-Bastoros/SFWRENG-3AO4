@@ -10,6 +10,7 @@
 \usepackage{fancyhdr}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
+\usepackage[inkscapeformat=png]{svg}
 \usepackage{float}
 %\usepackage{extarrows}
 \usepackage{booktabs}
@@ -113,19 +114,10 @@ This section should provide an analysis class diagram for your application.
 \clearpage
 \section{Architectural Design}
 \label{sec:architectural_design}
-% Begin Section
-This section should provide an overview of the overall architectural design of your application. Your overall architecture should show the division of the system into subsystems with high cohesion and low coupling.
 
 \subsection{System Architecture}
 \label{sub:system_architecture}
-% Begin SubSection
-\begin{itemize}
-	\item Identify and explain the overall architecture of your system
-	\item Be sure to clearly state the name of the architecture you used (this is the name of the architectural pattern, not the name of your system)
-	\item Provide the reasoning and justification of the choice of architecture
-	\item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate)
-	\item List any design alternatives you considered, but eliminated (and explain why you eliminated them)
-\end{itemize}
+
 % End SubSection
 
 Shroomify uses the \textbf{Model-View-Controller (MVC)} architectural pattern 
@@ -199,6 +191,23 @@ The repository architecture was chosen for the Recipe Recommendation subsystem s
 system is intended to be a simple search and compare algorithm from a database. The architecture provides
 a data store (database) which can be efficiently searched for recipes based on the identified mushrooms.
 
+\vspace{4pt}
+The following diagrams show the structural architecture of the system, illustrating the 
+relationships between different controllers, databases and views.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{sysarch.png}
+	\caption{Model-View-Controller Architecture}
+	\label{fig:sys-arch}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{blackboard-df.png}
+	\caption{Blackboard Architecture for Decision Forum}
+	\label{fig:blackboard}
+\end{figure}
 
 
 \subsection{Subsystems}
