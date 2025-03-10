@@ -10,7 +10,9 @@
 \usepackage{fancyhdr}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
+\usepackage{float}
 %\usepackage{extarrows}
+\usepackage{booktabs}
 %\usepackage{setspace}
 %------------------------------------------------------------------------------
 
@@ -31,6 +33,8 @@
 % Document
 %------------------------------------------------------------------------------
 \begin{document}
+
+\setlength{\parindent}{0pt}
 
 \maketitle	
 \noindent{\bf Tutorial Number:} T03\\
@@ -123,6 +127,79 @@ This section should provide an overview of the overall architectural design of y
 	\item List any design alternatives you considered, but eliminated (and explain why you eliminated them)
 \end{itemize}
 % End SubSection
+
+Shroomify uses the \textbf{Model-View-Controller (MVC)} architectural pattern 
+as the main architecture of the system. Within the MVC pattern, the system is 
+divided into three main component types: the \textbf{Model} components, the \textbf{View} components, and 
+the \textbf{Controller} components. The \textbf{Model} components are responsible for managing 
+data storage in the system. The \textbf{View} components are responsible 
+for displaying the various user interface pages. The \textbf{Controller} components 
+are responsible for handling user input and updating the models and views accordingly. 
+The MVC pattern was chosen for Shroomify because it provides a clear 
+separation of concerns between the different components of the system, 
+making it easier to maintain and extend the system in the future. The MVC 
+pattern also allows for the system to be easily tested, as each component 
+can be tested independently of the others.
+
+\vspace{5pt}
+For each subsystem, we have identified different architectures that will be used:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{cp{7cm}p{4cm}}
+		\toprule
+		Subsystem & Tasks & Architecture \\
+		\midrule
+		Decision Forum & Take partial solutions from expert agents and produce final identification solution. & Blackboard Architecture \\
+		Mushroom Management & Store and modify information related to mushrooms identified by the user in a database. & Repository Architecture \\
+		Account Management & Manage account registration and modification.  & Repository Architecture \\
+		Social Media Management & Handle information sharing with external social media platforms. & Model-View-Controller Architecture\\
+		Recipe Recommendation & Recommend recipes to user based on identified mushrooms. & Repository Architecture \\
+		\bottomrule
+	\end{tabular}
+	\caption{Subsystem Architectures}
+\end{table}
+
+\subsubsection{Decision Forum Architecture}
+
+The blackboard architecture was chosen for the Decision Forum subsystem because it is well-suited
+to combine partial solutions from different expert software agents such as the \textbf{Text Description Identifier},
+\textbf{Macro Image Identifier}, and \textbf{Micro Image Identifier}. The blackboard architecture
+allows these agents to work independently and asynchronously, and then combine their partial 
+solutions to produce a final identification solution. This architecture is well-suited to the 
+Decision Forum subsystem because it allows for the integration of multiple expert agents with 
+different areas of expertise, and provides a flexible and extensible framework for combining 
+their solutions. It also allows for us to easily modify each agent independently without affecting
+the overall system and also add more agents if needed in the future without any modification of pre-existing
+code. This architecture lets us apply the open-closed principle well which will help us with maintainability
+in the future.
+
+\subsubsection{Mushroom Management Architecture}
+
+The repository architecture was chosen for the Mushroom Management subsystem because it is well-suited
+for the simple data storage and retrieval tasks required by this subsystem. The repository architecture
+provides a data store that can be accessed by software agents in different ways.
+
+\subsubsection{Account Management Architecture}
+
+The repository architecture was chosen for the Account Management subsystem for the same reasons 
+as the Mushroom Management subsystem. The Account Management subsystem also requires simple data
+storage and retrieval tasks, and the repository architecture provides a flexible data store 
+system.
+
+\subsubsection{Social Media Management Architecture}
+
+The Model-View-Controller architecture was chosen for the Social Media Management subsystem since 
+a user interaction will be required to share information with external social media platforms. This entails
+having a user interface to interact with the system (View), an agent to handle user input (Controller), and 
+a data store to manage the retrieve and store the information being shared (Model).
+
+\subsubsection{Recipe Recommendation Architecture}
+
+The repository architecture was chosen for the Recipe Recommendation subsystem since the Recommendation
+system is intended to be a simple search and compare algorithm from a database. The architecture provides
+a data store (database) which can be efficiently searched for recipes based on the identified mushrooms.
+
+
 
 \subsection{Subsystems}
 \label{sub:subsystems}
