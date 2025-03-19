@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{extarrows}
 \usepackage{setspace}
+\usepackage{svg}
 %------------------------------------------------------------------------------
 
 % Header and Footer
@@ -31,9 +32,40 @@
 % Document
 %------------------------------------------------------------------------------
 \begin{document}
+\setlength{\parindent}{0pt}
 
 \maketitle	
+\noindent{\bf Tutorial Number:} T03\\
+{\bf Group Number:} G07 \\
+{\bf Group Members:} 
+\begin{itemize}
+	\item Farid Bastoros 
+	\item Neha Bhatla
+	\item Omar Alam
+	\item Luka Mahrt-Smith
+	\item Aidan Lao
+\end{itemize}
 
+\section*{IMPORTANT NOTES}
+\begin{itemize}
+	\item You do \underline{NOT} need to provide a text explanation of each diagram; the diagram should speak for itself
+	\item Please document any non-standard notations that you may have used
+	\begin{itemize}
+		\item \emph{Rule of Thumb}: if you feel there is any doubt surrounding the meaning of your notations, document them
+	\end{itemize}
+	\item Some diagrams may be difficult to fit into one page
+	\begin{itemize}
+		\item It is OK if the text is small but please ensure that it is readable when printed
+		\item If you need to break a diagram onto multiple pages, please adopt a system of doing so and throughly explain how it can be reconnected from one page to the next; if you are unsure about this, please ask me
+	\end{itemize}
+	\item Please submit the latest version of Deliverable 1 and Deliverable 2 with Deliverable 3
+	\begin{itemize}
+		\item They do not have to be a freshly printed versions; the latest marked versions are OK
+	\end{itemize}
+	\item If you do \underline{NOT} have a Division of Labour sheet, your deliverable will \underline{NOT} be marked
+\end{itemize}
+\maketitle	
+\clearpage
 \section{Introduction}
 \label{sec:introduction}
 % Begin Section
@@ -81,12 +113,19 @@ This section should provide a state chart for each controller class for your app
 This section should provide a sequence diagram for each use case of your application.
 % End Section
 
+\clearpage
 \section{Detailed Class Diagram}
 \label{sec:detailed_class_diagram}
 % Begin Section
 This section should provide a detailed class diagram for your application.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{DetailedClassDiagram4.pdf}
+    \caption{PlantUML Diagram}
+\end{figure}
 % End Section
 
+\clearpage
 \appendix
 \section{Division of Labour}
 \label{sec:division_of_labour}
@@ -95,24 +134,7 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 % End Section
 
 \newpage
-\section*{IMPORTANT NOTES}
-\begin{itemize}
-	\item You do \underline{NOT} need to provide a text explanation of each diagram; the diagram should speak for itself
-	\item Please document any non-standard notations that you may have used
-	\begin{itemize}
-		\item \emph{Rule of Thumb}: if you feel there is any doubt surrounding the meaning of your notations, document them
-	\end{itemize}
-	\item Some diagrams may be difficult to fit into one page
-	\begin{itemize}
-		\item It is OK if the text is small but please ensure that it is readable when printed
-		\item If you need to break a diagram onto multiple pages, please adopt a system of doing so and throughly explain how it can be reconnected from one page to the next; if you are unsure about this, please ask me
-	\end{itemize}
-	\item Please submit the latest version of Deliverable 1 and Deliverable 2 with Deliverable 3
-	\begin{itemize}
-		\item They do not have to be a freshly printed versions; the latest marked versions are OK
-	\end{itemize}
-	\item If you do \underline{NOT} have a Division of Labour sheet, your deliverable will \underline{NOT} be marked
-\end{itemize}
+
 
 
 \end{document}
