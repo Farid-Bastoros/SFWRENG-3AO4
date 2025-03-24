@@ -76,23 +76,36 @@
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
-This document outlines key aspects of the Mushroom Identification App's architecture, featuring state chart diagrams, sequence diagrams, and a comprehensive class diagram.
-It is designed for internal stakeholders, such as project managers, developers, domain experts, and investors. Reviewing earlier deliverables is recommended, as having technical knowledge can aid in fully grasping the details presented.
+% This document outlines key aspects of the Mushroom Identification App's architecture, featuring state chart diagrams, sequence diagrams, and a comprehensive class diagram.
+% It is designed for internal Shromoify stakeholders, including but not limited to, project managers, developers, domain experts, and investors. 
+% % Reviewing earlier deliverables is recommended, as having technical knowledge can aid in fully grasping the details presented.
 
+% % Prior technical knowledge is beneficial but not required for understanding this document. \\
+% Please ensure that Shroomify Deliverable 1 and Deliverable 2 are reviewed before Deliverable 3, as it provides essential context. Additionally, having technical knowledge may help in better understanding the contents of this document.
+
+This document outlines key aspects of the Mushroom Identification App’s architecture, featuring state chart diagrams, sequence diagrams, and a comprehensive class diagram. It is designed for internal Shroomify stakeholders, including but not limited to project managers, developers, domain experts, and investors. Please ensure that Shroomify Deliverable 1 and Deliverable 2 are reviewed before Deliverable 3, as they provide essential context. Additionally, technical knowledge may help in better understanding this document.
 % End SubSection
 
 \subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
-The mushroom identification app is a mobile application that uses image recognition and user input to help users identify different mushroom species. It provides information about each species, including whether they are edible or toxic, and allows users to contribute to a shared database. This document builds on Deliverable 2 by adding technical detail through state charts, sequence diagrams, and a class diagram that show the system’s internal structure.
+% The mushroom identification app is a mobile application that uses image recognition and user input to help users identify different mushroom species. It provides information about each species, including whether they are edible or toxic, and allows users to contribute to a shared database. This document builds on Deliverable 2 by adding technical detail through state charts, sequence diagrams, and a class diagram that show the system’s internal structure.
 
+The Mushroom Identification App is a mobile platform that processes user-provided text and image inputs to accurately identify mushroom species. The system employs a hybrid decision forum architecture, where multiple expert modules—including an LLM-based text identifier, a macro-image identification engine (Plant.id API), and a micro-image analysis module (Micro API)—collaborate to determine the most accurate classification. The decision forum integrates insights from these modules, iteratively refining the identification process, while a repository component efficiently manages user inputs, past identifications, and expert analysis results for future reference.\\
+
+This document builds on the foundational system description provided in Deliverable 2, expanding the technical details through state charts, sequence diagrams, and a comprehensive class diagram. These artifacts offer deeper insights into the system’s data flow, processing logic, and user interactions, illustrating how user inputs progress through various system components—from input validation to expert analysis and final result generation. Additionally, this document clarifies how user accounts, identification history, and species database contributions integrate into the broader system. Through these design elements, we establish a clear roadmap for the system’s implementation and behavior.
 % End SubSection
 
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-This document is organized by diagram type to clearly represent different aspects of the system. Section 2 contains state charts for key controller classes, Section 3 includes sequence diagrams for main use cases like mushroom identification and account registration, and Section 4 has a detailed UML class diagram showing class relationships and structure.
+% This document is organized by diagram type to clearly represent different aspects of the system. Section 2 contains state charts for key controller classes, Section 3 includes sequence diagrams for main use cases like mushroom identification and account registration, and Section 4 has a detailed UML class diagram showing class relationships and structure.
 
+This document provides a structured analysis and design of the Mushroom Identification App, focusing on State Chart Diagrams, Sequence Diagrams, and a detailed Class Diagram. It expands upon the foundational concepts introduced in Deliverables 1 and 2, ensuring a comprehensive understanding of the system’s behavior, interactions, and internal structure.  \\ \\
+Section 2 presents State Chart Diagrams, defining the behavior of key controller classes, particularly those handling user management and mushroom identification workflows. These diagrams illustrate the different states that system entities transition between and the conditions that trigger these transitions. 
+Section 3 provides Sequence Diagrams, visually representing the interaction flow between system components during key use cases such as mushroom identification, account registration, and database contribution. These diagrams capture step-by-step interactions between users, expert modules, and the system’s processing units. 
+Section 4 contains the Class Diagram, outlining the structure of the system’s core classes, their attributes, relationships, and methods. This diagram clarifies class responsibilities, making it easier to understand how data is managed and processed within the system.  \\ \\
+Together, these sections form a comprehensive guide to understanding the Mushroom Identification App’s state management, process flow, and class relationships, providing essential details for implementation and further development.
 
 % End SubSection
 
@@ -150,7 +163,7 @@ State chart diagrams are provided as SVG files and may be zoomed into to reveal 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.77\textwidth]{RegisterSequenceDiagram.png}
-    \caption{Register Account Sequence Diagram}
+    \caption{Sequence Diagram for Account Registration}
     \label{fig:register}
 \end{figure}
 
@@ -158,14 +171,14 @@ State chart diagrams are provided as SVG files and may be zoomed into to reveal 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.77\textwidth]{LoginSequenceDiagram.png}
-    \caption{Login Sequence Diagram}
+    \caption{Sequence Diagram for Login}
     \label{fig:login}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{IdentifyMushroomSequenceDiagram.png}
-    \caption{Identify Mushroom Sequence Diagram}
+    \caption{Sequence Diagram for Identify Mushroom}
     \label{fig:identify}
 \end{figure}
 
@@ -173,7 +186,7 @@ State chart diagrams are provided as SVG files and may be zoomed into to reveal 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.76\textwidth]{GetRecipeSequenceDiagram.png}
-    \caption{Get Recipe Sequence Diagram}
+    \caption{Sequence Diagram for Get Recipe}
     \label{fig:recipe}
 \end{figure}
 
@@ -182,7 +195,7 @@ State chart diagrams are provided as SVG files and may be zoomed into to reveal 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.82\textwidth]{sharetosocialmedia.png}
-    \caption{Share to Social Media Diagram}
+    \caption{Sequence Diagram for Share to Social Media}
     \label{fig:identify}
 \end{figure}
 
@@ -191,7 +204,7 @@ State chart diagrams are provided as SVG files and may be zoomed into to reveal 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.82\textwidth]{savemushroom.png}
-    \caption{Save Mushroom to Account Diagram}
+    \caption{Sequence Diagram for Save Mushroom}
     \label{fig:recipe}
 \end{figure}
 
@@ -233,12 +246,30 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 	% \item Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
 	\item Farid Bastoros:
 	\begin{itemize} 
-		\item Section 4 - Detailed Class Diagram
+		\item Section 4 - Completed Detailed Class Diagram
+		\item Section 1.1 - Reviewed and updated Purpose
+		\item Section 1.2 - Reviewed and updated System Description
+		\item Section 1.3 - Reviewed and updated Overview
+		\item Section 2 - Added 2 State Chart Diagrams to the document (Account Manager \& Social Media Manager)
+		\item Modified Deliverable 2 with Fixes including:
+		\begin{itemize} 
+			\item Updated CRC Card for Account Manager
+			\item Updated CRC Card for Mushroom Manager
+			\item Updated CRC Card for Social Media Manager
+			\item Updated CRC Card for Recipe Recommender
+			\item Updated CRC Card for Decision Fourm
+			\item Updated CRC Card for Text Description Identifier
+			\item Updated CRC Card for Macro Image Identifier
+			\item Updated CRC Card for Micro Image Identifier
+		\end{itemize}	
+		\item Compiled the Final documents
 	\end{itemize}
-	\includegraphics[scale=0.09]{Farid Bastoros - Signature.jpeg}\\ 
+	\includegraphics[scale=0.09]{Farid Bastoros - Signature.jpeg}
 	\item Neha Bhatla:
 	\begin{itemize} 
-		\item 
+		\item Section 1.2 - Completed System Description
+		\item Section 1.3 - Completed Overview
+		\item Section 3 - Sequence Diagrams for Register Account, Login, Identify Mushroom, and Get Recipe.
 	\end{itemize}
 	\includegraphics[scale=0.05]{neha_signature.jpeg}\\ 
 	\item Omar Alam:
@@ -256,7 +287,8 @@ Include a Division of Labour sheet which indicates the contributions of each tea
  	\includegraphics[scale=0.1]{luka_signature.png}\\
 	\item Aidan Lao:
 	\begin{itemize} 
-		\item 
+		\item Section 1.1 - Purpose
+		\item Section 3 - Sequence Diagrams for Save Mushroom and Share to Social Media
 	\end{itemize}
 	\includegraphics[scale=0.1]{aidan-signature.png}\\
 	

@@ -300,6 +300,7 @@ This section should contain all of your CRC cards.
 	\item Provide a CRC Card for each identified class
 	% \item Please use the format outlined in tutorial, i.e., 
 	\begin{table}[ht]
+		\color{red}
 		\centering
 		\begin{tabular}{|p{6cm}|p{6cm}|}
 		\hline 
@@ -307,12 +308,18 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Knows Get Recipe & Get Recipe\\
-		Knows Save Recipe & Save Recipe\\
-		Knows Recipe Error & Recipe Error\\
-		Knows Recipe DB & Recipe DB\\
-		Knows Decision Fourm & Decision Fourm\\
-		Knows Recipe Info & Recipe Info\\
+		- Retrieves and recommends recipes based on user preferences and available ingredients. & Get Recipe\\
+		- Saves user-selected recipes to the database for future access. & Save Recipe\\
+		- Handles errors related to recipe retrieval and recommendation failures. & Recipe Error\\
+		- Communicates with the recipe database to fetch and store recipe information. & Recipe DB\\
+		- Integrates with the Decision Forum to refine recommendations based on expert analysis. & Decision Forum\\
+		- Manages and processes recipe-related data for accurate recommendations. & Recipe Info\\
+		% Knows Get Recipe & Get Recipe\\
+		% Knows Save Recipe & Save Recipe\\
+		% Knows Recipe Error & Recipe Error\\
+		% Knows Recipe DB & Recipe DB\\
+		% Knows Decision Fourm & Decision Fourm\\
+		% Knows Recipe Info & Recipe Info\\
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
@@ -390,6 +397,7 @@ This section should contain all of your CRC cards.
 		\end{tabular}
 	\end{table}
 	\begin{table}[ht]
+		\color{red}
 		\centering
 		\begin{tabular}{|p{6cm}|p{6cm}|}
 		\hline 
@@ -397,20 +405,29 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Knows Upload Image & Upload Image \\
-		Knows Text Input & Text Input \\
-		Knows Identification Error & Identification Error \\
-		Knows Identification Success & Identification Success \\
-		Knows Text Description Identifier &  Text Description Identifier \\
-		Knows Macro Image Identifier & Macro Image Identifier \\
-		Knows Micro Image Identifier & Micro Image Identifier \\
-		Knows Recipe Recommender & Recipe Recommender \\
+		- Receives image and text input for identification requests. & Upload Image \\
+		- Forwards text or image input to the relevant identification modules. & Text Input \\
+		- Manages identification errors and provides feedback to users. & Identification Error \\
+		- Handles successful identification results and forwards them for further processing. & Identification Success \\
+		- Coordinates with the Text Description Identifier for text-based identification. & Text Description Identifier \\
+		- Coordinates with the Macro Image Identifier for macro image-based identification. & Macro Image Identifier \\
+		- Coordinates with the Micro Image Identifier for micro image-based identification. & Micro Image Identifier \\
+		- Interfaces with the Recipe Recommender to suggest recipes based on the identification results. & Recipe Recommender \\
+		% Knows Upload Image & Upload Image \\
+		% Knows Text Input & Text Input \\
+		% Knows Identification Error & Identification Error \\
+		% Knows Identification Success & Identification Success \\
+		% Knows Text Description Identifier &  Text Description Identifier \\
+		% Knows Macro Image Identifier & Macro Image Identifier \\
+		% Knows Micro Image Identifier & Micro Image Identifier \\
+		% Knows Recipe Recommender & Recipe Recommender \\
 
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
 	\end{table}
 	\begin{table}[ht]
+		\color{red}
 		\centering
 		\begin{tabular}{|p{6cm}|p{6cm}|}
 		\hline 
@@ -418,13 +435,16 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Knows Connect to LLM & Connect to LLM \\
-		Knows Decision Fourm & Decision Fourm \\ 
+		- Connects to the Language Model (LLM) for text-based identification. & Connect to LLM \\
+		- Forwards text input to the Decision Forum for further processing. & Decision Forum \\ 
+		% Knows Connect to LLM & Connect to LLM \\
+		% Knows Decision Fourm & Decision Fourm \\ 
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
 	\end{table}
 	\begin{table}[ht]
+		\color{red}
 		\centering
 		\begin{tabular}{|p{6cm}|p{6cm}|}
 		\hline 
@@ -432,13 +452,17 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Knows Connect to plant.id API & Connect to plant.id API \\
-		Knows Decision Fourm & Decision Fourm \\ 
+		- Connects to the Plant.id API for macro image-based identification. & Connect to Plant.id API \\
+		- Forwards macro image input to the Decision Forum for further analysis. & Decision Forum \\ 
+
+		% Knows Connect to plant.id API & Connect to plant.id API \\
+		% Knows Decision Fourm & Decision Fourm \\ 
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
 	\end{table}
 	\begin{table}[ht]
+		\color{red}
 		\centering
 		\begin{tabular}{|p{6cm}|p{6cm}|}
 		\hline 
@@ -446,8 +470,11 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Knows Connect to Micro API & Connect to Micro API \\
-		Knows Decision Fourm & Decision Fourm \\ 
+		- Connects to the Micro API for micro image-based identification. & Connect to Micro API \\
+		- Forwards micro image input to the Decision Forum for further analysis. & Decision Forum \\ 
+
+		% Knows Connect to Micro API & Connect to Micro API \\
+		% Knows Decision Fourm & Decision Fourm \\ 
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
@@ -554,6 +581,7 @@ This section should contain all of your CRC cards.
 	\end{table}
 
 	\begin{table}[ht]
+		\color{red}
 		\centering
 		\begin{tabular}{|p{6cm}|p{6cm}|}
 		\hline 
@@ -561,14 +589,24 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-            Knows Account DB & Account DB\\
-		Knows User Info & User Info\\
-		Knows Create Account & Create Account\\
-            Knows Edit Account & Edit Account\\
-		Knows View Account & View Account\\
-		Knows Login & Login\\
-            Knows Account Success & Account Success\\
-            Knows Account Error & Account Error\\
+			- Handles user account creation, authentication, and management. & Account DB\\
+			- Retrieves and updates user account information from the database. & User Info\\
+			- Processes login requests and verifies user credentials. & Create Account\\
+			- Manages account-related success and error handling. & Edit Account\\
+			- Provides access to account details and allows modifications when needed. & View Account\\
+			- Ensures data consistency and security during account operations. & Login\\
+            
+			& Account Success\\
+        	& Account Error\\
+			
+			% Knows Account DB & Account DB\\
+			% Knows User Info & User Info\\
+			% Knows Create Account & Create Account\\
+            % Knows Edit Account & Edit Account\\
+			% Knows View Account & View Account\\
+			% Knows Login & Login\\
+            % Knows Account Success & Account Success\\
+            % Knows Account Error & Account Error\\
 
 		\vspace{1in} & \\
 		\hline
@@ -697,7 +735,8 @@ This section should contain all of your CRC cards.
 		\end{tabular}
 	\end{table}
 
-     \begin{table}[ht]
+    \begin{table}[ht]
+		\color{red}
 		\centering
 		\begin{tabular}{|p{6cm}|p{6cm}|}
 		\hline 
@@ -705,11 +744,17 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-            Knows Mushroom DB & Mushroom DB\\
-		Knows Mushroom Info & Mushroom Info\\
-		Knows View Mushrooms & View Mushrooms\\
-            Knows Save Mushroom & Save Mushroom\\
-		Knows Delete Mushroom & Delete Mushroom\\
+		- Receives mushroom identification requests (text/image) from boundary classes.& Mushroom DB\\
+		- Forwards input to the appropriate identification modules for analysis. & Mushroom Info\\
+		- Aggregates and resolves identification results from expert modules. & View Mushrooms\\
+		- Sends the final identification result to the requesting boundary class. & Save Mushroom\\
+		- Manages saving, updating, and deleting mushroom records in the database.& Delete Mushroom\\
+		- Handles failed identification attempts and provides appropriate feedback. & \\
+            % Knows Mushroom DB & Mushroom DB\\
+			% Knows Mushroom Info & Mushroom Info\\
+			% Knows View Mushrooms & View Mushrooms\\
+        	% Knows Save Mushroom & Save Mushroom\\
+			% Knows Delete Mushroom & Delete Mushroom\\
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
@@ -791,6 +836,7 @@ This section should contain all of your CRC cards.
 	\end{table}    
 
    \begin{table}[ht]
+	\color{red}
 		\centering
 		\begin{tabular}{|p{6cm}|p{6cm}|}
 		\hline 
@@ -798,10 +844,15 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-            Knows Mushroom Info & Mushroom Info\\
-		Knows Recipe Info & Recipe Info\\
-		Knows Share Recipe & Share Recipe\\
-            Knows Share Mushroom & Share Mushroom\\
+			- Receives requests to share mushroom or recipe information from boundary classes.& Mushroom Info\\
+			- Retrieves relevant mushroom or recipe details from the database.& Recipe Info\\
+			- Formats and forwards content for sharing via supported social media platforms.& Share Recipe\\
+			- Manages permissions and restrictions for sharing mushroom and recipe data. & Share Mushroom\\
+			- Handles errors and ensures successful sharing operations.&   \\
+            % Knows Mushroom Info & Mushroom Info\\
+			% Knows Recipe Info & Recipe Info\\
+			% Knows Share Recipe & Share Recipe\\
+            % Knows Share Mushroom & Share Mushroom\\
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
@@ -849,6 +900,18 @@ This section should contain all of your CRC cards.
 	\item Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
 	\item Farid Bastoros:
 	\begin{itemize} 
+		\item \textcolor{red}{Updated CRC Cards Including:}
+		\begin{itemize} 
+			\color{red}
+			\item Account Manager
+			\item Mushroom Manager
+			\item Social Media Manager
+			\item Recipe Recommender
+			\item Decision Fourm
+			\item Text Description Identifier
+			\item Macro Image Identifier
+			\item Micro Image Identifier
+		\end{itemize}
 		\item Section 1 - Reviewed and updated 1.1
 		\item Section 1 - Reviewed and updated 1.3
 		\item Section 2 - Completed half of the classes
